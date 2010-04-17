@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.mapcelona.javaparser.rdfutils.RDFUtils;
 
+import com.hp.hpl.jena.rdf.model.Resource;
+
 public class PDFParser
 {
 	private String		name;
@@ -27,6 +29,8 @@ public class PDFParser
 		String			line, district, b;
 		List<String>	barrios;
 		RDFUtils		ru;
+		Resource		r;
+		int				i;
 		
 		ru = new RDFUtils();
 		
@@ -71,5 +75,19 @@ public class PDFParser
 		}
 		
 		System.out.println(barrios);
+		
+		while(line != null)
+		{
+			r = ru.checkMapping(line.substring(0, line.indexOf("20") - 1).replace("Þ", "fi"));
+			
+			i = barrios.size() - 1;
+			while(i >= 0)
+			{
+				System.out.println(barrios.get(i));
+				i = i - 1;
+			}
+			
+			line = br.readLine();
+		}
 	}
 }

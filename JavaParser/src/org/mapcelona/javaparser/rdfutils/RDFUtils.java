@@ -7,6 +7,14 @@ import java.util.ResourceBundle;
 
 import virtuoso.jena.driver.VirtModel;
 
+import com.hp.hpl.jena.query.Dataset;
+import com.hp.hpl.jena.query.DatasetFactory;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -16,13 +24,15 @@ import com.hp.hpl.jena.util.FileManager;
 public class RDFUtils
 {
 	private ResourceBundle	rb;
-	private Model			city, m;
+	private Model			demo, city, m;
 	private Resource		bcn, owlcity, owldistrict, owlbarrio;
-	private Property		ofClass, hasName, isDistrictOf, isNeighbourhoodOf;
+	private Property		ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
+							hasMapping;
 	
 	private static final String	cityUri = "http://www.mapcelona.org/city.owl#";
 	private static final String	bcnUri = "http://www.mapcelona.org/barcelona.owl#";
 	private static final String	rdfUri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+	private static final String demoUri = "http://www.mapcelona.org/demo.owl#";
 	
 	public RDFUtils()
 	{
@@ -41,8 +51,16 @@ public class RDFUtils
 		{
 			throw new IllegalArgumentException("File not found");
 		}
-		
 		city.read(in, null);
+
+		demo = ModelFactory.createOntologyModel();
+		in = FileManager.get().open("http://www.mapcelona.org/demo.owl");
+		if (in == null)
+		{
+			throw new IllegalArgumentException("File not found");
+		}
+		demo.read(in, null);
+		
 		ofClass = city.getProperty(rdfUri + "type");
 		owlcity = city.getResource(cityUri + "City");
 		hasName = city.getProperty(cityUri + "hasName");
@@ -50,6 +68,8 @@ public class RDFUtils
 		isDistrictOf = city.getProperty(cityUri + "isDistrictOf");
 		owlbarrio = city.getResource(cityUri + "Neighbourhood");
 		isNeighbourhoodOf = city.getProperty(cityUri + "isNeighbourhoodOf");
+		
+		hasMapping = demo.getProperty(demoUri + "hasMapping");
 	}
 
 	private void connect()
@@ -139,5 +159,43 @@ public class RDFUtils
 		
 		r = m.getResource(bcnUri + normalise(district));
 		System.out.println(r);
+	}
+
+	public Resource checkMapping(String mapping)
+	{
+		QuerySolution	qs;
+		Resource		r;
+		
+		// Prepare query string
+		String queryString =
+		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+		"PREFIX : <http://www.mapcelona.org/demo.owl#>\n" +
+		"SELECT ?r WHERE {" +
+		"?r rdf:type :DataClass.\n" +
+//		"?r :hasMapping ?m" + 
+//		"?r :hasMapping \"Edat mitjana edificis\"." + 
+		"?r :hasMapping \"" + mapping.trim() + "\"." + 
+		"}";
+		// Use the ontology model to create a Dataset object
+		// Note: If no reasoner has been attached to the model, no results
+		// will be returned (MarriedPerson has no asserted instances)
+		Dataset dataset = DatasetFactory.create(demo);
+		// Parse query string and create Query object
+		Query q = QueryFactory.create(queryString);
+		// Execute query and obtain result set
+		QueryExecution qexec = QueryExecutionFactory.create(q, dataset);
+		ResultSet resultSet = qexec.execSelect();
+		
+		if(resultSet.hasNext())
+		{
+			qs = resultSet.next();
+			r = qs.getResource("r");
+		}
+		else
+		{
+			throw new UnsupportedOperationException("Mapping falla: " + mapping);
+		}
+		
+		return r;
 	}
 }
