@@ -333,7 +333,7 @@
 
     <!-- http://www.mapcelona.org/demo.owl#Populaci&#243;Surface -->
 
-    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#Populaci&#243;Surface">
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationSurface">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
         <hasMapping>Superf&#237;cie (ha)</hasMapping>
     </owl:NamedIndividual>
