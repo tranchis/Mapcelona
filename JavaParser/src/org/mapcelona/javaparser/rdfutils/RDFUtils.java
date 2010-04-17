@@ -30,7 +30,7 @@ public class RDFUtils
 	private Resource				bcn, owlcity, owldistrict, owlbarrio, owldataclass, pieceOfData;
 	private Property				ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
 									hasValue, hasMapping, refersTo, isOfDataClass, hasAge;
-	private Map<String,Resource>	entities;
+	private Map<String,Resource>	mapBarrios, mapDistritos;
 	private Map<String,String>		alternates;
 	
 	private static final String	cityUri = "http://www.mapcelona.org/city.owl#";
@@ -41,7 +41,8 @@ public class RDFUtils
 	public RDFUtils()
 	{
 		rb = ResourceBundle.getBundle("virtuoso");
-		entities = new TreeMap<String,Resource>();
+		mapBarrios = new TreeMap<String,Resource>();
+		mapDistritos = new TreeMap<String,Resource>();
 		connect();
 		loadCity();
 		
@@ -49,6 +50,30 @@ public class RDFUtils
 		alternates.put("hostafrancs", "bordeta-hostafrancs");
 		alternates.put("la font de la guatlla", "font de la guatlla");
 		alternates.put("el poble-sec", "poble-sec");
+		alternates.put("el raval", "raval");
+		alternates.put("el gotic", "gotic");
+		alternates.put("sant pere, santa caterina i la ribera", "parc");
+		alternates.put("la barceloneta", "barceloneta");
+		alternates.put("fort pienc", "estacio nord");
+		alternates.put("dreta de l'eixample", "dreta eixample");
+		alternates.put("l'antiga esquerra de l'eixample", "esquerra eixample");
+		alternates.put("vallvidrera, el tibidabo i les planes", "vallvidrera-les planes");
+		alternates.put("sant gervasi-la bonanova", "sant gervasi");
+		alternates.put("la vall d'hebron", "vall d’hebron");
+		alternates.put("el guinardo", "guinardo");
+		alternates.put("ciutat meridiana", "ciutat meridiana-vallbona");
+		alternates.put("roquetes", "roquetes-verdum");
+		alternates.put("vilapicina i torre llobeta", "vilapicina-turo de la peira");
+		alternates.put("sant andreu de palomar", "sant andreu");
+		alternates.put("el congres i els indians", "congres");
+		alternates.put("la sagrera", "sagrera");
+		alternates.put("la verneda i la pau", "verneda");
+		alternates.put("el clot", "clot");
+		alternates.put("el besos i el maresme", "barris besos");
+		alternates.put("vallcarca i els penitents", "vallcarca");
+		alternates.put("vila de gracia", "gracia");
+		alternates.put("el poblenou", "poblenou");
+		alternates.put("la vila olimpica del poblenou", "fort pius");
 	}
 	
 	private void loadCity()
@@ -240,7 +265,7 @@ public class RDFUtils
 	{
 		Resource	r;
 		
-		r = entities.get(name);
+		r = mapBarrios.get(name);
 		if(r == null)
 		{
 			QuerySolution	qs;
@@ -251,7 +276,7 @@ public class RDFUtils
 			"PREFIX city: <http://www.mapcelona.org/city.owl#>\n" +
 			"PREFIX : <http://www.mapcelona.org/barcelona.owl#>\n" +
 			"SELECT ?r WHERE {" +
-//			"?r rdf:type city:Neighbourhood	.\n" +
+			"?r rdf:type city:Neighbourhood	.\n" +
 //			"?r :hasMapping ?m" + 
 //			"?r :hasMapping \"Edat mitjana edificis\"." + 
 			"?r city:hasName \"" + normalise(name).trim() + "\"." + 
@@ -277,7 +302,7 @@ public class RDFUtils
 				throw new UnsupportedOperationException("Mapping falla: " + name);
 			}
 			
-			entities.put(name, r);
+			mapBarrios.put(name, r);
 		}
 		
 		return r;
@@ -286,5 +311,67 @@ public class RDFUtils
 	public void setDataPieceYear(Resource dataPiece, int year)
 	{
 		dataPiece.addLiteral(hasAge, year);
+	}
+
+	public Resource addDataPieceDistrict(String name, Resource dataClass,
+			float value)
+	{
+		Resource	r, barrio;
+		
+		r = m.createResource();
+		barrio = getDistrito(name);
+		r.addLiteral(hasValue, value);
+		m.add(r, ofClass, pieceOfData);
+		m.add(r, isOfDataClass, dataClass);
+		m.add(r, refersTo, barrio);
+		
+		return r;
+	}
+
+	private Resource getDistrito(String name)
+	{
+		Resource	r;
+		
+		r = mapDistritos.get(name);
+		if(r == null)
+		{
+			QuerySolution	qs;
+			
+			// Prepare query string
+			String queryString =
+			"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+			"PREFIX city: <http://www.mapcelona.org/city.owl#>\n" +
+			"PREFIX : <http://www.mapcelona.org/barcelona.owl#>\n" +
+			"SELECT ?r WHERE {" +
+			"?r rdf:type city:District	.\n" +
+//			"?r :hasMapping ?m" + 
+//			"?r :hasMapping \"Edat mitjana edificis\"." + 
+			"?r city:hasName \"" + normalise(name).trim() + "\"." + 
+			"}";
+			System.out.println(queryString);
+			// Use the ontology model to create a Dataset object
+			// Note: If no reasoner has been attached to the model, no results
+			// will be returned (MarriedPerson has no asserted instances)
+			Dataset dataset = DatasetFactory.create(m);
+			// Parse query string and create Query object
+			Query q = QueryFactory.create(queryString);
+			// Execute query and obtain result set
+			QueryExecution qexec = QueryExecutionFactory.create(q, dataset);
+			ResultSet resultSet = qexec.execSelect();
+			
+			if(resultSet.hasNext())
+			{
+				qs = resultSet.next();
+				r = qs.getResource("r");
+			}
+			else
+			{
+				throw new UnsupportedOperationException("Mapping falla: " + name);
+			}
+			
+			mapDistritos.put(name, r);
+		}
+		
+		return r;
 	}
 }

@@ -17,20 +17,30 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public class PDFParser
 {
-	private String		name;
-
-	public PDFParser(String name)
-	{
-		this.name = name;
-	}
-
 	public static void main(String args[]) throws Exception
+	{
+		PDFParser	pp;
+		
+		pp = new PDFParser();
+		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte02.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte03.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte04.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte05.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte06.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte07.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte08.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte09.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte10.pdf");
+	}
+	
+	public void parse(String url) throws Exception
 	{
 		File				temp;
 		ThExtract			te;
 		FileInputStream		fis;
 		BufferedReader		br;
-		String				line, district, b, data;
+		String				line, district, b, data, tmp;
 		float				value;
 		List<String>		barrios;
 		RDFUtils			ru;
@@ -44,7 +54,7 @@ public class PDFParser
 		ru = new RDFUtils();
 		
 //		te = new ThExtract("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
-		te = new ThExtract("/Users/sergio/Desktop/dte01.pdf");
+		te = new ThExtract(url);
 		te.start();
 		te.join();
 		temp = te.getFile();
@@ -60,17 +70,89 @@ public class PDFParser
 		
 		br.readLine(); // 13
 		district = br.readLine(); //
-		System.out.println("[" + RDFUtils.normalise(district) + "]");
+		System.out.println(district);
 		
 		barrios = new ArrayList<String>();
 		
+		if(district.contains("ZEG"))
+		{
+			st = new StringTokenizer(district);
+			
+			st.nextToken(); // Any
+			st.nextToken(); // BARCELONA
+			st.nextToken(); // 4.
+			district = st.nextToken();
+			tmp = st.nextToken();
+			while(!tmp.equals("ZEG"))
+			{
+				district = district + " " + tmp;
+				tmp = st.nextToken();
+			}
+			district = RDFUtils.normalise(district);
+			
+			while(st.hasMoreTokens())
+			{
+				st.nextToken(); // 16
+				b = st.nextToken();
+				if(st.hasMoreTokens())
+				{
+					tmp = st.nextToken();
+					while(!tmp.equals("ZEG"))
+					{
+						b = b + " " + tmp;
+						tmp = st.nextToken();
+					}
+				}
+				barrios.add(RDFUtils.normalise(b));
+			}
+		}
+		
+		System.out.println("[" + RDFUtils.normalise(district) + "]");
+		
 		line = br.readLine();
-		while(!line.startsWith("ZEG"))
+		System.out.println(line);
+		while(!line.startsWith("Superf") && !line.trim().startsWith("ZEG") && !line.contains("ZEG"))
 		{
 			line = br.readLine();
 		}
 		
-		while(line.startsWith("ZEG"))
+		if(line.contains("ZEG") && !line.trim().startsWith("ZEG"))
+		{
+			System.out.println(line);
+			st = new StringTokenizer(line);
+			
+			st.nextToken(); // Any
+			st.nextToken(); // BARCELONA
+			st.nextToken(); // 4.
+			line = st.nextToken();
+			tmp = st.nextToken();
+			while(!tmp.equals("ZEG"))
+			{
+				district = district + " " + tmp;
+				tmp = st.nextToken();
+			}
+			district = RDFUtils.normalise(district);
+			
+			while(st.hasMoreTokens())
+			{
+				st.nextToken(); // 16
+				b = st.nextToken();
+				if(st.hasMoreTokens())
+				{
+					tmp = st.nextToken();
+					while(!tmp.equals("ZEG"))
+					{
+						b = b + " " + tmp;
+						tmp = st.nextToken();
+					}
+				}
+				barrios.add(RDFUtils.normalise(b));
+			}
+			
+			line = br.readLine();
+		}
+		
+		while(line.trim().startsWith("ZEG"))
 		{
 			line = br.readLine(); // Nombre de barrio
 			b = line;
@@ -121,7 +203,7 @@ public class PDFParser
 			data = pila.pop(); // Distrito
 			value = Float.parseFloat(data.replace(".", "").replace(",", "."));
 			System.out.println(district + ":" + value);
-			dataPiece = ru.addDataPiece(district, r, value);
+			dataPiece = ru.addDataPieceDistrict(district, r, value);
 			
 			pila.pop(); // Barcelona
 			data = pila.pop(); // Year
@@ -145,6 +227,6 @@ public class PDFParser
 			line = br.readLine();
 		}
 		
-		ru.dump();
+//		ru.dump();
 	}
 }

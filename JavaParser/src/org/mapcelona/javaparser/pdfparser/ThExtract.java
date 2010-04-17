@@ -27,6 +27,7 @@ public class ThExtract extends Thread
 		try
 		{
 			ExtractText.main(new String [] { "-startPage", "13", "-endPage", "13", name, temp.getAbsolutePath()} );
+			System.out.println(temp.getAbsolutePath());
 		}
 		catch (Exception e)
 		{
