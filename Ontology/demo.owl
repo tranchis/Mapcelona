@@ -178,6 +178,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#AirQualityNO2Level">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other 20081130elpepunac_3_Pes_PDF.pdf</hasMapping>
     </owl:NamedIndividual>
     
@@ -187,6 +188,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#AirQualityParticlesOnAirExceedDays">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other dte01.pdf</hasMapping>
     </owl:NamedIndividual>
     
@@ -196,6 +198,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#AirQualityParticlesOnAirLevel">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other dte01.pdf</hasMapping>
     </owl:NamedIndividual>
     
@@ -205,6 +208,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#EcologyPercentageOfTreesOnTheStreet">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% arbres al carrer</hasMapping>
     </owl:NamedIndividual>
     
@@ -214,6 +218,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#EcologyPercentageOfUrbanGreen">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% verd urb&#224;</hasMapping>
     </owl:NamedIndividual>
     
@@ -250,6 +255,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseAllTimeLengthExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Longitud exposada per cada districte en DEN</hasMapping>
     </owl:NamedIndividual>
     
@@ -259,6 +265,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseAllTimePopulationExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Poblaci&#243; exposada per cada districte al llarg del d&#237;a </hasMapping>
     </owl:NamedIndividual>
     
@@ -268,6 +275,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseDayTimeLengthExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Longitud exposada per cada districte en horari di&#252;rn</hasMapping>
     </owl:NamedIndividual>
     
@@ -277,6 +285,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseDayTimePopulationExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Poblaci&#243; exposada per cada districte en horari di&#252;rn</hasMapping>
     </owl:NamedIndividual>
     
@@ -286,6 +295,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseEveningTimeLengthExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Longitud exposada per cada districte en horari de vespre</hasMapping>
     </owl:NamedIndividual>
     
@@ -295,6 +305,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseEveningTimePopulationExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Poblaci&#243; exposada per cada districte en horari de vespre</hasMapping>
     </owl:NamedIndividual>
     
@@ -304,6 +315,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseNightTimeLengthExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Longitud exposada per cada districte en horari de vespre</hasMapping>
     </owl:NamedIndividual>
     
@@ -313,6 +325,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#NoiseNightTimePopulationExposure">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>http://docs.google.com/Doc?docid=0AcOfFWb9twnRZGdwc3Z6ZndfODVxcnR4d2hx&amp;hl=en-&gt;Poblaci&#243; exposada per cada districte en horari de nit</hasMapping>
     </owl:NamedIndividual>
     
@@ -331,6 +344,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationAllExpectedLivingYears">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Esperan&#231;a de vida en n&#233;ixer</hasMapping>
     </owl:NamedIndividual>
     
@@ -349,6 +363,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationBuildingMeanAge">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Edat mitjana edificis</hasMapping>
     </owl:NamedIndividual>
     
@@ -367,6 +382,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationDefunctionRate">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Taxa mortalitat</hasMapping>
     </owl:NamedIndividual>
     
@@ -376,6 +392,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationDensityOverall">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Densitat (Hab/ha)</hasMapping>
     </owl:NamedIndividual>
     
@@ -385,6 +402,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationDensityUrbanArea">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Densitat (Hab/ha s&#242;l residencial)</hasMapping>
     </owl:NamedIndividual>
     
@@ -403,6 +421,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationHouseMeanSurface">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Superf&#237;cie mitjana habitatges (m2)</hasMapping>
     </owl:NamedIndividual>
     
@@ -412,6 +431,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationManExpectedLivingYears">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>homes</hasMapping>
     </owl:NamedIndividual>
     
@@ -457,6 +477,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentageEmployed">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Taxa d&#39;activitat</hasMapping>
     </owl:NamedIndividual>
     
@@ -466,6 +487,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentageHighStudies">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% estudis superiors</hasMapping>
     </owl:NamedIndividual>
     
@@ -475,6 +497,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentageLonelyElder">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>% gent gran que viu sola (+70 anys)</hasMapping>
     </owl:NamedIndividual>
     
@@ -556,6 +579,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentagePrimaryStudies">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% estudis primaris</hasMapping>
     </owl:NamedIndividual>
     
@@ -583,6 +607,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentageUnderstandsCatalan">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% ent&#233;n catal&#224;</hasMapping>
     </owl:NamedIndividual>
     
@@ -592,6 +617,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentageUnemployed">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Taxa d&#39;atur</hasMapping>
     </owl:NamedIndividual>
     
@@ -610,6 +636,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationPercentatgeOfOwnedHouses">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% habitatges propietat</hasMapping>
     </owl:NamedIndividual>
     
@@ -619,6 +646,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationUsedHouseEstimatedPrize">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Estim. venda habitatge segona m&#224; (&#8364;/m2)</hasMapping>
     </owl:NamedIndividual>
     
@@ -628,6 +656,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationWomanExpectedLivingYears">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>dones</hasMapping>
     </owl:NamedIndividual>
     
@@ -637,6 +666,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehicleAccidentsPercentage">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other: http://www.bcn.cat/estadistica/catala/dades/anuari/cap15/C1511040.htm</hasMapping>
     </owl:NamedIndividual>
     
@@ -646,6 +676,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesAccidentTotal">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other: http://www.bcn.cat/estadistica/catala/dades/anuari/cap15/C1511040.htm</hasMapping>
     </owl:NamedIndividual>
     
@@ -655,6 +686,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesBicingStation">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Oher: Ask Lluis</hasMapping>
     </owl:NamedIndividual>
     
@@ -664,6 +696,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesBikeLane">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Oher: Ask Lluis</hasMapping>
     </owl:NamedIndividual>
     
@@ -673,6 +706,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesBusStop">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Oher: Ask Lluis</hasMapping>
     </owl:NamedIndividual>
     
@@ -700,6 +734,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesMetroStop">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Other: Ask Lluis</hasMapping>
     </owl:NamedIndividual>
     
@@ -718,6 +753,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesParkingPlacesBlueZone">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other: Not known</hasMapping>
     </owl:NamedIndividual>
     
@@ -727,6 +763,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesParkingPlacesFreeZone">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Other: Not known</hasMapping>
     </owl:NamedIndividual>
     
@@ -736,6 +773,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesParkingPlacesGreenZone">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">false</isPositive>
         <hasMapping>Other: Not known</hasMapping>
     </owl:NamedIndividual>
     
@@ -745,6 +783,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesPercentageOfVehiclesWithLessThanTwoYears">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>% turismes de menys 2 anys</hasMapping>
     </owl:NamedIndividual>
     
@@ -754,6 +793,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#VehiclesTramwayStop">
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>Other: Ask Lluis</hasMapping>
     </owl:NamedIndividual>
 </rdf:RDF>

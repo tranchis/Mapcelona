@@ -27,7 +27,7 @@ public class RDFUtils
 {
 	private ResourceBundle			rb;
 	private Model					demo, city, m;
-	private Resource				bcn, owlcity, owldistrict, owlbarrio, owldataclass;
+	private Resource				bcn, owlcity, owldistrict, owlbarrio, owldataclass, pieceOfData;
 	private Property				ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
 									hasValue, hasMapping, refersTo, isOfDataClass, hasAge;
 	private Map<String,Resource>	entities;
@@ -80,6 +80,7 @@ public class RDFUtils
 		isNeighbourhoodOf = city.getProperty(cityUri + "isNeighbourhoodOf");
 		
 		owldataclass = demo.getResource(demoUri + "DataClass");
+		pieceOfData = demo.getResource(demoUri + "PieceOfData");
 		hasMapping = demo.getProperty(demoUri + "hasMapping");
 		refersTo = demo.getProperty(demoUri + "refersTo");
 		isOfDataClass = demo.getProperty(demoUri + "isOfDataClass");
@@ -228,7 +229,7 @@ public class RDFUtils
 		r = m.createResource();
 		barrio = getNeighbourhood(name);
 		r.addLiteral(hasValue, value);
-		m.add(r, ofClass, owldataclass);
+		m.add(r, ofClass, pieceOfData);
 		m.add(r, isOfDataClass, dataClass);
 		m.add(r, refersTo, barrio);
 		
