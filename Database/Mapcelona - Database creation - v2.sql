@@ -50,9 +50,10 @@ CREATE TABLE IF NOT EXISTS district_value
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	district_id INT UNSIGNED NOT NULL,
 	dataclass_id INT UNSIGNED NOT NULL,
+	age INT UNSIGNED NOT NULL,
 	_value FLOAT COMMENT 'Specific value of a dataclass in a district',
 	CONSTRAINT PK_district_value PRIMARY KEY (id),
-	CONSTRAINT UNIQUE_district_value UNIQUE (district_id, dataclass_id),
+	CONSTRAINT UNIQUE_district_value UNIQUE (district_id, dataclass_id, age),
 	CONSTRAINT FK_district_value_0 FOREIGN KEY (district_id) REFERENCES district (id),
 	CONSTRAINT FK_district_value_1 FOREIGN KEY (dataclass_id) REFERENCES dataclass (id)
 ) TYPE = INNODB;
@@ -62,9 +63,10 @@ CREATE TABLE IF NOT EXISTS neighbourhood_value
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	neighbourhood_id INT UNSIGNED NOT NULL,
 	dataclass_id INT UNSIGNED NOT NULL,
+	age INT UNSIGNED NOT NULL,
 	_value FLOAT COMMENT 'Specific value of a dataclass in a neighbourhood',
 	CONSTRAINT PK_neighbourhood_value PRIMARY KEY (id),
-	CONSTRAINT UNIQUE_neighbourhood_value UNIQUE (neighbourhood_id, dataclass_id),
+	CONSTRAINT UNIQUE_neighbourhood_value UNIQUE (neighbourhood_id, dataclass_id, age),
 	CONSTRAINT FK_neighbourhood_value_0 FOREIGN KEY (neighbourhood_id) REFERENCES neighbourhood (id),
 	CONSTRAINT FK_neighbourhood_value_1 FOREIGN KEY (dataclass_id) REFERENCES dataclass (id)
 ) TYPE = INNODB;
