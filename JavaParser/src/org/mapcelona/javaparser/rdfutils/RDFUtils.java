@@ -3,7 +3,9 @@ package org.mapcelona.javaparser.rdfutils;
 import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 import virtuoso.jena.driver.VirtModel;
 
@@ -23,11 +25,13 @@ import com.hp.hpl.jena.util.FileManager;
 
 public class RDFUtils
 {
-	private ResourceBundle	rb;
-	private Model			demo, city, m;
-	private Resource		bcn, owlcity, owldistrict, owlbarrio;
-	private Property		ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
-							hasMapping;
+	private ResourceBundle			rb;
+	private Model					demo, city, m;
+	private Resource				bcn, owlcity, owldistrict, owlbarrio, owldataclass;
+	private Property				ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
+									hasValue, hasMapping, refersTo, isOfDataClass, hasAge;
+	private Map<String,Resource>	entities;
+	private Map<String,String>		alternates;
 	
 	private static final String	cityUri = "http://www.mapcelona.org/city.owl#";
 	private static final String	bcnUri = "http://www.mapcelona.org/barcelona.owl#";
@@ -37,8 +41,14 @@ public class RDFUtils
 	public RDFUtils()
 	{
 		rb = ResourceBundle.getBundle("virtuoso");
+		entities = new TreeMap<String,Resource>();
 		connect();
 		loadCity();
+		
+		alternates = new TreeMap<String,String>();
+		alternates.put("hostafrancs", "bordeta-hostafrancs");
+		alternates.put("la font de la guatlla", "font de la guatlla");
+		alternates.put("el poble-sec", "poble-sec");
 	}
 	
 	private void loadCity()
@@ -69,7 +79,12 @@ public class RDFUtils
 		owlbarrio = city.getResource(cityUri + "Neighbourhood");
 		isNeighbourhoodOf = city.getProperty(cityUri + "isNeighbourhoodOf");
 		
+		owldataclass = demo.getResource(demoUri + "DataClass");
 		hasMapping = demo.getProperty(demoUri + "hasMapping");
+		refersTo = demo.getProperty(demoUri + "refersTo");
+		isOfDataClass = demo.getProperty(demoUri + "isOfDataClass");
+		hasAge = demo.getProperty(demoUri + "hasAge");
+		hasValue = demo.getProperty(demoUri + "hasValue");
 	}
 
 	private void connect()
@@ -92,7 +107,7 @@ public class RDFUtils
 
 	public void addDistrict(String odistrict, List<String> barrios)
 	{
-		String				district, barrio;
+		String				district, barrio, alternate;
 		Iterator<String>	it;
 		Resource			rdfdistrict, rdfbarrio;
 		
@@ -111,6 +126,13 @@ public class RDFUtils
 			m.add(rdfbarrio, hasName, barrio);
 			m.add(rdfbarrio, ofClass, owlbarrio);
 			m.add(rdfbarrio, isNeighbourhoodOf, rdfdistrict);
+			
+			alternate = alternates.get(barrio);
+			if(alternate != null)
+			{
+				System.out.println("alternate: " + alternate);
+				m.add(rdfbarrio, hasName, alternate);
+			}
 		}
 	}
 
@@ -197,5 +219,71 @@ public class RDFUtils
 		}
 		
 		return r;
+	}
+
+	public Resource addDataPiece(String name, Resource dataClass, float value)
+	{
+		Resource	r, barrio;
+		
+		r = m.createResource();
+		barrio = getNeighbourhood(name);
+		r.addLiteral(hasValue, value);
+		m.add(r, ofClass, owldataclass);
+		m.add(r, isOfDataClass, dataClass);
+		m.add(r, refersTo, barrio);
+		
+		return r;
+	}
+
+	private Resource getNeighbourhood(String name)
+	{
+		Resource	r;
+		
+		r = entities.get(name);
+		if(r == null)
+		{
+			QuerySolution	qs;
+			
+			// Prepare query string
+			String queryString =
+			"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+			"PREFIX city: <http://www.mapcelona.org/city.owl#>\n" +
+			"PREFIX : <http://www.mapcelona.org/barcelona.owl#>\n" +
+			"SELECT ?r WHERE {" +
+//			"?r rdf:type city:Neighbourhood	.\n" +
+//			"?r :hasMapping ?m" + 
+//			"?r :hasMapping \"Edat mitjana edificis\"." + 
+			"?r city:hasName \"" + normalise(name).trim() + "\"." + 
+			"}";
+			System.out.println(queryString);
+			// Use the ontology model to create a Dataset object
+			// Note: If no reasoner has been attached to the model, no results
+			// will be returned (MarriedPerson has no asserted instances)
+			Dataset dataset = DatasetFactory.create(m);
+			// Parse query string and create Query object
+			Query q = QueryFactory.create(queryString);
+			// Execute query and obtain result set
+			QueryExecution qexec = QueryExecutionFactory.create(q, dataset);
+			ResultSet resultSet = qexec.execSelect();
+			
+			if(resultSet.hasNext())
+			{
+				qs = resultSet.next();
+				r = qs.getResource("r");
+			}
+			else
+			{
+				throw new UnsupportedOperationException("Mapping falla: " + name);
+			}
+			
+			entities.put(name, r);
+		}
+		
+		return r;
+	}
+
+	public void setDataPieceYear(Resource dataPiece, int year)
+	{
+		dataPiece.addLiteral(hasAge, year);
 	}
 }
