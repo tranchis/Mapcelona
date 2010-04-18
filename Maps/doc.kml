@@ -9236,11 +9236,11 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>FAFAFA13</color>
+			<color>FAFAFAFAFAFAFAFA</color>
 			<width>1.2</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>FAFAFA13</color>
+			<color>FAFAFAFAFAFAFAFA</color>
 		</PolyStyle>
 	</Style>
 <Style id="13H">
@@ -9252,11 +9252,11 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>FAFAFA13</color>
+			<color>FAFAFAFAFAFAFAFA</color>
 			<width>1.2</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>FAFAFA13</color>
+			<color>FAFAFAFAFAFAFAFA</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sh_open-diamond250">
