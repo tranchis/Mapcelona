@@ -22,7 +22,7 @@ public class PDFParser
 		PDFParser	pp;
 		
 		pp = new PDFParser();
-		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
+//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte02.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte03.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte04.pdf");
@@ -31,7 +31,7 @@ public class PDFParser
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte07.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte08.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte09.pdf");
-//		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte10.pdf");
+		pp.parse(args[0]);
 	}
 	
 	public void parse(String url) throws Exception
@@ -204,6 +204,7 @@ public class PDFParser
 			value = Float.parseFloat(data.replace(".", "").replace(",", "."));
 			System.out.println(district + ":" + value);
 			dataPiece = ru.addDataPieceDistrict(district, r, value);
+			pieces.add(dataPiece);
 			
 			pila.pop(); // Barcelona
 			data = pila.pop(); // Year

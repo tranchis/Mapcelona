@@ -328,7 +328,7 @@ public class RDFUtils
 		return r;
 	}
 
-	private Resource getDistrito(String name)
+	public Resource getDistrito(String name)
 	{
 		Resource	r;
 		
@@ -371,6 +371,15 @@ public class RDFUtils
 			
 			mapDistritos.put(name, r);
 		}
+		
+		return r;
+	}
+
+	public Resource getDataClass(String code)
+	{
+		Resource	r;
+		
+		r = demo.getResource(demoUri + code);
 		
 		return r;
 	}
