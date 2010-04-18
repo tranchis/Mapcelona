@@ -9216,49 +9216,3380 @@
 			<scale>0.6</scale>
 		</LabelStyle>
 	</Style>
-	<!-- montjuic -->
-<StyleMap id="13">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#13N</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#13H</styleUrl>
-		</Pair>
-	</StyleMap>
-<Style id="13N">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<LineStyle>
-			<color>FAFAFAFAFAFAFAFA</color>
-			<width>1.2</width>
-		</LineStyle>
-		<PolyStyle>
-			<color>FAFAFAFAFAFAFAFA</color>
-		</PolyStyle>
-	</Style>
-<Style id="13H">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<LineStyle>
-			<color>FAFAFAFAFAFAFAFA</color>
-			<width>1.2</width>
-		</LineStyle>
-		<PolyStyle>
-			<color>FAFAFAFAFAFAFAFA</color>
-		</PolyStyle>
-	</Style>
+	
+<!-- zona franca-port -->
+<StyleMap id="238">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#238N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#238H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="238N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF238</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF238</color>
+        </PolyStyle>
+    </Style>
+<Style id="238H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF238</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF238</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant gervasi-la bonanova -->
+<StyleMap id="239">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#239N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#239H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="239N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF239</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF239</color>
+        </PolyStyle>
+    </Style>
+<Style id="239H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF239</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF239</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant gervasi-galvany -->
+<StyleMap id="240">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#240N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#240H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="240N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF240</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF240</color>
+        </PolyStyle>
+    </Style>
+<Style id="240H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF240</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF240</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la barceloneta -->
+<StyleMap id="241">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#241N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#241H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="241N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF241</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF241</color>
+        </PolyStyle>
+    </Style>
+<Style id="241H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF241</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF241</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el gotic -->
+<StyleMap id="242">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#242N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#242H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="242N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF242</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF242</color>
+        </PolyStyle>
+    </Style>
+<Style id="242H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF242</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF242</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el raval -->
+<StyleMap id="243">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#243N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#243H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="243N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF243</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF243</color>
+        </PolyStyle>
+    </Style>
+<Style id="243H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF243</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF243</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant pere, santa caterina i la ribera -->
+<StyleMap id="244">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#244N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#244H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="244N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF244</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF244</color>
+        </PolyStyle>
+    </Style>
+<Style id="244H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF244</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF244</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- l'antiga esquerra de l'eixample -->
+<StyleMap id="245">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#245N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#245H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="245N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF245</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF245</color>
+        </PolyStyle>
+    </Style>
+<Style id="245H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF245</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF245</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la nova esquerra de l'eixample -->
+<StyleMap id="246">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#246N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#246H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="246N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF246</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF246</color>
+        </PolyStyle>
+    </Style>
+<Style id="246H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF246</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF246</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- dreta de l'eixample -->
+<StyleMap id="247">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#247N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#247H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="247N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF247</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF247</color>
+        </PolyStyle>
+    </Style>
+<Style id="247H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF247</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF247</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- fort pienc -->
+<StyleMap id="248">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#248N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#248H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="248N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF248</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF248</color>
+        </PolyStyle>
+    </Style>
+<Style id="248H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF248</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF248</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sagrada familia -->
+<StyleMap id="249">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#249N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#249H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="249N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF249</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF249</color>
+        </PolyStyle>
+    </Style>
+<Style id="249H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF249</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF249</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant antoni -->
+<StyleMap id="250">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#250N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#250H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="250N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF250</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF250</color>
+        </PolyStyle>
+    </Style>
+<Style id="250H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF250</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF250</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la bordeta -->
+<StyleMap id="251">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#251N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#251H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="251N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF251</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF251</color>
+        </PolyStyle>
+    </Style>
+<Style id="251H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF251</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF251</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la font de la guatlla -->
+<StyleMap id="252">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#252N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#252H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="252N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF252</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF252</color>
+        </PolyStyle>
+    </Style>
+<Style id="252H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF252</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF252</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- hostafrancs -->
+<StyleMap id="253">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#253N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#253H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="253N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF253</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF253</color>
+        </PolyStyle>
+    </Style>
+<Style id="253H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF253</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF253</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la marina de port -->
+<StyleMap id="254">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#254N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#254H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="254N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF254</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF254</color>
+        </PolyStyle>
+    </Style>
+<Style id="254H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF254</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF254</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la marina del prat vermell -->
+<StyleMap id="255">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#255N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#255H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="255N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF255</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF255</color>
+        </PolyStyle>
+    </Style>
+<Style id="255H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF255</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF255</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el poble-sec -->
+<StyleMap id="256">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#256N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#256H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="256N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF256</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF256</color>
+        </PolyStyle>
+    </Style>
+<Style id="256H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF256</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF256</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sants -->
+<StyleMap id="257">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#257N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#257H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="257N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF257</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF257</color>
+        </PolyStyle>
+    </Style>
+<Style id="257H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF257</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF257</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sants-badal -->
+<StyleMap id="258">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#258N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#258H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="258N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF258</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF258</color>
+        </PolyStyle>
+    </Style>
+<Style id="258H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF258</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF258</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- montjuic -->
+<StyleMap id="259">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#259N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#259H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="259N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF259</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF259</color>
+        </PolyStyle>
+    </Style>
+<Style id="259H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF259</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF259</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- les corts -->
+<StyleMap id="260">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#260N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#260H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="260N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF260</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF260</color>
+        </PolyStyle>
+    </Style>
+<Style id="260H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF260</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF260</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la maternitat i sant ramon -->
+<StyleMap id="261">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#261N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#261H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="261N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF261</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF261</color>
+        </PolyStyle>
+    </Style>
+<Style id="261H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF261</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF261</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- pedralbes -->
+<StyleMap id="262">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#262N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#262H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="262N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF262</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF262</color>
+        </PolyStyle>
+    </Style>
+<Style id="262H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF262</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF262</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el putget i farro -->
+<StyleMap id="263">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#263N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#263H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="263N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF263</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF263</color>
+        </PolyStyle>
+    </Style>
+<Style id="263H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF263</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF263</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sarria -->
+<StyleMap id="264">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#264N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#264H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="264N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF264</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF264</color>
+        </PolyStyle>
+    </Style>
+<Style id="264H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF264</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF264</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- les tres torres -->
+<StyleMap id="265">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#265N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#265H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="265N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF265</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF265</color>
+        </PolyStyle>
+    </Style>
+<Style id="265H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF265</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF265</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- vallvidrera, el tibidabo i les planes -->
+<StyleMap id="266">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#266N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#266H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="266N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF266</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF266</color>
+        </PolyStyle>
+    </Style>
+<Style id="266H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF266</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF266</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- gracia -->
+<StyleMap id="267">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#267N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#267H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="267N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF267</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF267</color>
+        </PolyStyle>
+    </Style>
+<Style id="267H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF267</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF267</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- camp d'en grassot i gracia nova -->
+<StyleMap id="268">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#268N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#268H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="268N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF268</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF268</color>
+        </PolyStyle>
+    </Style>
+<Style id="268H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF268</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF268</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la salut -->
+<StyleMap id="269">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#269N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#269H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="269N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF269</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF269</color>
+        </PolyStyle>
+    </Style>
+<Style id="269H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF269</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF269</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el coll -->
+<StyleMap id="270">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#270N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#270H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="270N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF270</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF270</color>
+        </PolyStyle>
+    </Style>
+<Style id="270H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF270</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF270</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- vallcarca i els penitents -->
+<StyleMap id="271">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#271N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#271H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="271N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF271</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF271</color>
+        </PolyStyle>
+    </Style>
+<Style id="271H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF271</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF271</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el baix guinardo -->
+<StyleMap id="272">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#272N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#272H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="272N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF272</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF272</color>
+        </PolyStyle>
+    </Style>
+<Style id="272H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF272</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF272</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el guinardo -->
+<StyleMap id="273">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#273N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#273H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="273N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF273</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF273</color>
+        </PolyStyle>
+    </Style>
+<Style id="273H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF273</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF273</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- can baro -->
+<StyleMap id="274">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#274N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#274H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="274N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF274</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF274</color>
+        </PolyStyle>
+    </Style>
+<Style id="274H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF274</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF274</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el carmel -->
+<StyleMap id="275">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#275N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#275H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="275N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF275</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF275</color>
+        </PolyStyle>
+    </Style>
+<Style id="275H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF275</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF275</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la font d'en fargues -->
+<StyleMap id="276">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#276N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#276H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="276N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF276</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF276</color>
+        </PolyStyle>
+    </Style>
+<Style id="276H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF276</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF276</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- horta -->
+<StyleMap id="277">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#277N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#277H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="277N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF277</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF277</color>
+        </PolyStyle>
+    </Style>
+<Style id="277H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF277</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF277</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la clota -->
+<StyleMap id="278">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#278N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#278H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="278N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF278</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF278</color>
+        </PolyStyle>
+    </Style>
+<Style id="278H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF278</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF278</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- montbau -->
+<StyleMap id="279">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#279N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#279H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="279N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF279</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF279</color>
+        </PolyStyle>
+    </Style>
+<Style id="279H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF279</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF279</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant genis dels agudells                      -->
+<StyleMap id="280">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#280N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#280H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="280N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF280</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF280</color>
+        </PolyStyle>
+    </Style>
+<Style id="280H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF280</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF280</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la teixonera                                  -->
+<StyleMap id="281">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#281N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#281H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="281N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF281</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF281</color>
+        </PolyStyle>
+    </Style>
+<Style id="281H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF281</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF281</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la vall d'hebron                              -->
+<StyleMap id="282">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#282N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#282H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="282N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF282</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF282</color>
+        </PolyStyle>
+    </Style>
+<Style id="282H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF282</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF282</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- can peguera                                   -->
+<StyleMap id="283">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#283N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#283H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="283N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF283</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF283</color>
+        </PolyStyle>
+    </Style>
+<Style id="283H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF283</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF283</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- canyelles                                     -->
+<StyleMap id="284">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#284N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#284H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="284N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF284</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF284</color>
+        </PolyStyle>
+    </Style>
+<Style id="284H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF284</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF284</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- ciutat meridiana                              -->
+<StyleMap id="285">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#285N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#285H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="285N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF285</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF285</color>
+        </PolyStyle>
+    </Style>
+<Style id="285H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF285</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF285</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la guineueta                                  -->
+<StyleMap id="286">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#286N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#286H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="286N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF286</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF286</color>
+        </PolyStyle>
+    </Style>
+<Style id="286H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF286</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF286</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- porta                                         -->
+<StyleMap id="287">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#287N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#287H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="287N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF287</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF287</color>
+        </PolyStyle>
+    </Style>
+<Style id="287H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF287</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF287</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- prosperitat                                   -->
+<StyleMap id="288">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#288N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#288H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="288N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF288</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF288</color>
+        </PolyStyle>
+    </Style>
+<Style id="288H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF288</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF288</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- roquetes                                      -->
+<StyleMap id="289">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#289N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#289H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="289N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF289</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF289</color>
+        </PolyStyle>
+    </Style>
+<Style id="289H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF289</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF289</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- torre baro                                    -->
+<StyleMap id="290">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#290N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#290H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="290N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF290</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF290</color>
+        </PolyStyle>
+    </Style>
+<Style id="290H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF290</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF290</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- trinitat nova                                 -->
+<StyleMap id="291">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#291N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#291H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="291N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF291</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF291</color>
+        </PolyStyle>
+    </Style>
+<Style id="291H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF291</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF291</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- turo de la peira                              -->
+<StyleMap id="292">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#292N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#292H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="292N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF292</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF292</color>
+        </PolyStyle>
+    </Style>
+<Style id="292H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF292</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF292</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- vallbona                                      -->
+<StyleMap id="293">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#293N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#293H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="293N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF293</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF293</color>
+        </PolyStyle>
+    </Style>
+<Style id="293H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF293</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF293</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- verdum                                        -->
+<StyleMap id="294">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#294N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#294H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="294N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF294</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF294</color>
+        </PolyStyle>
+    </Style>
+<Style id="294H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF294</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF294</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- vilapicina i torre llobeta                    -->
+<StyleMap id="295">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#295N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#295H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="295N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF295</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF295</color>
+        </PolyStyle>
+    </Style>
+<Style id="295H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF295</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF295</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- baro de viver                                 -->
+<StyleMap id="296">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#296N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#296H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="296N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF296</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF296</color>
+        </PolyStyle>
+    </Style>
+<Style id="296H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF296</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF296</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- bon pastor                                    -->
+<StyleMap id="297">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#297N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#297H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="297N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF297</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF297</color>
+        </PolyStyle>
+    </Style>
+<Style id="297H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF297</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF297</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el congres i els indians                      -->
+<StyleMap id="298">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#298N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#298H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="298N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF298</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF298</color>
+        </PolyStyle>
+    </Style>
+<Style id="298H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF298</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF298</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- navas                                         -->
+<StyleMap id="299">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#299N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#299H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="299N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF299</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF299</color>
+        </PolyStyle>
+    </Style>
+<Style id="299H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF299</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF299</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant andreu                                   -->
+<StyleMap id="300">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#300N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#300H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="300N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF300</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF300</color>
+        </PolyStyle>
+    </Style>
+<Style id="300H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF300</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF300</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la sagrera                                    -->
+<StyleMap id="301">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#301N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#301H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="301N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF301</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF301</color>
+        </PolyStyle>
+    </Style>
+<Style id="301H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF301</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF301</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- trinitat vella                                -->
+<StyleMap id="302">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#302N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#302H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="302N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF302</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF302</color>
+        </PolyStyle>
+    </Style>
+<Style id="302H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF302</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF302</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el besos i el maresme                         -->
+<StyleMap id="303">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#303N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#303H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="303N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF303</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF303</color>
+        </PolyStyle>
+    </Style>
+<Style id="303H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF303</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF303</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el clot                                       -->
+<StyleMap id="304">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#304N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#304H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="304N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF304</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF304</color>
+        </PolyStyle>
+    </Style>
+<Style id="304H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF304</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF304</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el camp de l'arpa del clot                    -->
+<StyleMap id="305">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#305N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#305H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="305N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF305</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF305</color>
+        </PolyStyle>
+    </Style>
+<Style id="305H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF305</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF305</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- diagonal mar i el front maritim del poblenou -->
+<StyleMap id="306">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#306N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#306H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="306N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF306</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF306</color>
+        </PolyStyle>
+    </Style>
+<Style id="306H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF306</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF306</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el parc i llacuna del poblenou -->
+<StyleMap id="307">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#307N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#307H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="307N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF307</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF307</color>
+        </PolyStyle>
+    </Style>
+<Style id="307H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF307</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF307</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- el poblenou -->
+<StyleMap id="308">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#308N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#308H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="308N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF308</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF308</color>
+        </PolyStyle>
+    </Style>
+<Style id="308H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF308</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF308</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- provencals del poblenou -->
+<StyleMap id="309">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#309N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#309H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="309N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF309</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF309</color>
+        </PolyStyle>
+    </Style>
+<Style id="309H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF309</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF309</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- sant marti de provencals -->
+<StyleMap id="310">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#310N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#310H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="310N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF310</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF310</color>
+        </PolyStyle>
+    </Style>
+<Style id="310H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF310</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF310</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la verneda i la pau -->
+<StyleMap id="311">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#311N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#311H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="311N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF311</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF311</color>
+        </PolyStyle>
+    </Style>
+<Style id="311H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF311</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF311</color>
+        </PolyStyle>
+    </Style>
+
+
+<!-- la vila olimpica del poblenou -->
+<StyleMap id="312">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#312N</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#312H</styleUrl>
+        </Pair>
+    </StyleMap>
+<Style id="312N">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF312</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF312</color>
+        </PolyStyle>
+    </Style>
+<Style id="312H">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>FAFAF312</color>
+            <width>1.2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>FAFAF312</color>
+        </PolyStyle>
+    </Style>
 	<Style id="sh_open-diamond250">
 		<IconStyle>
 			<scale>0.709091</scale>
