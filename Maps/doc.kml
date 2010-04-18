@@ -14658,7 +14658,7 @@
 				<name>el Raval</name>
 				<description><![CDATA[Limits for neighbourhood of el Raval.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,259065493_286491632_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin76</styleUrl>
+				<styleUrl>#243</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14673,7 +14673,7 @@
 				<name>Barri Gòtic</name>
 				<description><![CDATA[Limits for neighbourhood of Barri Gòtic.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,259065493_286492279_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin77</styleUrl>
+				<styleUrl>#242</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14688,7 +14688,7 @@
 				<name>Barceloneta</name>
 				<description><![CDATA[Limits for neighbourhood of Barceloneta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,259065493_286492731_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin115</styleUrl>
+				<styleUrl>#241</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14703,7 +14703,7 @@
 				<name>Sant Pere, Santa Caterina i la Ribera</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Pere, Santa Caterina i la Ribera.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,259065493_286492737_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin05</styleUrl>
+				<styleUrl>#244</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14793,7 +14793,7 @@
 				<name>Fort Pienc</name>
 				<description><![CDATA[Limits for neighbourhood of Fort Pienc.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775860_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin4</styleUrl>
+				<styleUrl>#248</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14808,7 +14808,7 @@
 				<name>Sagrada Familia</name>
 				<description><![CDATA[Limits for neighbourhood of Sagrada Familia.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775862_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin68</styleUrl>
+				<styleUrl>#249</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14823,7 +14823,7 @@
 				<name>Dreta de l&apos;Eixample</name>
 				<description><![CDATA[Limits for neighbourhood of Dreta de l'Eixample.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775864_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<styleUrl>#247</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14838,7 +14838,7 @@
 				<name>Antiga Esquerra de l&apos;Eixample</name>
 				<description><![CDATA[Limits for neighbourhood of Antiga Esquerra de l'Eixample.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775887_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin32</styleUrl>
+				<styleUrl>#245</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14853,7 +14853,7 @@
 				<name>Nova Esquerra de l&apos;Eixample</name>
 				<description><![CDATA[Limits for neighbourhood of Nova Esquerra de l'Eixample.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775889_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin611</styleUrl>
+				<styleUrl>#245</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14868,7 +14868,7 @@
 				<name>Sant Antoni</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Antoni.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290651641_290775891_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin16</styleUrl>
+				<styleUrl>#250</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -14991,7 +14991,7 @@
 				<name>Vallcarca i els Penitents</name>
 				<description><![CDATA[Limits for neighbourhood of Vallcarca i els Penitents.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652219_290855737_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin48</styleUrl>
+				<styleUrl>#271</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15006,7 +15006,7 @@
 				<name>el Coll</name>
 				<description><![CDATA[Limits for neighbourhood of el Coll.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652219_290855762_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin83</styleUrl>
+				<styleUrl>#271</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15021,7 +15021,7 @@
 				<name>la Salut</name>
 				<description><![CDATA[Limits for neighbourhood of la Salut.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652219_290855764_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin39</styleUrl>
+				<styleUrl>#271</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15036,7 +15036,7 @@
 				<name>la Vila de Gràcia</name>
 				<description><![CDATA[Limits for neighbourhood of la Vila de Gràcia.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652219_290855769_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin251</styleUrl>
+				<styleUrl>#267</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15051,7 +15051,7 @@
 				<name>el Camp d&apos;en Grassot i Gràcia Nova</name>
 				<description><![CDATA[Limits for neighbourhood of el Camp d'en Grassot i Gràcia Nova.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652219_290855787_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin26</styleUrl>
+				<styleUrl>#267</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15158,7 +15158,7 @@
 				<name>el Baix Guinardó</name>
 				<description><![CDATA[Limits for neighbourhood of el Baix Guinardó.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450874_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin5</styleUrl>
+				<styleUrl>#273</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15173,7 +15173,7 @@
 				<name>Can Baró</name>
 				<description><![CDATA[Limits for neighbourhood of Can Baró.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450876_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<styleUrl>#273</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15188,7 +15188,7 @@
 				<name>el Guinardó</name>
 				<description><![CDATA[Limits for neighbourhood of el Guinardó.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450878_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin7</styleUrl>
+				<styleUrl>#273</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15203,7 +15203,7 @@
 				<name>la Font d&apos;en Fargues</name>
 				<description><![CDATA[Limits for neighbourhood of la Font d'en Fargues.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450880_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin79</styleUrl>
+				<styleUrl>#277</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15218,7 +15218,7 @@
 				<name>el Carmel</name>
 				<description><![CDATA[Limits for neighbourhood of el Carmel.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450882_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin22</styleUrl>
+				<styleUrl>#277</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15233,7 +15233,7 @@
 				<name>la Teixonera</name>
 				<description><![CDATA[Limits for neighbourhood of la Teixonera.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450884_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin25</styleUrl>
+				<styleUrl>#282</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15248,7 +15248,7 @@
 				<name>el Sant Genís i els Agudells</name>
 				<description><![CDATA[Limits for neighbourhood of el Sant Genís i els Agudells.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450892_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin29</styleUrl>
+				<styleUrl>#282</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15263,7 +15263,7 @@
 				<name>Montbau</name>
 				<description><![CDATA[Limits for neighbourhood of Montbau.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450894_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin42</styleUrl>
+				<styleUrl>#282</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15278,7 +15278,7 @@
 				<name>la Vall d&apos;Hebron</name>
 				<description><![CDATA[Limits for neighbourhood of la Vall d'Hebron.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324450896_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin13</styleUrl>
+				<styleUrl>#282</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15293,7 +15293,7 @@
 				<name>la Clota</name>
 				<description><![CDATA[Limits for neighbourhood of la Clota.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324470863_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin3</styleUrl>
+				<styleUrl>#282</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15308,7 +15308,7 @@
 				<name>Horta</name>
 				<description><![CDATA[Limits for neighbourhood of Horta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321150885_324470865_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin35</styleUrl>
+				<styleUrl>#277</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15517,7 +15517,7 @@
 				<name>Les Corts</name>
 				<description><![CDATA[Limits for neighbourhood of Les Corts.
 <a href="http://w110.bcn.cat/portal/site/LesCorts/menuitem.f021004a4881d0b9e212e2126e424ea0/?vgnextoid=a13875730b014210VgnVCM100000e624e40aRCRD&vgnextchannel=a13875730b014210VgnVCM100000e624e40aRCRD&lang=ca_ES">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin50</styleUrl>
+				<styleUrl>#260</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15532,7 +15532,7 @@
 				<name>La Maternitat i Sant Ramón</name>
 				<description><![CDATA[Limits for neighbourhood of La Maternitat i Sant Ramón.
 <a href="http://w110.bcn.cat/portal/site/LesCorts/menuitem.f021004a4881d0b9e212e2126e424ea0/?vgnextoid=674875730b014210VgnVCM100000e624e40aRCRD&vgnextchannel=674875730b014210VgnVCM100000e624e40aRCRD&lang=ca_ES">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin70</styleUrl>
+				<styleUrl>#260</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15547,7 +15547,7 @@
 				<name>Pedralbes</name>
 				<description><![CDATA[Limits for neighbourhood of Pedralbes.
 <a href="http://w110.bcn.cat/portal/site/LesCorts/menuitem.f021004a4881d0b9e212e2126e424ea0/?vgnextoid=7d7875730b014210VgnVCM100000e624e40aRCRD&vgnextchannel=7d7875730b014210VgnVCM100000e624e40aRCRD&lang=ca_ES">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin119</styleUrl>
+				<styleUrl>#262</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -15619,7 +15619,7 @@
 				<name>Porta</name>
 				<description><![CDATA[Limits for neighbourhood of Porta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326412553_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin52</styleUrl>
+				<styleUrl>#295</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15634,7 +15634,7 @@
 				<name>Turó de la Peira</name>
 				<description><![CDATA[Limits for neighbourhood of Turó de la Peira.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326450799_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin420</styleUrl>
+				<styleUrl>#295</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15649,7 +15649,7 @@
 				<name>Can Peguera</name>
 				<description><![CDATA[Limits for neighbourhood of Can Peguera.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326454901_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin59</styleUrl>
+				<styleUrl>#295</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15664,7 +15664,7 @@
 				<name>la Guineueta</name>
 				<description><![CDATA[Limits for neighbourhood of la Guineueta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326486729_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin730</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15679,7 +15679,7 @@
 				<name>Canyelles</name>
 				<description><![CDATA[Limits for neighbourhood of Canyelles.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326488882_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin28</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15694,7 +15694,7 @@
 				<name>Roquetes</name>
 				<description><![CDATA[Limits for neighbourhood of Roquetes.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326489331_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin222</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15709,7 +15709,7 @@
 				<name>Verdum</name>
 				<description><![CDATA[Limits for neighbourhood of Verdum.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326489333_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin82</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15724,7 +15724,7 @@
 				<name>Prosperitat</name>
 				<description><![CDATA[Limits for neighbourhood of Prosperitat.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326490842_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin45</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15739,7 +15739,7 @@
 				<name>Trinitat Nova</name>
 				<description><![CDATA[Limits for neighbourhood of Trinitat Nova.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_326501016_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin115</styleUrl>
+				<styleUrl>#289</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15754,7 +15754,7 @@
 				<name>Torre Baró</name>
 				<description><![CDATA[Limits for neighbourhood of Torre Baró.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_328870892_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin350</styleUrl>
+				<styleUrl>#285</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15769,7 +15769,7 @@
 				<name>Ciutat Meridiana</name>
 				<description><![CDATA[Limits for neighbourhood of Ciutat Meridiana.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_328870894_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<styleUrl>#285</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15784,7 +15784,7 @@
 				<name>Vallbona</name>
 				<description><![CDATA[Limits for neighbourhood of Vallbona.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_328870896_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin120</styleUrl>
+				<styleUrl>#285</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -15799,7 +15799,7 @@
 				<name>Vilapicina i Torre Llobeta</name>
 				<description><![CDATA[Limits for neighbourhood of Vilapicina i Torre Llobeta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,321153868_328872128_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin67</styleUrl>
+				<styleUrl>#295</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -16042,7 +16042,7 @@
 				<name>la Trinitat Vella</name>
 				<description><![CDATA[Limits for neighbourhood of la Trinitat Vella.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425778907_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin46</styleUrl>
+				<styleUrl>#302</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16057,7 +16057,7 @@
 				<name>Baró de Viver</name>
 				<description><![CDATA[Limits for neighbourhood of Baro de Viver.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425778914_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<styleUrl>#297</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16072,7 +16072,7 @@
 				<name>Bon Pastor</name>
 				<description><![CDATA[Limits for neighbourhood of Bon Pastor.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425778916_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin29</styleUrl>
+				<styleUrl>#297</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16087,7 +16087,7 @@
 				<name>la Sagrera</name>
 				<description><![CDATA[Limits for neighbourhood of la Sagrera.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425778918_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin12</styleUrl>
+				<styleUrl>#301</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16102,7 +16102,7 @@
 				<name>Navas</name>
 				<description><![CDATA[Limits for neighbourhood of Navas.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425778995_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin20</styleUrl>
+				<styleUrl>#301</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16117,7 +16117,7 @@
 				<name>el Congrés i els Indians</name>
 				<description><![CDATA[Limits for neighbourhood of el Congrés i els Indians.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425780328_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin321</styleUrl>
+				<styleUrl>#298</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16132,7 +16132,7 @@
 				<name>Sant Andreu</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Andreu.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370099034_425780334_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin192</styleUrl>
+				<styleUrl>#300</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16273,7 +16273,7 @@
 				<name>Camp de l&apos;Arpa del Clot</name>
 				<description><![CDATA[Limits for neighbourhood of Camp de l'Arpa del Clot.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913830_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin36</styleUrl>
+				<styleUrl>#304</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16288,7 +16288,7 @@
 				<name>Clot</name>
 				<description><![CDATA[Limits for neighbourhood of Clot.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913832_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin2</styleUrl>
+				<styleUrl>#304</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16303,7 +16303,7 @@
 				<name>Parc i la Llacuna del Poblenou</name>
 				<description><![CDATA[Limits for neighbourhood of Parc i la Llacuna del Poblenou.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913834_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin6</styleUrl>
+				<styleUrl>#312</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16318,7 +16318,7 @@
 				<name>Vila Olímpica del Poblenou</name>
 				<description><![CDATA[Limits for neighbourhood of Vila Olímpica del Poblenou.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913836_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<styleUrl>#312</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16333,7 +16333,7 @@
 				<name>Diagonal Mar i el Front Marítim del Poblenou</name>
 				<description><![CDATA[Limits for neighbourhood of Diagonal Mar i el Front Marítim del Poblenou.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913840_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin6</styleUrl>
+				<styleUrl>#308</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16348,7 +16348,7 @@
 				<name>Besòs i el Maresme</name>
 				<description><![CDATA[Limits for neighbourhood of Besòs i el Maresme.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913842_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin47</styleUrl>
+				<styleUrl>#303</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16363,7 +16363,7 @@
 				<name>Poblenou</name>
 				<description><![CDATA[Limits for neighbourhood of Poblenou.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913838_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin9</styleUrl>
+				<styleUrl>#308</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16378,7 +16378,7 @@
 				<name>Provençals del Poblenou</name>
 				<description><![CDATA[Limits for neighbourhood of Provençals del Poblenou.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913844_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin19</styleUrl>
+				<styleUrl>#308</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16393,7 +16393,7 @@
 				<name>Sant Martí de Provençals</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Martí de Provençals.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913846_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin15</styleUrl>
+				<styleUrl>#311</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16408,7 +16408,7 @@
 				<name>Verneda i la Pau</name>
 				<description><![CDATA[Limits for neighbourhood of Verneda i la Pau.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,370084977_425913848_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<styleUrl>#311</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16599,7 +16599,7 @@
 				<name>Poble Sec</name>
 				<description><![CDATA[Limits for neighbourhood of Poble Sec.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652237_1,00.html>Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin24</styleUrl>
+				<styleUrl>#256</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16614,7 +16614,7 @@
 				<name>Marina de Port</name>
 				<description><![CDATA[Limits for neighbourhood of Marina de Port.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652249_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin21</styleUrl>
+				<styleUrl>#238</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16629,7 +16629,7 @@
 				<name>Marina del Prat Vermell</name>
 				<description><![CDATA[Limits for neighbourhood of Marina del Prat Vermell.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652247_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin17</styleUrl>
+				<styleUrl>#238</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16644,7 +16644,7 @@
 				<name>Font de la Guatlla</name>
 				<description><![CDATA[Limits for neighbourhood of Font de la Guatlla.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652251_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<styleUrl>#252</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16659,7 +16659,7 @@
 				<name>Sants</name>
 				<description><![CDATA[Limits for neighbourhood of Sants.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652259_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin17</styleUrl>
+				<styleUrl>#257</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16674,7 +16674,7 @@
 				<name>Sants-Badal</name>
 				<description><![CDATA[Limits for neighbourhood of Sants-Badal.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652257_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin110</styleUrl>
+				<styleUrl>#257</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16689,7 +16689,7 @@
 				<name>Hostafrancs</name>
 				<description><![CDATA[Limits for neighbourhood of Hostafrancs.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652253_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin56</styleUrl>
+				<styleUrl>#253</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16704,7 +16704,7 @@
 				<name>Bordeta</name>
 				<description><![CDATA[Limits for neighbourhood of Bordeta.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652255_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin70</styleUrl>
+				<styleUrl>#253</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16719,7 +16719,7 @@
 				<name>Parc de Montjuïc</name>
 				<description><![CDATA[Limits for neighbourhood of Parc de Montjuïc.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652261_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin471</styleUrl>
+				<styleUrl>#259</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16734,7 +16734,7 @@
 				<name>Zona Franca - Port</name>
 				<description><![CDATA[Limits for neighbourhood of Zona Franca-Port.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652263_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin34</styleUrl>
+				<styleUrl>#238</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16926,7 +16926,7 @@
 				<name>Vallvidrera, el Tibidabo i les Planes</name>
 				<description><![CDATA[Limits for neighbourhood of Vallvidrera, el Tibidabo i les Planes.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430451742_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin125</styleUrl>
+				<styleUrl>#266</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -16941,7 +16941,7 @@
 				<name>Sarrià</name>
 				<description><![CDATA[Limits for neighbourhood of Sarrià.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430451793_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin81</styleUrl>
+				<styleUrl>#264</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -16956,7 +16956,7 @@
 				<name>les Tres Torres</name>
 				<description><![CDATA[Limits for neighbourhood of les Tres Torres.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430453634_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin22</styleUrl>
+				<styleUrl>#264</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -16971,7 +16971,7 @@
 				<name>Sant Gervasi - la Bonanova</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Gervasi-La Bonanova.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430453674_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin41</styleUrl>
+				<styleUrl>#239</styleUrl>
 				<Polygon>
 					<outerBoundaryIs>
 						<LinearRing>
@@ -16986,7 +16986,7 @@
 				<name>Sant Gervasi - Galvany</name>
 				<description><![CDATA[Limits for neighbourhood of Sant Gervasi-Galvany.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430453693_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin48</styleUrl>
+				<styleUrl>#239</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
@@ -17001,7 +17001,7 @@
 				<name>el Putxet i el Farró</name>
 				<description><![CDATA[Limits for neighbourhood of el Putxet i el Farró.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,429320918_430453695_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#sn_ylw-pushpin451</styleUrl>
+				<styleUrl>#239</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
