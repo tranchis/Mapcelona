@@ -331,15 +331,6 @@
     
 
 
-    <!-- http://www.mapcelona.org/demo.owl#Populaci&#243;Surface -->
-
-    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationSurface">
-        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
-        <hasMapping>Superf&#237;cie (ha)</hasMapping>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.mapcelona.org/demo.owl#PopulationAllExpectedLivingYears -->
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationAllExpectedLivingYears">
@@ -642,6 +633,15 @@
     
 
 
+    <!-- http://www.mapcelona.org/demo.owl#PopulationSurface -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationSurface">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Superf&#237;cie (ha)</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.mapcelona.org/demo.owl#PopulationUsedHouseEstimatedPrize -->
 
     <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#PopulationUsedHouseEstimatedPrize">
@@ -658,6 +658,366 @@
         <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
         <isPositive rdf:datatype="&xsd;boolean">true</isPositive>
         <hasMapping>dones</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionAssistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionAssistence">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Actuacions d&#39;assist&#232;ncia</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionCrimesAdministrativeFaults -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionCrimesAdministrativeFaults">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Faltes Administratives</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionCrimesJuridicOrdres -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionCrimesJuridicOrdres">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Ordres judicials</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionCrimesOffense -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionCrimesOffense">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Delictes</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionCrimesOther -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionCrimesOther">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Altres</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionCrimesPenalFaults -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionCrimesPenalFaults">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Faltes penals</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionDrivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionDrivers">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>A conductors</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionOther -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionOther">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Altres serveis d&#39;ajuda</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionTransfer">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Trasllats de persones (2)</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityActionUnderAge -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityActionUnderAge">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Relacionades amb menors</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityAlcoholTests -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityAlcoholTests">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>To be done by hand</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenBench -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenBench">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <isPositive>Bancs p&#250;blics</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenElectricWires -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenElectricWires">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Cables el&#232;ctrics</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenFences -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenFences">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Tanques</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenFountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenFountain">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Fonts</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenGardens -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenGardens">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Jardineres</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenLight -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenLight">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Fanals Enllumenat</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenOther -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenOther">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Altres Elements</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenPedestrianLane -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenPedestrianLane">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Vorades</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenPlayGround -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenPlayGround">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Instal&#183;lacions jocs infantils</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenRegisterBox -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenRegisterBox">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <isPositive>Caixetins de registre</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenSewerCover -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenSewerCover">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Embornals</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenStreetSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenStreetSign">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Plaques r&#232;tols carrers</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenTrafficElements -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenTrafficElements">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>To be done by hand</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenTrafficLane -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenTrafficLane">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Clots a la calcada</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenTrashCan -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenTrashCan">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Papereres</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityBrokenTrees -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityBrokenTrees">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>Arbres</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityCrimeReporting -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityCrimeReporting">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>To be done by hand</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityFireFighterIntervention -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityFireFighterIntervention">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>To be done by hand</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityLevelScore -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityLevelScore">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>true</isPositive>
+        <barcelona:hasName>To be done by hand</barcelona:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecuritySanctionActivity -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecuritySanctionActivity">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>estab. de concurr&#232;ncia p&#250;blica</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecuritySanctionCoexistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecuritySanctionCoexistence">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>ciutadana</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecuritySanctionPublicSpaceUssage -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecuritySanctionPublicSpaceUssage">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>espais p&#250;blics</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecuritySanctionUrbanEnvironment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecuritySanctionUrbanEnvironment">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <isPositive>false</isPositive>
+        <hasMapping>ambient urb&#224;</hasMapping>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityTrafficSanctions -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityTrafficSanctions">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>to be done by hand</hasMapping>
+        <isPositive>false</isPositive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mapcelona.org/demo.owl#SecurityWaterLeak -->
+
+    <owl:NamedIndividual rdf:about="http://www.mapcelona.org/demo.owl#SecurityWaterLeak">
+        <rdf:type rdf:resource="http://www.mapcelona.org/demo.owl#DataClass"/>
+        <hasMapping>Fuites d&#39;aigua</hasMapping>
+        <isPositive>false</isPositive>
     </owl:NamedIndividual>
     
 
@@ -800,5 +1160,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.0.0.1413) http://owlapi.sourceforge.net -->
 

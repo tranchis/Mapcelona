@@ -23,5 +23,6 @@
 	<classpathentry kind="lib" path="lib/wstx-asl-3.2.9.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl-2.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/jericho-html-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-3.0.17-ga-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
