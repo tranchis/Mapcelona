@@ -1,0 +1,4071 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    
+    .writely-callout-data {
+      display: inline-block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin-left: -1px;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Verdana;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Verdana;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>Ontologia del domini</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+<h1>
+  Una Altra Cosa
+</h1>
+<h2>
+  Lista de fuentes utilizadas en la implementación final
+</h2>
+<ul>
+  <li>
+    Distritos y barrios de Barcelona:
+  </li>
+  <ul>
+    <li>
+      http://ca.wikipedia.org/wiki/Districtes_i_barris_de_Barcelona
+    </li>
+    <li>
+      <br>
+    </li>
+  </ul>
+</ul>
+<h2 style=TEXT-ALIGN:left>
+  Parámetros disponibles + URL + Forma de acceder a los datos (por orden)
+</h2>
+<ul>
+  <li>
+    Ruido
+  </li>
+  <ul>
+    <li>
+      <a href=http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf id=k-a- title=http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf>http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf</a>
+    </li>
+    <li>
+      Hay que hacerlo a mano
+    </li>
+  </ul>
+  <li>
+    Qualitat de l'aire
+  </li>
+  <ul>
+    <li>
+      <a href=http://mediambient.gencat.cat/cat/el_medi/atmosfera/pla_millora_qualitat_aire/doc/informe_seguiment1.pdf id=r7vu style=COLOR:#551a8b title=http://mediambient.gencat.cat/cat/el_medi/atmosfera/pla_millora_qualitat_aire/doc/informe_seguiment1.pdf>http://mediambient.gencat.cat/cat/el_medi/atmosfera/pla_millora_qualitat_aire/doc/informe_seguiment1.pdf</a>
+    </li>
+    <li>
+      Hay que hacerlo a mano
+    </li>
+  </ul>
+</ul>
+<br>
+<ul style=BACKGROUND-COLOR:#ffe599>
+  <li>
+    ATENCIÓN: http://www.bcn.es/estadistica/castella/dades/anuari/cap01/index.htm En esta dirección hay más datos sobre medio ambiente (nivel de ozono, CO2,...) en HTML. Son precisos a nivel de distrito en el 2008 únicamente (no hay más luego). Puede ser interesante hasta cierto puntoEn esa misma página hay datos sobre tamaño de parques, cantidad de árboles, etc..., es decir, vegetación. Aunque sea de 2008, creo que es relevante (los parques no creo que hayan incrementado o decrementado su tamaño demasiado en dos años).
+  </li>
+</ul>
+<br style=BACKGROUND-COLOR:#ffe599>
+<ul style=BACKGROUND-COLOR:#ffe599>
+  <li>
+    ATENCIÓn 2!!!: Aquí hay muchos datos por distrito de la evolución sanitaria: http://www.aspb.es/quefem/documents_salut_districtes.htm (epidemias, drogas, etc...)
+  </li>
+</ul>
+<br>
+<br>
+<ul>
+  <li>
+    SIMA
+  </li>
+  <ul>
+    <li>
+      dfasdf
+    </li>
+  </ul>
+  <li>
+    Ajuntament de Barcelona:<a href=http://www.bcn.es/estadistica/catala/dades/index.htm#tema id=xnqn title=http://www.bcn.es/estadistica/catala/dades/index.htm#tema>http://www.bcn.es/estadistica/catala/dades/index.htm#tema</a>
+  </li>
+  <li>
+    http://www.bcn.es/estadistica/catala/pub/index1.htm (aquí están todos los PDFs)<br>
+  </li>
+  <ul>
+    <li>
+      Estadísticas varias por distrito y barrio: demográficas, culturales, inmigración, trabajo, tipos de vivienda... (para dar cuerpo al conjunto de datos); en PDF con formato similar<br>
+    </li>
+    <li>
+      Con PDFBox he conseguido sacar el texto plano del PDF. Hay muchos datos, pero podemos limitarnos, para empezar, a parsear los datos de la sección 0: RESUM D’INDICADORS, GRÀFICS I NOTES al comienzo de cada PDF justo después del índice. Lo bueno es que esta estructura es siempre la misma, para cada PDF de distrito!!!
+    </li>
+    <li>
+      Ejemplo de estructura (del .txt ya parseado):
+    </li>
+    <ul>
+      <li>
+        ...
+      </li>
+      <li>
+        0. RESUM D’INDICADORS, GRÀFICS I NOTES &lt;-- ultima línea del índice
+      </li>
+      <li>
+        RESUM D’INDICADORS, GRÀFICS I NOTES &lt;-- primera línea del resumen
+      </li>
+      <li>
+        13 &lt;-- creo que es el número de la página del PDF
+      </li>
+      <li>
+        Ciutat Vella &lt;-- distrito
+      </li>
+      <li>
+        Indicadors &lt;-- nombre de la tabla
+      </li>
+      <li>
+        Any BARCELONA 1. CIUTAT VELLA &lt;-- primeras tres columnas
+      </li>
+      <li>
+        ZEG 1 &lt;-- zona
+      </li>
+      <li>
+        Barceloneta &lt;-- barrio?
+      </li>
+      <li>
+        ZEG 2&nbsp;
+      </li>
+      <li>
+        Parc
+      </li>
+      <li>
+        ZEG 3&nbsp;
+      </li>
+      <li>
+        Gòtic
+      </li>
+      <li>
+        ZEG 4&nbsp;
+      </li>
+      <li>
+        Raval
+      </li>
+      <li>
+        Superfície (ha) 2004 10.096,0 449,4 146,3 111,7 82,5 108,9 &lt;-- dato en crudo, se puede parsear de último a primero ya que generalmente el título tiene más de una palabra
+      </li>
+      <li>
+        % verd urbà 2004 10,3 6,0 - - - -
+      </li>
+      <li>
+        % arbres al carrer 2004 100,0 4,4 - - - -
+      </li>
+      <li>
+        Població 2004 1.578.546 107.605 15.512 22.170 24.940 44.983
+      </li>
+      <li>
+        Població 2001 1.503.884 85.177 14.252 19.444 15.199 36.282
+      </li>
+      <li>
+        ...
+      </li>
+      <li>
+        <br>
+      </li>
+      <li>
+        % turismes de menys 2 anys 2004 13,9 21,1 10,5 12,2 27,6 40,8 29,5 12,6 &lt;-- último dato en crudo
+      </li>
+      <li>
+        RESUM D’INDICADORS, GRÀFICS I NOTES &lt;-- última línea del resumen
+      </li>
+      <li>
+        ...
+      </li>
+    </ul>
+  </ul>
+  <li>
+    Mapa de mercats municipals de Barcelona:<a href=http://www.mercatsbcn.com/mercats/index.php?fuseaction=main id=rhic title=http://www.mercatsbcn.com/mercats/index.php?fuseaction=main>http://www.mercatsbcn.com/mercats/index.php?fuseaction=main</a><br>
+  </li>
+</ul>
+<br>
+<br>
+<div>
+  Otros
+</div>
+<ul>
+  <li>
+    <a href=http://www.gencat.es:8000/oicqa/owa/b01.consulta?estacio=00&amp;contaminant=99&amp;dades=1 style=COLOR:#551a8b>en temps real</a>&nbsp;(viene de&nbsp;<a href=http://www.ub.edu/ossma/info/index.htm id=b6lo style=COLOR:#551a8b title=http://www.ub.edu/ossma/info/index.htm>http://www.ub.edu/ossma/info/index.htm</a>)
+  </li>
+</ul>
+<br>
+<h2>
+  Ontologia del dominio
+</h2>
+Cosas a tener en cuenta:<br>
+<br>
+<ul>
+  <li>
+    Algunos datos son de barrio, otros datos son de distrito y otros de toda la ciudad y otros de puntos concretos de la ciudad
+  </li>
+  <li>
+    Año de publicación de los datos
+  </li>
+</ul>
+<br>
+<br>
+<h2>
+  Otros
+</h2>
+<ul>
+  <li>
+    <font style=BACKGROUND-COLOR:#93c47d>Falta hacer la inscripción - coño, esto hay que hacerlo ya!</font><br>
+  </li>
+  <li style=BACKGROUND-COLOR:#93c47d>
+    Pensar en un nombre para la app
+  </li>
+  <li>
+    Por si sirve de inspiración, el primer mashup con GMaps (imagino que lo habrán ido mejorando con los años, hoy hace justo 5 años): http://www.housingmaps.com/
+  </li>
+</ul>
+<br>
+<br>
+<h2>
+  Datos sobre el ruido
+</h2>
+<a href=http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf id=t45l title=http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf>http://www.elpais.com/elpaismedia/ultimahora/media/200811/30/espana/20081130elpepunac_3_Pes_PDF.pdf</a><br>
+<br>
+A partir de la página 41 empiezan a mostrar los resultados.<br>
+<br>
+<br>
+Longitud exposada per cada districte en horari diürn (esto significa que porcentaje de las calles de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 7h a 21h. Vamos, la media porcentual de ruido en ese distrito por las mañanas.<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=kos4 style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      2,6%<br>
+    </td>
+    <td width=10%>
+      21,4%<br>
+    </td>
+    <td width=10%>
+      40,8%<br>
+    </td>
+    <td width=10%>
+      24,8%<br>
+    </td>
+    <td width=10%>
+      7,7%<br>
+    </td>
+    <td width=10%>
+      2,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      1,9%<br>
+    </td>
+    <td width=10%>
+      7,2%<br>
+    </td>
+    <td width=10%>
+      34,2%<br>
+    </td>
+    <td width=10%>
+      53,6%<br>
+    </td>
+    <td width=10%>
+      2,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      1,1%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      13,6%<br>
+    </td>
+    <td width=10%>
+      30,9%<br>
+    </td>
+    <td width=10%>
+      33,5%<br>
+    </td>
+    <td width=10%>
+      17,3%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      2,7%<br>
+    </td>
+    <td width=10%>
+      2,5%<br>
+    </td>
+    <td width=10%>
+      3,7%<br>
+    </td>
+    <td width=10%>
+      11,2%<br>
+    </td>
+    <td width=10%>
+      29,5%<br>
+    </td>
+    <td width=10%>
+      33,5%<br>
+    </td>
+    <td width=10%>
+      16,6%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      9,7%<br>
+    </td>
+    <td width=10%>
+      7,0%<br>
+    </td>
+    <td width=10%>
+      11,4%<br>
+    </td>
+    <td width=10%>
+      7,6%<br>
+    </td>
+    <td width=10%>
+      25,4%<br>
+    </td>
+    <td width=10%>
+      21,2%<br>
+    </td>
+    <td width=10%>
+      16,7%<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      7,7%<br>
+    </td>
+    <td width=10%>
+      22,2%<br>
+    </td>
+    <td width=10%>
+      27,9%<br>
+    </td>
+    <td width=10%>
+      25,5%<br>
+    </td>
+    <td width=10%>
+      13,5%<br>
+    </td>
+    <td width=10%>
+      1,7%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      3,3%<br>
+    </td>
+    <td width=10%>
+      7,2%<br>
+    </td>
+    <td width=10%>
+      24,3%<br>
+    </td>
+    <td width=10%>
+      28,8%<br>
+    </td>
+    <td width=10%>
+      17,6%<br>
+    </td>
+    <td width=10%>
+      18,5%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      5,2%<br>
+    </td>
+    <td width=10%>
+      9,0%<br>
+    </td>
+    <td width=10%>
+      23,0%<br>
+    </td>
+    <td width=10%>
+      36,7%<br>
+    </td>
+    <td width=10%>
+      14,0%<br>
+    </td>
+    <td width=10%>
+      8,5%<br>
+    </td>
+    <td width=10%>
+      2,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      1,1%<br>
+    </td>
+    <td width=10%>
+      3,9%<br>
+    </td>
+    <td width=10%>
+      24,0%<br>
+    </td>
+    <td width=10%>
+      27,8%<br>
+    </td>
+    <td width=10%>
+      25,4%<br>
+    </td>
+    <td width=10%>
+      13,8%<br>
+    </td>
+    <td width=10%>
+      4,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      1,2%<br>
+    </td>
+    <td width=10%>
+      3,3%<br>
+    </td>
+    <td width=10%>
+      15,3%<br>
+    </td>
+    <td width=10%>
+      30,8%<br>
+    </td>
+    <td width=10%>
+      36,4%<br>
+    </td>
+    <td width=10%>
+      12,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Longitud exposada per cada districte en horari de vespre (esto significa que porcentaje de las calles de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 21h a 23h. Vamos, la media porcentual de ruido en ese distrito por los atardeceres.<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=h_cz style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      2,6%<br>
+    </td>
+    <td width=10%>
+      21,4%<br>
+    </td>
+    <td width=10%>
+      40,8%<br>
+    </td>
+    <td width=10%>
+      24,8%<br>
+    </td>
+    <td width=10%>
+      7,7%<br>
+    </td>
+    <td width=10%>
+      2,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,8%<br>
+    </td>
+    <td width=10%>
+      2,7%<br>
+    </td>
+    <td width=10%>
+      17,5%<br>
+    </td>
+    <td width=10%>
+      55,7%<br>
+    </td>
+    <td width=10%>
+      23,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      1,9%<br>
+    </td>
+    <td width=10%>
+      6,5%<br>
+    </td>
+    <td width=10%>
+      22,9%<br>
+    </td>
+    <td width=10%>
+      30,5%<br>
+    </td>
+    <td width=10%>
+      30,4%<br>
+    </td>
+    <td width=10%>
+      6,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      4,4%<br>
+    </td>
+    <td width=10%>
+      3,0%<br>
+    </td>
+    <td width=10%>
+      6,2%<br>
+    </td>
+    <td width=10%>
+      19,9%<br>
+    </td>
+    <td width=10%>
+      36,8%<br>
+    </td>
+    <td width=10%>
+      24,7%<br>
+    </td>
+    <td width=10%>
+      5,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      14,1%<br>
+    </td>
+    <td width=10%>
+      6,3%<br>
+    </td>
+    <td width=10%>
+      12,4%<br>
+    </td>
+    <td width=10%>
+      16,2%<br>
+    </td>
+    <td width=10%>
+      25,0%<br>
+    </td>
+    <td width=10%>
+      21,0%<br>
+    </td>
+    <td width=10%>
+      5,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      7,8%<br>
+    </td>
+    <td width=10%>
+      22,1%<br>
+    </td>
+    <td width=10%>
+      30,0%<br>
+    </td>
+    <td width=10%>
+      27,7%<br>
+    </td>
+    <td width=10%>
+      10,4%<br>
+    </td>
+    <td width=10%>
+      0,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      7,3%<br>
+    </td>
+    <td width=10%>
+      22,0%<br>
+    </td>
+    <td width=10%>
+      29,5%<br>
+    </td>
+    <td width=10%>
+      21,0%<br>
+    </td>
+    <td width=10%>
+      12,6%<br>
+    </td>
+    <td width=10%>
+      4,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      5,2%<br>
+    </td>
+    <td width=10%>
+      9,0%<br>
+    </td>
+    <td width=10%>
+      23,5%<br>
+    </td>
+    <td width=10%>
+      37,1%<br>
+    </td>
+    <td width=10%>
+      13,2%<br>
+    </td>
+    <td width=10%>
+      8,2%<br>
+    </td>
+    <td width=10%>
+      2,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      3,6%<br>
+    </td>
+    <td width=10%>
+      24,7%<br>
+    </td>
+    <td width=10%>
+      31,0%<br>
+    </td>
+    <td width=10%>
+      23,2%<br>
+    </td>
+    <td width=10%>
+      12,0%<br>
+    </td>
+    <td width=10%>
+      4,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      0,5%<br>
+    </td>
+    <td width=10%>
+      2,6%<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      24,4%<br>
+    </td>
+    <td width=10%>
+      38,6%<br>
+    </td>
+    <td width=10%>
+      21,8%<br>
+    </td>
+    <td width=10%>
+      3,9%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+Longitud exposada per cada districte en horari de nit (esto significa que porcentaje de las calles de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 23h a 7h. Vamos, la media porcentual de ruido en ese distrito por las noches.<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=iw_c style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      9,4%<br>
+    </td>
+    <td width=10%>
+      28,3%<br>
+    </td>
+    <td width=10%>
+      25,7%<br>
+    </td>
+    <td width=10%>
+      23,2%<br>
+    </td>
+    <td width=10%>
+      9,8%<br>
+    </td>
+    <td width=10%>
+      2,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      1,2%<br>
+    </td>
+    <td width=10%>
+      2,9%<br>
+    </td>
+    <td width=10%>
+      22,3%<br>
+    </td>
+    <td width=10%>
+      51,6%<br>
+    </td>
+    <td width=10%>
+      21,6%<br>
+    </td>
+    <td width=10%>
+      0,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      2,6%<br>
+    </td>
+    <td width=10%>
+      9,3%<br>
+    </td>
+    <td width=10%>
+      23,1%<br>
+    </td>
+    <td width=10%>
+      29,9%<br>
+    </td>
+    <td width=10%>
+      27,3%<br>
+    </td>
+    <td width=10%>
+      6,0%<br>
+    </td>
+    <td width=10%>
+      1,9%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      8,5%<br>
+    </td>
+    <td width=10%>
+      9,1%<br>
+    </td>
+    <td width=10%>
+      19,8%<br>
+    </td>
+    <td width=10%>
+      35,8%<br>
+    </td>
+    <td width=10%>
+      22,5%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      24,4%<br>
+    </td>
+    <td width=10%>
+      10,0%<br>
+    </td>
+    <td width=10%>
+      20,4%<br>
+    </td>
+    <td width=10%>
+      22,8%<br>
+    </td>
+    <td width=10%>
+      17,6%<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      8,4%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      24,9%<br>
+    </td>
+    <td width=10%>
+      26,8%<br>
+    </td>
+    <td width=10%>
+      10,5%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      17,5%<br>
+    </td>
+    <td width=10%>
+      17,2%<br>
+    </td>
+    <td width=10%>
+      23,9%<br>
+    </td>
+    <td width=10%>
+      21,6%<br>
+    </td>
+    <td width=10%>
+      14,8%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      15,6%<br>
+    </td>
+    <td width=10%>
+      5,4%<br>
+    </td>
+    <td width=10%>
+      32,9%<br>
+    </td>
+    <td width=10%>
+      23,1%<br>
+    </td>
+    <td width=10%>
+      13,4%<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      10,6%<br>
+    </td>
+    <td width=10%>
+      26,0%<br>
+    </td>
+    <td width=10%>
+      18,9%<br>
+    </td>
+    <td width=10%>
+      24,8%<br>
+    </td>
+    <td width=10%>
+      12,1%<br>
+    </td>
+    <td width=10%>
+      2,9%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      3,3%<br>
+    </td>
+    <td width=10%>
+      10,2%<br>
+    </td>
+    <td width=10%>
+      24,7%<br>
+    </td>
+    <td width=10%>
+      40,8%<br>
+    </td>
+    <td width=10%>
+      17,2%<br>
+    </td>
+    <td width=10%>
+      3,6%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Longitud exposada per cada districte en DEN (Day-Evening-Night) (esto significa que porcentaje de las calles de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 24 horas. Vamos, la media porcentual de ruido en ese distrito a lo largo del día.<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=fe10 style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      13,0%<br>
+    </td>
+    <td width=10%>
+      33,5%<br>
+    </td>
+    <td width=10%>
+      31,5%<br>
+    </td>
+    <td width=10%>
+      14,9%<br>
+    </td>
+    <td width=10%>
+      5,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      1,3%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      27,6%<br>
+    </td>
+    <td width=10%>
+      56,7%<br>
+    </td>
+    <td width=10%>
+      10,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      0,5%<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      2,0%<br>
+    </td>
+    <td width=10%>
+      10,4%<br>
+    </td>
+    <td width=10%>
+      27,1%<br>
+    </td>
+    <td width=10%>
+      32,2%<br>
+    </td>
+    <td width=10%>
+      24,3%<br>
+    </td>
+    <td width=10%>
+      2,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      8,9%<br>
+    </td>
+    <td width=10%>
+      2,0%<br>
+    </td>
+    <td width=10%>
+      4,1%<br>
+    </td>
+    <td width=10%>
+      9,6%<br>
+    </td>
+    <td width=10%>
+      25,1%<br>
+    </td>
+    <td width=10%>
+      35,0%<br>
+    </td>
+    <td width=10%>
+      20,5%<br>
+    </td>
+    <td width=10%>
+      1,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      7,2%<br>
+    </td>
+    <td width=10%>
+      9,9%<br>
+    </td>
+    <td width=10%>
+      8,6%<br>
+    </td>
+    <td width=10%>
+      22,8%<br>
+    </td>
+    <td width=10%>
+      22,7%<br>
+    </td>
+    <td width=10%>
+      16,9%<br>
+    </td>
+    <td width=10%>
+      3,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      5,8%<br>
+    </td>
+    <td width=10%>
+      13,4%<br>
+    </td>
+    <td width=10%>
+      24,9%<br>
+    </td>
+    <td width=10%>
+      28,5%<br>
+    </td>
+    <td width=10%>
+      21,6%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      3,0%<br>
+    </td>
+    <td width=10%>
+      2,4%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      23,0%<br>
+    </td>
+    <td width=10%>
+      21,7%<br>
+    </td>
+    <td width=10%>
+      17,6%<br>
+    </td>
+    <td width=10%>
+      11,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      3,1%<br>
+    </td>
+    <td width=10%>
+      8,2%<br>
+    </td>
+    <td width=10%>
+      13,1%<br>
+    </td>
+    <td width=10%>
+      37,2%<br>
+    </td>
+    <td width=10%>
+      21,0%<br>
+    </td>
+    <td width=10%>
+      9,6%<br>
+    </td>
+    <td width=10%>
+      6,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      4,5%<br>
+    </td>
+    <td width=10%>
+      11,5%<br>
+    </td>
+    <td width=10%>
+      30,0%<br>
+    </td>
+    <td width=10%>
+      21,1%<br>
+    </td>
+    <td width=10%>
+      24,9%<br>
+    </td>
+    <td width=10%>
+      7,6%<br>
+    </td>
+    <td width=10%>
+      0,4%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,9%<br>
+    </td>
+    <td width=10%>
+      2,7%<br>
+    </td>
+    <td width=10%>
+      11,7%<br>
+    </td>
+    <td width=10%>
+      27,9%<br>
+    </td>
+    <td width=10%>
+      39,7%<br>
+    </td>
+    <td width=10%>
+      16,0%<br>
+    </td>
+    <td width=10%>
+      0,9%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<hr size=2><br>
+Població exposada per cada districte en horari diürn (esto significa que porcentaje de la población de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 7h a 21h. Vamos, la media porcentual de ruido que la gente de ese distrito percibe la mayor parte del día.<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=mf-r style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      25,7%<br>
+    </td>
+    <td width=10%>
+      47,4%<br>
+    </td>
+    <td width=10%>
+      16,7%<br>
+    </td>
+    <td width=10%>
+      2,2%<br>
+    </td>
+    <td width=10%>
+      0,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      9,6%<br>
+    </td>
+    <td width=10%>
+      15,6%<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      4,5%<br>
+    </td>
+    <td width=10%>
+      30,2%<br>
+    </td>
+    <td width=10%>
+      37,8%<br>
+    </td>
+    <td width=10%>
+      1,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      9,1%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      17,0%<br>
+    </td>
+    <td width=10%>
+      33,9%<br>
+    </td>
+    <td width=10%>
+      17,6%<br>
+    </td>
+    <td width=10%>
+      16,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      0,03%<br>
+    </td>
+    <td width=10%>
+      8,0%<br>
+    </td>
+    <td width=10%>
+      4,7%<br>
+    </td>
+    <td width=10%>
+      5,0%<br>
+    </td>
+    <td width=10%>
+      28,3%<br>
+    </td>
+    <td width=10%>
+      31,8%<br>
+    </td>
+    <td width=10%>
+      22,2%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      1,7%<br>
+    </td>
+    <td width=10%>
+      5,4%<br>
+    </td>
+    <td width=10%>
+      7,6%<br>
+    </td>
+    <td width=10%>
+      3,2%<br>
+    </td>
+    <td width=10%>
+      25,6%<br>
+    </td>
+    <td width=10%>
+      25,7%<br>
+    </td>
+    <td width=10%>
+      29,0%<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      0,05%<br>
+    </td>
+    <td width=10%>
+      5,6%<br>
+    </td>
+    <td width=10%>
+      5,8%<br>
+    </td>
+    <td width=10%>
+      17,1%<br>
+    </td>
+    <td width=10%>
+      31,7%<br>
+    </td>
+    <td width=10%>
+      26,2%<br>
+    </td>
+    <td width=10%>
+      11,3%<br>
+    </td>
+    <td width=10%>
+      2,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      4,2%<br>
+    </td>
+    <td width=10%>
+      3,6%<br>
+    </td>
+    <td width=10%>
+      25,4%<br>
+    </td>
+    <td width=10%>
+      34,8%<br>
+    </td>
+    <td width=10%>
+      19,6%<br>
+    </td>
+    <td width=10%>
+      11,8%<br>
+    </td>
+    <td width=10%>
+      0,6%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      8,8%<br>
+    </td>
+    <td width=10%>
+      6,6%<br>
+    </td>
+    <td width=10%>
+      20,7%<br>
+    </td>
+    <td width=10%>
+      40,3%<br>
+    </td>
+    <td width=10%>
+      15,9%<br>
+    </td>
+    <td width=10%>
+      6,3%<br>
+    </td>
+    <td width=10%>
+      1,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      6,9%<br>
+    </td>
+    <td width=10%>
+      5,6%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      28,9%<br>
+    </td>
+    <td width=10%>
+      24,2%<br>
+    </td>
+    <td width=10%>
+      9,6%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      0,4%<br>
+    </td>
+    <td width=10%>
+      5,1%<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      16,3%<br>
+    </td>
+    <td width=10%>
+      29,6%<br>
+    </td>
+    <td width=10%>
+      30,5%<br>
+    </td>
+    <td width=10%>
+      13,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+Població exposada per cada districte en horari de vespre (esto significa que porcentaje de la población de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 21h a 23h. Vamos, la media porcentual de ruido que la gente de ese distrito percibe durante el anochecer [Eixample i Les corts tienen un valor alto porque se tienen en cuenta las islas interiores, que a esa hora hay más gente y hay más ruido]).<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=s2b- style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      4,9%<br>
+    </td>
+    <td width=10%>
+      35,6%<br>
+    </td>
+    <td width=10%>
+      38,5%<br>
+    </td>
+    <td width=10%>
+      14,4%<br>
+    </td>
+    <td width=10%>
+      1,4%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      21,1%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      1,9%<br>
+    </td>
+    <td width=10%>
+      12,6%<br>
+    </td>
+    <td width=10%>
+      45,7%<br>
+    </td>
+    <td width=10%>
+      14,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      6,8%<br>
+    </td>
+    <td width=10%>
+      6,7%<br>
+    </td>
+    <td width=10%>
+      9,1%<br>
+    </td>
+    <td width=10%>
+      26,8%<br>
+    </td>
+    <td width=10%>
+      27,6%<br>
+    </td>
+    <td width=10%>
+      17,2%<br>
+    </td>
+    <td width=10%>
+      5,7%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      6,8%<br>
+    </td>
+    <td width=10%>
+      3,7%<br>
+    </td>
+    <td width=10%>
+      12,3%<br>
+    </td>
+    <td width=10%>
+      34,3%<br>
+    </td>
+    <td width=10%>
+      30,4%<br>
+    </td>
+    <td width=10%>
+      7,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      7,9%<br>
+    </td>
+    <td width=10%>
+      3,6%<br>
+    </td>
+    <td width=10%>
+      14,3%<br>
+    </td>
+    <td width=10%>
+      27,8%<br>
+    </td>
+    <td width=10%>
+      33,3%<br>
+    </td>
+    <td width=10%>
+      8,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      2,3%<br>
+    </td>
+    <td width=10%>
+      5,6%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      17,3%<br>
+    </td>
+    <td width=10%>
+      35,2%<br>
+    </td>
+    <td width=10%>
+      27,9%<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      1,7%<br>
+    </td>
+    <td width=10%>
+      4,3%<br>
+    </td>
+    <td width=10%>
+      4,0%<br>
+    </td>
+    <td width=10%>
+      23,3%<br>
+    </td>
+    <td width=10%>
+      35,2%<br>
+    </td>
+    <td width=10%>
+      20,3%<br>
+    </td>
+    <td width=10%>
+      10,3%<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      3,2%<br>
+    </td>
+    <td width=10%>
+      8,8%<br>
+    </td>
+    <td width=10%>
+      3,6%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      40,3%<br>
+    </td>
+    <td width=10%>
+      15,4%<br>
+    </td>
+    <td width=10%>
+      6,4%<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      2,8%<br>
+    </td>
+    <td width=10%>
+      6,9%<br>
+    </td>
+    <td width=10%>
+      2,8%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      33,4%<br>
+    </td>
+    <td width=10%>
+      21,7%<br>
+    </td>
+    <td width=10%>
+      8,8%<br>
+    </td>
+    <td width=10%>
+      2,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      1,3%<br>
+    </td>
+    <td width=10%>
+      7,2%<br>
+    </td>
+    <td width=10%>
+      8,8%<br>
+    </td>
+    <td width=10%>
+      24,2%<br>
+    </td>
+    <td width=10%>
+      33,2%<br>
+    </td>
+    <td width=10%>
+      21,7%<br>
+    </td>
+    <td width=10%>
+      3,7%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Població exposada per cada districte en horari de nit (esto significa que porcentaje de la población de ese distrito está afectada por los rangos de dbA de la columna durante el periodo de 23h a 7h. Vamos, la media porcentual de ruido que la gente de ese distrito percibe durante la noche).<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=t0yn style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      6,1%<br>
+    </td>
+    <td width=10%>
+      9,5%<br>
+    </td>
+    <td width=10%>
+      34,7%<br>
+    </td>
+    <td width=10%>
+      25,3%<br>
+    </td>
+    <td width=10%>
+      20,4%<br>
+    </td>
+    <td width=10%>
+      3,7%<br>
+    </td>
+    <td width=10%>
+      0,3%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      22,4%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      18,0%<br>
+    </td>
+    <td width=10%>
+      41,3%<br>
+    </td>
+    <td width=10%>
+      13,3%<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      13,3%<br>
+    </td>
+    <td width=10%>
+      11,5%<br>
+    </td>
+    <td width=10%>
+      26,3%<br>
+    </td>
+    <td width=10%>
+      26,9%<br>
+    </td>
+    <td width=10%>
+      16,8%<br>
+    </td>
+    <td width=10%>
+      5,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      12,1%<br>
+    </td>
+    <td width=10%>
+      4,4%<br>
+    </td>
+    <td width=10%>
+      14,1%<br>
+    </td>
+    <td width=10%>
+      36,6%<br>
+    </td>
+    <td width=10%>
+      28,0%<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      13,1%<br>
+    </td>
+    <td width=10%>
+      3,8%<br>
+    </td>
+    <td width=10%>
+      18,5%<br>
+    </td>
+    <td width=10%>
+      27,3%<br>
+    </td>
+    <td width=10%>
+      29,3%<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      10,5%<br>
+    </td>
+    <td width=10%>
+      5,6%<br>
+    </td>
+    <td width=10%>
+      22,4%<br>
+    </td>
+    <td width=10%>
+      24,5%<br>
+    </td>
+    <td width=10%>
+      28,4%<br>
+    </td>
+    <td width=10%>
+      8,6%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      6,0%<br>
+    </td>
+    <td width=10%>
+      16,1%<br>
+    </td>
+    <td width=10%>
+      19,1%<br>
+    </td>
+    <td width=10%>
+      28,6%<br>
+    </td>
+    <td width=10%>
+      20,4%<br>
+    </td>
+    <td width=10%>
+      9,1%<br>
+    </td>
+    <td width=10%>
+      0,6%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      15,6%<br>
+    </td>
+    <td width=10%>
+      3,9%<br>
+    </td>
+    <td width=10%>
+      29,5%<br>
+    </td>
+    <td width=10%>
+      30,2%<br>
+    </td>
+    <td width=10%>
+      14,4%<br>
+    </td>
+    <td width=10%>
+      5,7%<br>
+    </td>
+    <td width=10%>
+      0,6%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      12,5%<br>
+    </td>
+    <td width=10%>
+      8,2%<br>
+    </td>
+    <td width=10%>
+      26,2%<br>
+    </td>
+    <td width=10%>
+      16,7%<br>
+    </td>
+    <td width=10%>
+      24,5%<br>
+    </td>
+    <td width=10%>
+      8,4%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      8,5%<br>
+    </td>
+    <td width=10%>
+      11,2%<br>
+    </td>
+    <td width=10%>
+      23,3%<br>
+    </td>
+    <td width=10%>
+      35,2%<br>
+    </td>
+    <td width=10%>
+      18,3%<br>
+    </td>
+    <td width=10%>
+      3,4%<br>
+    </td>
+    <td width=10%>
+      0,01%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      0,0%
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Població exposada per cada districte al llarg del día (Lden)(esto significa que porcentaje de la población de ese distrito está afectada por los rangos de dbA de la columna a lo largo del día. Vamos, la media porcentual de ruido que la gente de ese distrito percibe durante las 24h).<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=ntuz style=HEIGHT:234px;WIDTH:995px>
+  <tbody>
+  <tr>
+    <td width=10%>
+      <br>
+    </td>
+    <td width=10%>
+      &lt; 45<br>
+    </td>
+    <td width=10%>
+      45-50<br>
+    </td>
+    <td width=10%>
+      50-55<br>
+    </td>
+    <td width=10%>
+      55-60<br>
+    </td>
+    <td width=10%>
+      60-65<br>
+    </td>
+    <td width=10%>
+      65-70<br>
+    </td>
+    <td width=10%>
+      70-75<br>
+    </td>
+    <td width=10%>
+      75-80<br>
+    </td>
+    <td width=10%>
+      &gt;80<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Ciutat Vella<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      1,0%<br>
+    </td>
+    <td width=10%>
+      5,5%<br>
+    </td>
+    <td width=10%>
+      12,7%<br>
+    </td>
+    <td width=10%>
+      41,9%<br>
+    </td>
+    <td width=10%>
+      29,1%<br>
+    </td>
+    <td width=10%>
+      8,9%<br>
+    </td>
+    <td width=10%>
+      0,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Eixample<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      4,9%<br>
+    </td>
+    <td width=10%>
+      19,6%<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      2,6%<br>
+    </td>
+    <td width=10%>
+      22,5%<br>
+    </td>
+    <td width=10%>
+      44,0%<br>
+    </td>
+    <td width=10%>
+      4,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sants-Montjuïc<br>
+    </td>
+    <td width=10%>
+      1,1%<br>
+    </td>
+    <td width=10%>
+      7,5%<br>
+    </td>
+    <td width=10%>
+      6,3%<br>
+    </td>
+    <td width=10%>
+      12,8%<br>
+    </td>
+    <td width=10%>
+      30,3%<br>
+    </td>
+    <td width=10%>
+      23,9%<br>
+    </td>
+    <td width=10%>
+      14,7%<br>
+    </td>
+    <td width=10%>
+      3,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Les Corts<br>
+    </td>
+    <td width=10%>
+      0,03%<br>
+    </td>
+    <td width=10%>
+      7,0%<br>
+    </td>
+    <td width=10%>
+      5,0%<br>
+    </td>
+    <td width=10%>
+      5,3%<br>
+    </td>
+    <td width=10%>
+      21,1%<br>
+    </td>
+    <td width=10%>
+      32,8%<br>
+    </td>
+    <td width=10%>
+      27,0%<br>
+    </td>
+    <td width=10%>
+      1,8%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sarrià-Sant Gervasi<br>
+    </td>
+    <td width=10%>
+      1,5%<br>
+    </td>
+    <td width=10%>
+      4,4%<br>
+    </td>
+    <td width=10%>
+      7,8%<br>
+    </td>
+    <td width=10%>
+      3,8%<br>
+    </td>
+    <td width=10%>
+      21,6%<br>
+    </td>
+    <td width=10%>
+      27,4%<br>
+    </td>
+    <td width=10%>
+      28,8%<br>
+    </td>
+    <td width=10%>
+      4,7%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Gràcia<br>
+    </td>
+    <td width=10%>
+      0,4%<br>
+    </td>
+    <td width=10%>
+      1,9%<br>
+    </td>
+    <td width=10%>
+      8,1%<br>
+    </td>
+    <td width=10%>
+      8,8%<br>
+    </td>
+    <td width=10%>
+      26,7%<br>
+    </td>
+    <td width=10%>
+      30,7%<br>
+    </td>
+    <td width=10%>
+      20,2%<br>
+    </td>
+    <td width=10%>
+      3,2%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Horta-Guinardó<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      1,3%<br>
+    </td>
+    <td width=10%>
+      5,2%<br>
+    </td>
+    <td width=10%>
+      21,3%<br>
+    </td>
+    <td width=10%>
+      26,6%<br>
+    </td>
+    <td width=10%>
+      24,1%<br>
+    </td>
+    <td width=10%>
+      16,2%<br>
+    </td>
+    <td width=10%>
+      5,4%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Nou Barris<br>
+    </td>
+    <td width=10%>
+      0,2%<br>
+    </td>
+    <td width=10%>
+      3,5%<br>
+    </td>
+    <td width=10%>
+      10,8%<br>
+    </td>
+    <td width=10%>
+      10,5%<br>
+    </td>
+    <td width=10%>
+      34,5%<br>
+    </td>
+    <td width=10%>
+      27,6%<br>
+    </td>
+    <td width=10%>
+      10,9%<br>
+    </td>
+    <td width=10%>
+      2,1%<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Andreu<br>
+    </td>
+    <td width=10%>
+      0,0%<br>
+    </td>
+    <td width=10%>
+      2,0%<br>
+    </td>
+    <td width=10%>
+      10,3%<br>
+    </td>
+    <td width=10%>
+      9,9%<br>
+    </td>
+    <td width=10%>
+      30,2%<br>
+    </td>
+    <td width=10%>
+      19,5%<br>
+    </td>
+    <td width=10%>
+      19,9%<br>
+    </td>
+    <td width=10%>
+      7,5%<br>
+    </td>
+    <td width=10%>
+      0,7%<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=10%>
+      Sant Martí<br>
+    </td>
+    <td width=10%>
+      0,1%<br>
+    </td>
+    <td width=10%>
+      3,7%<br>
+    </td>
+    <td width=10%>
+      5,6%<br>
+    </td>
+    <td width=10%>
+      13,3%<br>
+    </td>
+    <td width=10%>
+      26,6%<br>
+    </td>
+    <td width=10%>
+      33,4%<br>
+    </td>
+    <td width=10%>
+      16,4%<br>
+    </td>
+    <td width=10%>
+      0,9%<br>
+    </td>
+    <td width=10%>
+      0,0%
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<h2>
+  Datos sobre la calidad del aire
+</h2>
+En primer lugar, en las gráficas aparecen dos colores (verde y amarillo) para reflejar el VLa, que es el Valor Límite anual (hay también d, para diario) que es el máximo permitido por Europa cuyo objetivo se ha de alcanzar en el 2010 (es de 40 microgramos por metro cúbico) y el VLa+MdT; este no se qué significa (el MdT, lo otro lo he explicado antes), pero creo que se trata de los valores objetivo marcados para cada año (la secuencia va del año 2000 al 2010, y la columna amarilla VLa+MdT va disminuyendo hasta alcanzar el valor de 40 marcado por la VLa en el 2010)<br>
+Hay 3 gráficas: dos para valores medios anuales de Dióxido de nitrogeno (NO2) y partículas más pequeñas a 10 micras (en general, podría decirse que superar el valor 40 en estas dos gráficas es malo, aunque en verdad lo malo sería superar VLa+MdT, que entiendo son los objetivos planteados para converger a Europa en el 2010).<br>
+La tercera gráfica refleja la evolución a lo largo del año de las veces que se han superado los valores límites diarios permitidos. (Europa permite que se supere enormemente los valores permitidos de forma puntual. Esta gráfica refleja cuan 'frecuente' es que eso haya sucedido; Europa indica que esto solo debería pasar unas 35 veces al año y el máximo para eso incluso es de 50 microgramos por metro cúbico; es decir, en esta, cualquier valor superior a 35 es malo).<br>
+Existen otras gráficas, pero comprenden una zona de medición superior (Zona 2) mientras que la 1 contempla 6 tomas en Barcelona y 3-4 más en municipios de alrededor (supongo que se podría llegar a extender a los distritos colindantes: Santa Coloma-Sant Andreu, Sant Adrià y Badalona-Sant Martí, Cornellà-Hospitalet- Les corts, El Prat, Sants-Montjuic). He quitado Gavà y Sant Vicenç dels Horts<br>
+<br>
+Estas gráficas son del departamento de la Generalitat. He encontrado esto en BCN medi ambient:<a href=http://www.bcn.es/estadistica/castella/dades/anuari/cap01/C0103030.htm id=kcd_ title=http://www.bcn.es/estadistica/castella/dades/anuari/cap01/C0103030.htm>http://www.bcn.es/estadistica/castella/dades/anuari/cap01/C0103030.htm</a><br>
+Pone los datos para el 2008 de las tomas de Barcelona (y para toda barcelona en general en años anteriores). Veo que también tiene para las partículas de menos de 10 micras; tb he visto en el departament de medi ambient, los datos exactos (nada de gra´fica pero se corresponden en ambos casos) para el año 2006. Mejor, así es un poco más preciso que a ojímetro.<br>
+<br>
+Evolución de la media anual de NO2 (micrograms per metre cúbic):<br>
+VLa=40<br>
+<br>
+<table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=g76l width=100%>
+  <tbody>
+  <tr>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      2000<br>
+    </td>
+    <td width=8.333333333333334%>
+      2001<br>
+    </td>
+    <td width=8.333333333333334%>
+      2002<br>
+    </td>
+    <td width=8.333333333333334%>
+      2003<br>
+    </td>
+    <td width=8.333333333333334%>
+      2004<br>
+    </td>
+    <td width=8.333333333333334%>
+      2005<br>
+    </td>
+    <td width=8.333333333333334%>
+      2006<br>
+    </td>
+    <td width=8.333333333333334%>
+      2007<br>
+    </td>
+    <td width=8.333333333333334%>
+      2008<br>
+    </td>
+    <td width=8.333333333333334%>
+      2009<br>
+    </td>
+    <td width=8.333333333333334%>
+      2010<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      VLa+MdT<br>
+    </td>
+    <td width=8.333333333333334%>
+      60<br>
+    </td>
+    <td width=8.333333333333334%>
+      58<br>
+    </td>
+    <td width=8.333333333333334%>
+      56<br>
+    </td>
+    <td width=8.333333333333334%>
+      54<br>
+    </td>
+    <td width=8.333333333333334%>
+      52<br>
+    </td>
+    <td width=8.333333333333334%>
+      50<br>
+    </td>
+    <td width=8.333333333333334%>
+      48<br>
+    </td>
+    <td width=8.333333333333334%>
+      46<br>
+    </td>
+    <td width=8.333333333333334%>
+      44<br>
+    </td>
+    <td width=8.333333333333334%>
+      42<br>
+    </td>
+    <td width=8.333333333333334%>
+      40<br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Ciutadella)<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      47<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      42<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Poblenou)<br>
+    </td>
+    <td width=8.333333333333334%>
+      60<br>
+    </td>
+    <td width=8.333333333333334%>
+      42<br>
+    </td>
+    <td width=8.333333333333334%>
+      53<br>
+    </td>
+    <td width=8.333333333333334%>
+      57<br>
+    </td>
+    <td width=8.333333333333334%>
+      40<br>
+    </td>
+    <td width=8.333333333333334%>
+      43<br>
+    </td>
+    <td width=8.333333333333334%>
+      47<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      47<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Eixample)<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      68<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      65<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Sants)<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      31<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      45<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Parc Vall d'Hebrón)<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      37<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Barcelona (Gràcia-Sant Gervasi)<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      74<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      63<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      El Prat del Llobregat<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      54<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      L'Hospitalet de Llobregat<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      40<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Santa Coloma de Gramenet<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      50<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Sant Adrià de Besòs<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      51<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td width=8.333333333333334%>
+      Cornellà de Llobregat<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      46<br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+    <td width=8.333333333333334%>
+      <br>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Bueno, he encontrado lo del aire en formato tabla y más completo (de hecho, más datos, más productos y más tomas de medida): <a href=http://mediambient.gencat.cat/cat/el_medi/atmosfera/immissions/informes.jsp?ComponentID=26289&amp;SourcePageID=23429#1 id=f81l title=http://mediambient.gencat.cat/cat/el_medi/atmosfera/immissions/informes.jsp?ComponentID=26289&amp;SourcePageID=23429#1>http://mediambient.gencat.cat/cat/el_medi/atmosfera/immissions/informes.jsp?ComponentID=26289&amp;SourcePageID=23429#1</a><br>
+Solo hay que fijarse siempre en los que sean de Zona de medida 1 que estén en el listado <b><u><font size=1>Informes de la qualitat de l'aire per contaminants</font></u></b><br>
+<br>
+<br>
+<br>
+<br></body>
+</html>
