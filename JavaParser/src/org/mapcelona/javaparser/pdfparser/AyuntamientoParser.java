@@ -15,13 +15,13 @@ import org.mapcelona.javaparser.rdfutils.RDFUtils;
 
 import com.hp.hpl.jena.rdf.model.Resource;
 
-public class PDFParser
+public class AyuntamientoParser
 {
 	public static void main(String args[]) throws Exception
 	{
-		PDFParser	pp;
+		AyuntamientoParser	pp;
 		
-		pp = new PDFParser();
+		pp = new AyuntamientoParser();
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte02.pdf");
 //		pp.parse("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte03.pdf");
@@ -54,7 +54,7 @@ public class PDFParser
 		ru = new RDFUtils();
 		
 //		te = new ThExtract("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
-		te = new ThExtract(url);
+		te = new ThExtract(url, 13);
 		te.start();
 		te.join();
 		temp = te.getFile();

@@ -7,13 +7,15 @@ import org.apache.pdfbox.ExtractText;
 
 public class ThExtract extends Thread
 {
-	private String name;
-	private File temp;
+	private String	name;
+	private File	temp;
+	private int		page;
 
-	public ThExtract(String name) throws IOException
+	public ThExtract(String name, int page) throws IOException
 	{
 		this.name = name;
 		temp = File.createTempFile("dades", "tmp");
+		this.page = page;
 	}
 	
 	public File getFile()
@@ -26,7 +28,7 @@ public class ThExtract extends Thread
 	{
 		try
 		{
-			ExtractText.main(new String [] { "-startPage", "13", "-endPage", "13", name, temp.getAbsolutePath()} );
+			ExtractText.main(new String [] { "-startPage", "" + page, "-endPage", "" + page, name, temp.getAbsolutePath()} );
 			System.out.println(temp.getAbsolutePath());
 		}
 		catch (Exception e)
