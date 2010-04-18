@@ -26,7 +26,7 @@ public class Ruido
 	
 	public Ruido()
 	{
-		ru = new RDFUtils();
+		ru = RDFUtils.getInstance();
 	}
 
 	private void execute() throws IOException

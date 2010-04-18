@@ -28,7 +28,7 @@ public class Wikipedia2Neighbourhoods
 		List<String>		barrios;
 		String				name;
 
-		ru = new RDFUtils();
+		ru = RDFUtils.getInstance();
 		ru.clean();
 
 		s = new Source(

@@ -2,6 +2,7 @@ package org.mapcelona.javaparser.entrypoint;
 
 import org.mapcelona.javaparser.barrios.Wikipedia2Neighbourhoods;
 import org.mapcelona.javaparser.pdfparser.AyuntamientoParser;
+import org.mapcelona.javaparser.pdfparser.UrbanaParser;
 import org.mapcelona.javaparser.staticdata.Ruido;
 
 public class InitDB
@@ -35,5 +36,7 @@ public class InitDB
 		AyuntamientoParser.main(new String[] { "http://www.bcn.es/estadistica/catala/dades/inf/guies/dte10.pdf" });
 		System.gc();
 		Ruido.main(null);
+		System.gc();
+		UrbanaParser.main(null);
 	}
 }

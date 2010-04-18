@@ -30,7 +30,7 @@ public class RDFUtils
 	private Resource				bcn, owlcity, owldistrict, owlbarrio, owldataclass, pieceOfData;
 	private Property				ofClass, hasName, isDistrictOf, isNeighbourhoodOf,
 									hasValue, hasMapping, refersTo, isOfDataClass, hasAge;
-	private Map<String,Resource>	mapBarrios, mapDistritos;
+	private Map<String,Resource>	mapBarrios, mapDistritos, mapData;
 	private Map<String,String>		alternates;
 	
 	private static final String	cityUri = "http://www.mapcelona.org/city.owl#";
@@ -38,11 +38,19 @@ public class RDFUtils
 	private static final String	rdfUri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 	private static final String demoUri = "http://www.mapcelona.org/demo.owl#";
 	
-	public RDFUtils()
+	private static final RDFUtils singleton = new RDFUtils();
+	
+	public static RDFUtils getInstance()
+	{
+		return singleton;
+	}
+	
+	private RDFUtils()
 	{
 		rb = ResourceBundle.getBundle("virtuoso");
 		mapBarrios = new TreeMap<String,Resource>();
 		mapDistritos = new TreeMap<String,Resource>();
+		mapData = new TreeMap<String,Resource>();
 		connect();
 		loadCity();
 		
@@ -198,7 +206,7 @@ public class RDFUtils
 
 	public void dump()
 	{
-		m.write(System.out, "RDF/XML");
+//		m.write(System.out, "RDF/XML");
 	}
 
 	public void getDistrict(String district)
@@ -214,34 +222,41 @@ public class RDFUtils
 		QuerySolution	qs;
 		Resource		r;
 		
-		// Prepare query string
-		String queryString =
-		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-		"PREFIX : <http://www.mapcelona.org/demo.owl#>\n" +
-		"SELECT ?r WHERE {" +
-		"?r rdf:type :DataClass.\n" +
-//		"?r :hasMapping ?m" + 
-//		"?r :hasMapping \"Edat mitjana edificis\"." + 
-		"?r :hasMapping \"" + mapping.trim() + "\"." + 
-		"}";
-		// Use the ontology model to create a Dataset object
-		// Note: If no reasoner has been attached to the model, no results
-		// will be returned (MarriedPerson has no asserted instances)
-		Dataset dataset = DatasetFactory.create(demo);
-		// Parse query string and create Query object
-		Query q = QueryFactory.create(queryString);
-		// Execute query and obtain result set
-		QueryExecution qexec = QueryExecutionFactory.create(q, dataset);
-		ResultSet resultSet = qexec.execSelect();
+		r = mapData.get(mapping);
 		
-		if(resultSet.hasNext())
+		if(r == null)
 		{
-			qs = resultSet.next();
-			r = qs.getResource("r");
-		}
-		else
-		{
-			throw new UnsupportedOperationException("Mapping falla: " + mapping);
+			// Prepare query string
+			String queryString =
+			"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+			"PREFIX : <http://www.mapcelona.org/demo.owl#>\n" +
+			"SELECT ?r WHERE {" +
+			"?r rdf:type :DataClass.\n" +
+	//		"?r :hasMapping ?m" + 
+	//		"?r :hasMapping \"Edat mitjana edificis\"." + 
+			"?r :hasMapping \"" + mapping.trim() + "\"." + 
+			"}";
+			// Use the ontology model to create a Dataset object
+			// Note: If no reasoner has been attached to the model, no results
+			// will be returned (MarriedPerson has no asserted instances)
+			Dataset dataset = DatasetFactory.create(demo);
+			// Parse query string and create Query object
+			Query q = QueryFactory.create(queryString);
+			// Execute query and obtain result set
+			QueryExecution qexec = QueryExecutionFactory.create(q, dataset);
+			ResultSet resultSet = qexec.execSelect();
+			
+			if(resultSet.hasNext())
+			{
+				qs = resultSet.next();
+				r = qs.getResource("r");
+			}
+			else
+			{
+				throw new UnsupportedOperationException("Mapping falla: " + mapping);
+			}
+			
+			mapData.put(mapping, r);
 		}
 		
 		return r;

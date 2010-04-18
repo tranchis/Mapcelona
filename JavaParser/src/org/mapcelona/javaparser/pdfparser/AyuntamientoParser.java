@@ -51,7 +51,7 @@ public class AyuntamientoParser
 		List<Resource>		pieces;
 		Iterator<Resource>	it;
 		
-		ru = new RDFUtils();
+		ru = RDFUtils.getInstance(); 
 		
 //		te = new ThExtract("http://www.bcn.es/estadistica/catala/dades/inf/guies/dte01.pdf");
 		te = new ThExtract(url, 13);
