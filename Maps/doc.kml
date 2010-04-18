@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
 	<name>Districts and neighbourhoods of Barcelona</name>
@@ -2344,14 +2344,14 @@
 			<color>66ff0000</color>
 		</PolyStyle>
 	</Style>
-	<StyleMap id="msn_ylw-pushpin471">
+	<StyleMap id="Parc de Montjuïc">
 		<Pair>
 			<key>normal</key>
-			<styleUrl>#sn_ylw-pushpin89</styleUrl>
+			<styleUrl>#Parc de Montjuïc N</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin72</styleUrl>
+			<styleUrl>#Parc de Montjuïc H</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="msn_ylw-pushpin39">
@@ -6122,7 +6122,7 @@
 			<styleUrl>#sh_open-diamond150</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Style id="sh_ylw-pushpin72">
+	<Style id="Parc de Montjuïc H">
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
@@ -6432,7 +6432,7 @@
 			<color>66b8b8ff</color>
 		</PolyStyle>
 	</Style>
-	<Style id="sn_ylw-pushpin89">
+	<Style id="Parc de Montjuïc N">
 		<IconStyle>
 			<scale>1.1</scale>
 			<Icon>
@@ -13345,7 +13345,7 @@
 				<name>Parc de Montjuïc</name>
 				<description><![CDATA[Limits for neighbourhood of Parc de Montjuïc.
 <a href="http://w3.bcn.es/XMLServeis/XMLHomeLinkPl/0,4022,290652295_303652261_1,00.html">Webpage</a>]]></description>
-				<styleUrl>#msn_ylw-pushpin471</styleUrl>
+				<styleUrl>#Parc de Montjuïc</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
