@@ -2040,7 +2040,7 @@
 			<color>ff000000</color>
 		</LineStyle>
 		<PolyStyle>
-			<color>7f7faaff</color>
+			<color>00000000</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_ylw-pushpin610">
@@ -5280,7 +5280,7 @@
 			<width>1.2</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>660000ff</color>
+			<color>00000000</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="msn_ylw-pushpin300">
@@ -13452,7 +13452,7 @@
 			<width>1.2</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>66808000</color>
+			<color>00000000</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_ylw-pushpin2001">
@@ -14312,7 +14312,7 @@
 		</Pair>
 	</StyleMap>
 	<Folder>
-		<name>Districts</name>
+		<name>çs</name>
 		<description><![CDATA[<a href="http://www.bcn.es/catala/laciutat/districtes/welcome.htm">Districts of Barcelona</a>]]></description>
 		<Placemark>
 			<name>Ciutat Vella</name>
