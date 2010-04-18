@@ -1,7 +1,8 @@
 <?php
 session_name("mapcelona");
 session_start();
-$langs = array("ca","es","en");
+include('define.php');
+
 if(isset($_GET['lang']) && in_array($_GET['lang'],$langs)) {
     $_SESSION['lang'] = $_GET['lang'];
 }
@@ -17,49 +18,48 @@ include './lang/'.$lang.'.php';
     
 echo '
 <html>
-<head>';
-/*<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset="utf-8" />
 <title>mapcelona</title>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="js/geoxml3.js"></script>
-<script type="text/javascript" src="js/ProjectedOverlay.js"></script>
-<script type="text/javascript">
-  function initialize() {
-      var latlng = new google.maps.LatLng(41.387917,2.169919);
-      var options = {
-        zoom: 12,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var myMap = new google.maps.Map(document.getElementById("map"), options);
-    var myParser = new geoXML3.parser({map: myMap});
-    myParser.parse("http://www.mapcelona.org/doc.kml");
-  }
-</script>*/
-echo'
 <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body onload="initialize()">';
-    include 'header.php';
+<body>';
+include 'header.php';
 echo '
     <div id="panel">
+        <div id="panel_collapsed" class="visible">
+            <a id="panel_trigger" href="#" onclick="expandPanel();">'.$Definition["TuneParams"].' &rsaquo;</a>
+        </div><!--panel_collapsed-->
+        <div id="panel_expanded" class="invisible">
+            <a id="panel_trigger" href="#" onclick="collapsePanel();">&lsaquo; '.$Definition["Close"].'</a>
+        </div><!--panel_expanded-->
     </div><!--/panel--> 
-    <div id="map"></div>
+    <div id="map">&nbsp;</div>
     <script type="text/javascript">
         var map =new GMap2(document.getElementById("map"));
         map.addControl(new GLargeMapControl3D());
         map.setCenter(new GLatLng(41.387917,2.169919), 12);
         var kml = new GGeoXml("http://www.mapcelona.org/doc.kml");
         showPolygons();
-        
-        var timer = setInterval(hidePolygons,3000);
 
+        function showPolygons() {
+            kml = new GGeoXml("http://www.mapcelona.org/doc.kml");
+            map.addOverlay(kml);
+        }
         function hidePolygons() {
             map.removeOverlay(kml);
         }
-        function showPolygons() {
-            map.addOverlay(kml);
+        
+        function expandPanel() {
+            document.getElementById("panel").setAttribute("class", "panel_expanded");
+            document.getElementById("panel_collapsed").setAttribute("class", "invisible");
+            document.getElementById("panel_expanded").setAttribute("class", "visible");
+        }
+        function collapsePanel() {
+            document.getElementById("panel").setAttribute("class", "panel_collapsed");
+            document.getElementById("panel_collapsed").setAttribute("class", "visible");
+            document.getElementById("panel_expanded").setAttribute("class", "invisible");
         }
     </script>
 </body>

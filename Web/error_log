@@ -1,0 +1,21 @@
+[16-Apr-2010 22:42:12] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Host 'box323.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home1/sergioal/public_html/mapcelona/connection.php on line 2
+[16-Apr-2010 22:47:17] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Host 'box323.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home1/sergioal/public_html/mapcelona/connection.php on line 2
+[16-Apr-2010 23:37:57] PHP Parse error:  syntax error, unexpected '<' in /home1/sergioal/public_html/mapcelona/index.php on line 5
+[17-Apr-2010 11:19:18] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home1/sergioal/public_html/mapcelona/staging.php on line 21
+[17-Apr-2010 12:14:41] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home1/sergioal/public_html/mapcelona/staging.php on line 5
+[17-Apr-2010 12:15:04] PHP Fatal error:  Call to undefined function  http_negotiate_language() in /home1/sergioal/public_html/mapcelona/staging.php on line 7
+[17-Apr-2010 12:23:24] PHP Parse error:  syntax error, unexpected '{' in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:23:46] PHP Warning:  array_key_exists() [<a href='function.array-key-exists'>function.array-key-exists</a>]: The second argument should be either an array or an object in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:27:42] PHP Warning:  array_key_exists() [<a href='function.array-key-exists'>function.array-key-exists</a>]: The second argument should be either an array or an object in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:28:21] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home1/sergioal/public_html/mapcelona/staging.php on line 12
+[17-Apr-2010 12:29:09] PHP Warning:  array_key_exists() [<a href='function.array-key-exists'>function.array-key-exists</a>]: The second argument should be either an array or an object in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:29:41] PHP Warning:  array_key_exists() [<a href='function.array-key-exists'>function.array-key-exists</a>]: The second argument should be either an array or an object in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:34:13] PHP Parse error:  syntax error, unexpected ')' in /home1/sergioal/public_html/mapcelona/staging.php on line 7
+[17-Apr-2010 12:34:34] PHP Parse error:  syntax error, unexpected '{' in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:34:55] PHP Warning:  array_key_exists() [<a href='function.array-key-exists'>function.array-key-exists</a>]: The second argument should be either an array or an object in /home1/sergioal/public_html/mapcelona/staging.php on line 8
+[17-Apr-2010 12:56:36] PHP Warning:  include(lang/esp.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home1/sergioal/public_html/mapcelona/about.php on line 2
+[17-Apr-2010 12:56:36] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'lang/esp.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home1/sergioal/public_html/mapcelona/about.php on line 2
+[17-Apr-2010 16:23:20] PHP Warning:  include(lang/esp.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home1/sergioal/public_html/mapcelona/about.php on line 2
+[17-Apr-2010 16:23:20] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'lang/esp.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home1/sergioal/public_html/mapcelona/about.php on line 2
+[17-Apr-2010 16:29:30] PHP Parse error:  syntax error, unexpected T_LNUMBER, expecting ',' or ';' in /home1/sergioal/public_html/mapcelona/about.php on line 30
+[18-Apr-2010 14:09:22] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home1/sergioal/public_html/mapcelona/index.php on line 52

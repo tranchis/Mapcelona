@@ -14,4 +14,8 @@ $Definition['What'] = 'Què és mapcelona?';
 $Definition['Who'] = 'Qui és mapcelona?';
 $Definition['Sources'] = 'Quines fonts?';
 $Definition['BasedOn'] = 'Interioritats';
+
+// Panel
+$Definition["TuneParams"] = 'Personalitza paràmetres';
+$Definition["Close"] = 'Tanca';
 ?>

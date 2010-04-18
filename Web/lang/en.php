@@ -14,4 +14,8 @@ $Definition['What'] = 'What is mapcelona?';
 $Definition['Who'] = 'Who is mapcelona?';
 $Definition['Sources'] = 'Which sources?';
 $Definition['BasedOn'] = 'Under the hood';
+
+// Panel
+$Definition["TuneParams"] = 'Tune parameters';
+$Definition["Close"] = 'Close';
 ?>
