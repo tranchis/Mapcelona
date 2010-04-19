@@ -41,6 +41,7 @@ class dataClassManager {
             $rawValues=null; 
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
            
+print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
             foreach($neighbourhoods as $key=>$value) if (!in_array($key, $keys)) $noValues[]=$key;
@@ -132,11 +133,11 @@ foreach($colours as $color)
 					}
                 else $normalisedValues[$key]=(float) 1/count($values);
             }
-            //print('<br>Normalised:<br>');
-            //print_r($normalisedValues);
+            print('<br>Normalised:<br>');
+            print_r($normalisedValues);
 			$sum = 0;
             foreach($normalisedValues as $value) $sum=max($sum,$value);
-            //print('Sum '.$sum);
+            print('Sum '.$sum);
             return $normalisedValues;
         }
         else return null;
