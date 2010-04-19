@@ -39,7 +39,7 @@ $dcm = new dataClassManager();
                 foreach ($parameters as $parameter) {
                     print('<li id="'.$parameter['id'].'" class="factor">
                                 <input type="checkbox" class="factor_checkbox"/>'.
-                                $parameter['name'].
+                                $parameter['_value'] .
                             '</li>');
                 }
             ?>
