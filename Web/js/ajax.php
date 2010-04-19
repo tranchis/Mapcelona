@@ -83,7 +83,7 @@ foreach($values as $dataclass => $value)
 	$blue = "00";
 	*/
 	//echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
-	$alpha = strtoupper(dechex(min(255, $value * 256)));
+	$alpha = strtoupper(dechex(min(255, 100 + $value * 100)));
 	$blue = "00";
 	$green = "FF";
 	$red = "00";

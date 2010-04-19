@@ -53,6 +53,8 @@ while(!feof($file)) {
 fclose ($file);
 
 // print_r($colors);
+$startcolor = hexdec("0000FF");
+$endcolor = hexdec("00FF00");
 foreach($values as $dataclass => $value)
 {
 	//echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
@@ -83,11 +85,17 @@ foreach($values as $dataclass => $value)
 	$blue = "00";
 	*/
 	//echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
-	$alpha = strtoupper(dechex(min(255, $value * 256)));
-	$blue = "00";
-	$green = "FF";
-	$red = "00";
-	$output = str_replace("FAFAF" . $dataclass, $alpha . $blue . $green . $red, $output);
+	$alpha = strtoupper(dechex(min(255, 128)));//100 + $value * 100)));
+	if(strlen($alpha) == 1)
+	{
+		$alpha = "0" . $alpha;
+	}
+	$bgr = dechex($startcolor + $value * ($endcolor - $startcolor));
+	while(strlen($bgr) < 6)
+	{
+		$bgr = "0" . $bgr;
+	}
+	$output = str_replace("FAFAF" . $dataclass, $alpha . $bgr, $output);
 }
 
 $randname = rand_str(5);
