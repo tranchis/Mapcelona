@@ -41,7 +41,7 @@ class dataClassManager {
             $rawValues=null; 
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
            
-print_r($neighbourhoodValues);
+// print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
             foreach($neighbourhoods as $key=>$value) if (!in_array($key, $keys)) $noValues[]=$key;
@@ -85,6 +85,9 @@ $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
 				//print_r($normalisedWeightedValues);
                 if (!isset($normalisedWeightedValues[$neighbourhood['id']])) $normalisedWeightedValues[$neighbourhood['id']]=0;
 				$value = $normalisedWeightedValues[$neighbourhood['id']];
+				$values[$neighbourhood['id']] += $value;
+				//print_r($values);
+				/*
 				if($value >= 0.5)
 				{
 	                $colours[$neighbourhood['id']]['green'] += $value;
@@ -93,18 +96,19 @@ $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
 				{
 	                $colours[$neighbourhood['id']]['red'] += $value;
 				}
+				*/
                 // $colours[$neighbourhood['id']]['blue'] = '00';
             }
         }
-
+/*
 foreach($colours as $color)
 {
 	$color['green'] = $color['green'] / count($dataClassWeights);
 	$color['red'] = $color['red'] / count($dataClassWeights);
 }
-
+*/
         //print_r($colours);
-        return $colours;
+        return $values;
     }
 
 
@@ -133,11 +137,11 @@ foreach($colours as $color)
 					}
                 else $normalisedValues[$key]=(float) 1/count($values);
             }
-            print('<br>Normalised:<br>');
-            print_r($normalisedValues);
-			$sum = 0;
-            foreach($normalisedValues as $value) $sum=max($sum,$value);
-            print('Sum '.$sum);
+            //print('<br>Normalised:<br>');
+            //print_r($normalisedValues);
+			//$sum = 0;
+            //foreach($normalisedValues as $value) $sum=max($sum,$value);
+            //print('Sum '.$sum);
             return $normalisedValues;
         }
         else return null;

@@ -26,7 +26,7 @@ function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
 }
 
 $dcm = new dataClassManager();
-$colors=$dcm->getIndicator(array(456=>1));
+@$values=$dcm->getIndicator(array(206=>83));
 
 //print_r($colors);
 
@@ -38,10 +38,11 @@ while(!feof($file)) {
 }
 fclose ($file);
 
-print_r($colors);
-foreach($colors as $dataclass => $color)
+print_r($values);
+foreach($values as $dataclass => $value)
 {
 	//echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
+	/*
 	$total = $color["green"] - $color["red"];
 	if($total < 0)
 	{
@@ -55,6 +56,7 @@ foreach($colors as $dataclass => $color)
 		$green = "FF";
 		$alpha = strtoupper(dechex(min(255, 128 + $total*128)));
 	}
+	*/
 	/*
 	if(strlen($red . "") == 1)
 	{
@@ -64,12 +66,15 @@ foreach($colors as $dataclass => $color)
 	{
 		$green = "0" . $green;
 	}
-	*/
 	$blue = "00";
+	*/
 	//echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
+	$alpha = strtoupper(dechex(min(255, $value * 256)));
+	$blue = "00";
+	$green = "FF";
+	$red = "00";
 	$output = str_replace("FAFAF" . $dataclass, $alpha . $blue . $green . $red, $output);
 }
-
 
 $filename="./doc" . rand_str(5) . ".kml";
 $file = fopen($filename, "w");

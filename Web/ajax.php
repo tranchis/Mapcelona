@@ -40,7 +40,7 @@ function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
 }
 
 $dcm = new dataClassManager();
-@$colors=$dcm->getIndicator($exploded_pairs);
+@$values=$dcm->getIndicator($exploded_pairs);
 
 //print_r($colors);
 
@@ -53,9 +53,10 @@ while(!feof($file)) {
 fclose ($file);
 
 // print_r($colors);
-foreach($colors as $dataclass => $color)
+foreach($values as $dataclass => $value)
 {
 	//echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
+	/*
 	$total = $color["green"] - $color["red"];
 	if($total < 0)
 	{
@@ -69,6 +70,7 @@ foreach($colors as $dataclass => $color)
 		$green = "FF";
 		$alpha = strtoupper(dechex(min(255, 128 + $total*128)));
 	}
+	*/
 	/*
 	if(strlen($red . "") == 1)
 	{
@@ -78,9 +80,13 @@ foreach($colors as $dataclass => $color)
 	{
 		$green = "0" . $green;
 	}
-	*/
 	$blue = "00";
+	*/
 	//echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
+	$alpha = strtoupper(dechex(min(255, $value * 256)));
+	$blue = "00";
+	$green = "FF";
+	$red = "00";
 	$output = str_replace("FAFAF" . $dataclass, $alpha . $blue . $green . $red, $output);
 }
 
@@ -90,6 +96,6 @@ $file = fopen($filename, "w");
 fputs($file, $output);
 fclose ($file);
 
-echo "http://www.mapcelona.org/doc". $randname .".kml";
+echo "http://www.mapcelona.org/devel/doc". $randname .".kml";
 
 ?>
