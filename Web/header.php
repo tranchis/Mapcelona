@@ -2,7 +2,7 @@
 
 echo'
 <div id="header">
-    <a id="logo" href="/">mapcelona</a>
+    <a id="logo" href="/" alt="mapcelona"></a>
     <div id="navigation">
         <a href="/">'.$Definition["Home"].'</a>
         |
@@ -21,6 +21,7 @@ echo'
         <a href="?lang=es" onclick=""><img src="'.IMAGES_PATH.'esp_w.png" alt="español" class="flag" /></a>
         <a href="?lang=en" onclick=""><img src="'.IMAGES_PATH.'eng_w.png" alt="english" class="flag" /></a>
     </div><!--/navigation-->
+    <div id="spacer"></div>
     <div id="actionlist">
         <a href="#">'.$Definition["GetData"].'</a>
         |
