@@ -38,7 +38,7 @@ while(!feof($file)) {
 }
 fclose ($file);
 
-// print_r($colors);
+print_r($colors);
 foreach($colors as $dataclass => $color)
 {
 	//echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
