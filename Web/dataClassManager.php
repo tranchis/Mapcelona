@@ -15,7 +15,7 @@ class dataClassManager {
                 WHERE dc.id=t.dataclass_id AND t.language_id=l.id AND l.name=";
         if (isset($_SESSION['lang'])) $sql.="'{$_SESSION['lang']}'";
         else $sql.="'en'";
-        return $this->db->launchQuery('SELECT * FROM dataclass ORDER BY name');
+        return $this->db->launchQuery($sql); // 'SELECT * FROM dataclass ORDER BY name');
     }
     // Given a dataclass, the function returns a list of the values that each district has on this dataclass
     public function getDistrictValues($dataclass_id){
