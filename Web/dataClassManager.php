@@ -108,7 +108,7 @@ foreach($colours as $color)
 
 
 
-    private function normaliseValues($values, $weight=1.0, $direction){
+    private function normaliseValues($values, $weight=1.0, $direction=true){
         $aux = array_values($values);
         if (sort($aux, SORT_NUMERIC)){
             //print('<br>');print_r($aux);print('<br>');
