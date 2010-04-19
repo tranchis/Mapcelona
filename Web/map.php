@@ -26,7 +26,7 @@ function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
 }
 
 $dcm = new dataClassManager();
-$colors=$dcm->getIndicator(array(418=>1));
+$colors=$dcm->getIndicator(array(456=>1));
 
 //print_r($colors);
 
