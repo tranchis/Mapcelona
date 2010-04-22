@@ -191,8 +191,14 @@ div.panel_expanded {
     text-decoration:underline !important;
 }
 
-#logo_abredatos {
-    margin:0 auto;
+/* floater */
+
+#floater {
+    background:#fff;
+    border:1px solid #242424;
+    display:inline;
+    padding:20px;
+    z-index:100;
 }
 
 .invisible {
