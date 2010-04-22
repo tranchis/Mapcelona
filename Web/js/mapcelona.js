@@ -119,7 +119,7 @@ function updateMap() {
         datastring = 'params=' + datastring;
         // make the ajax call
         $.ajax({
-            url:'http://www.mapcelona.org/ajax.php',
+            url:'http://www.mapcelona.org/devel/ajax.php',
             data:datastring,
             success: function(url){showPolygons(url);}
         });
