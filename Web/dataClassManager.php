@@ -41,11 +41,13 @@ class dataClassManager {
             $rawValues=null; 
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
            
-// print_r($neighbourhoodValues);
+//print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
             foreach($neighbourhoods as $key=>$value) if (!in_array($key, $keys)) $noValues[]=$key;
-            $maxAge = $this->db->launchQuery("SELECT MAX(dv.age) as age FROM district_value dv WHERE dv.dataclass_id={$dataclass_id}");
+            $maxAge = $this->db->launchQuery("SELECT MAX(dv.age) as age, d.direction FROM district_value dv, dataclass d WHERE dv.dataclass_id={$dataclass_id} AND d.id = dv.dataclass_id");
+			$direction = !($maxAge[0]['direction'] == "negative");
+			// echo "<br/>" . $direction . ":" . $maxAge[0]['direction'] . "<br/>";
             $maxAge = $maxAge[0]['age'];
             foreach ($noValues as $idNeighbourhood){
                 /*
@@ -70,7 +72,6 @@ $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
                                                                     dis.id={$neighbourhoods[$idNeighbourhood]['district_id']} AND
                                                                     d.id = dv.dataclass_id
                         ORDER BY dis.id");
-				$direction = !($result[0]['direction'] == "negative");
                 $rawValues[$idNeighbourhood]=$result[0]['_value'];
             }
             $normalisedWeightedValues=$this->normaliseValues($rawValues, $normalisedWeights[$dataclass_id], $direction);
