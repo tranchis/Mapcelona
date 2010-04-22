@@ -1,17 +1,17 @@
 <div id="overlay"></div>
 <div id="floater">
-    <div id="floater_abredatos">
-        <a href="http://www.mapcelona.org/">
+    <a href="http://www.mapcelona.org/">
+        <div id="floater_abredatos">
             <img src="<?=IMAGES_PATH?>abredatos.png" />
             <p><? echo $Definition["Go_Abredatos"]; ?></p>
-        </a>
-    </div>
-    <div id="floater_mapcelona">
-        <a class="floater_close">
-            <img src="<?=IMAGES_PATH?>logo.png" />
+        </div>   
+    </a>
+    <a class="floater_close">
+        <div id="floater_mapcelona">
+            <img src="<?=IMAGES_PATH?>logo_t.png" />
             <p><? echo $Definition["Go_Devel"]; ?></p>
-        </a>
-    </div>
+        </div>    
+    </a>
     <div id="floater_close">
         <a class="floater_close">
             <img src="<?=IMAGES_PATH?>close.png" />
