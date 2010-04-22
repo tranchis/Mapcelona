@@ -1,3 +1,14 @@
+// Floater
+var offset_top = $('#floater').outerHeight() / 2 - $('#floater').height() / 2;
+var offset_left = $('#floater').outerWidth() / 2 - $('#floater').width() / 2;
+$('#floater').offset({top:offset_top,left:offset_left});
+
+$('.floater_close').bind('click', function() {
+  $('#overlay').addClass('invisible');
+  $('#floater').addClass('invisible');
+});
+
+
 // loading the map
 var map =new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
