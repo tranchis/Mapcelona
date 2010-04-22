@@ -18,18 +18,24 @@ function hidePolygons() {
 
 // handling the panel
 function expandPanel() {
-    document.getElementById("panel").setAttribute("class", "panel_expanded");
+/*    document.getElementById("panel").setAttribute("class", "panel_expanded");
     document.getElementById("panel_collapsed").setAttribute("class", "invisible");
-    document.getElementById("panel_expanded").setAttribute("class", "visible");
+    document.getElementById("panel_expanded").setAttribute("class", "visible");*/
+    $('#panel').toggleClass('panel_expanded panel_collapsed');
+    $('#panel_collapsed').toggleClass('visible invisible');
+    $('#panel_expanded').toggleClass('visible invisible');
 }
 function collapsePanel() {
-    document.getElementById("panel").setAttribute("class", "panel_collapsed");
+/*    document.getElementById("panel").setAttribute("class", "panel_collapsed");
     document.getElementById("panel_collapsed").setAttribute("class", "visible");
-    document.getElementById("panel_expanded").setAttribute("class", "invisible");
+    document.getElementById("panel_expanded").setAttribute("class", "invisible");*/
+    $('#panel').toggleClass('panel_expanded panel_collapsed');
+    $('#panel_collapsed').toggleClass('visible invisible');
+    $('#panel_expanded').toggleClass('visible invisible');
     updateMap();
 }
 
-// factors in the panel
+/*// factors in the panel
 function checkParameter(chk) {
     if (chk.checked) {
         // add the slider
@@ -37,28 +43,28 @@ function checkParameter(chk) {
         
         
         $('.slider-handle').draggable({
-    		containment:'parent',
-    		axis:'x',
-    		drag:function(e,ui){
-    			/* The drag function is called on every drag movement, no matter how minute */
-    			if(!this.par)
-    			{
-    				/* Initializing the variables only on the first drag move for performance */
-    				this.par = $(this).parent();
-    				this.parWidth = this.par.width();
-    				this.width = $(this).width();
-    			}
+            containment:'parent',
+            axis:'x',
+            drag:function(e,ui){
+                // The drag function is called on every drag movement, no matter how minute
+                if(!this.par)
+                {
+                    // Initializing the variables only on the first drag move for performance 
+                    this.par = $(this).parent();
+                    this.parWidth = this.par.width();
+                    this.width = $(this).width();
+                }
                 
-    			var maxValue = this.parWidth-this.width;
-    			var ratio = ui.position.left/maxValue;
-    			ratio = Math.round(ratio*100);
-    			this.par.siblings().last().html(ratio + ' %');
-    		}
-    	});
+                var maxValue = this.parWidth-this.width;
+                var ratio = ui.position.left/maxValue;
+                ratio = Math.round(ratio*100);
+                this.par.siblings().last().html(ratio + ' %');
+            }
+        });
     } else {
-        chk.parentNode.innerHTML 
+        //chk.parentNode.innerHTML 
     }
-}
+}*/
 
 $('.factor_checkbox').change(function() {
     if ($(this).is(':checked')) {
@@ -88,6 +94,8 @@ $('.factor_checkbox').change(function() {
         $(this).parent().removeClass('active');
         $(this).siblings().last().remove();
         $(this).siblings().last().remove();
+        // we should test whether we are removing the '%' symbol or not
+        //$(this).siblings().last().remove();
     }
 });
 
@@ -102,17 +110,16 @@ function updateMap() {
         arrayOfWeights.push($(this).html());
     });
     if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
-        // put all the values in the string to be sent
+        // encode all the values in the string to be sent
         var datastring = '';
         for(var i in arrayOfIds) {
             datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
         }
         datastring = datastring.substring(1);
         datastring = 'params=' + datastring;
-        //$('#header').append(datastring);
         // make the ajax call
         $.ajax({
-            url:'http://www.mapcelona.org/devel/ajax.php',
+            url:'http://www.mapcelona.org/ajax.php',
             data:datastring,
             success: function(url){showPolygons(url);}
         });
