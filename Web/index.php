@@ -28,15 +28,9 @@ $dcm = new dataClassManager();
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>newstyle.css" />
     </head>
     <body>
-<<<<<<< HEAD
-        <? include('header2.php'); include('floater.php');
-           /*if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
-           else $_SESSION['floater'] ? include('floater.php'): false;*/
-=======
-        <? 
-            include('header2.php');
-            include('floater.php');
->>>>>>> bd413c2da220ea618c64778e159f47aadb725464
+        <? include('header2.php'); //include('floater.php');
+           if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
+           else $_SESSION['floater'] ? include('floater.php'): false;
         ?>
         <div id="panel" class="panel_collapsed">
         <div id="panel_collapsed" class="visible">
