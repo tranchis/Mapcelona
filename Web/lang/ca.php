@@ -9,6 +9,10 @@ $Definition['Help'] = 'Ajuda';
 $Definition["GetData"] = 'Descarrega les dades';
 $Definition["Share"] = 'Comparteix';
 
+// Floater
+$Definition["Go_Abredatos"] = 'Per anar a la versió del concurs AbreDatos 2010';
+$Definition["Go_Devel"] = 'Segueix cap a la versió actualitzada de l\'aplicació';
+
 // About links
 $Definition['What'] = 'Què és mapcelona?';
 $Definition['Who'] = 'Qui és mapcelona?';
