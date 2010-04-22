@@ -26,7 +26,7 @@ function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
 }
 
 $dcm = new dataClassManager();
-@$values=$dcm->getIndicator(array(206=>83));
+@$values=$dcm->getIndicator(array(251=>0));
 
 //print_r($colors);
 
@@ -38,7 +38,7 @@ while(!feof($file)) {
 }
 fclose ($file);
 
-// print_r($colors);
+print_r($values);
 $startcolor = hexdec("0000FF");
 $endcolor = hexdec("00FF00");
 foreach($values as $dataclass => $value)
