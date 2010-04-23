@@ -14,6 +14,7 @@ caption {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 body {
 	line-height: 1;
@@ -126,16 +127,19 @@ td {
     clear:both;
 }
 
-#panel {
+#panel_collapsed {
     float:left;
     width:20%;
     height:100%;
     overflow:auto;
+	background-color:#FFFFFF;
 }
 
-div.panel_expanded {
-    width:100% !important;
+#panel_expanded {
+    /* width:100% !important; */
     z-index:10;
+	position:absolute;left:20%;
+	     right:100%;background-color:#FFFFFF;overflow:auto;
 }
 
 #panel_trigger {

@@ -32,12 +32,12 @@ $dcm = new dataClassManager();
            // if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
            //            else $_SESSION['floater'] ? include('floater.php'): false;
         ?>
-        <div id="panel" class="panel_collapsed">
+        <!--<div id="panel" class="panel_collapsed">//-->
         <div id="panel_collapsed" class="visible">
             <a id="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>
         </div><!--panel_collapsed-->
 
-        <div id="panel_expanded" class="invisible">
+        <div id="panel_expanded" class="visible">
             <a id="panel_trigger" onclick="collapsePanel();">&lsaquo; <?php print($Definition["Close"]); ?></a>
             <ul id="factors_expanded">
             <?php 

@@ -24,21 +24,74 @@ function hidePolygons() {
 }
 
 // handling the panel
+var sliderIntervalId = 0;
+var totalHeight = 700;
+var sliderHeight = 232;
+var sliding = false;
+var slideSpeed = 60;
+function Slide()
+{
+   if(sliding)
+      return;
+   sliding = true;
+   if(sliderHeight == totalHeight)
+      sliderIntervalId = setInterval('SlideUpRun()', 30);
+   else
+      sliderIntervalId = setInterval('SlideDownRun()', 30);
+}
+function SlideUpRun()
+{
+   slider = document.getElementById('panel_expanded');
+   if(sliderHeight <= 0)
+   {
+      sliding = false;
+      sliderHeight = 0;
+      slider.style.width = '0px';
+      clearInterval(sliderIntervalId);
+   }
+   else
+   {
+      sliderHeight -= slideSpeed;
+      if(sliderHeight < 0)
+         sliderHeight = 0;
+      slider.style.width = sliderHeight + 'px';
+   }
+}
+function SlideDownRun()
+{
+   slider = document.getElementById('panel_expanded');
+   if(sliderHeight >= totalHeight)
+   {
+      sliding = false;
+      sliderHeight = totalHeight;
+      slider.style.width = totalHeight + 'px';
+      clearInterval(sliderIntervalId);
+   }
+   else
+   {
+      sliderHeight += slideSpeed;
+      if(sliderHeight > totalHeight)
+         sliderHeight = totalHeight;
+      slider.style.width = sliderHeight + 'px';
+   }
+}
 function expandPanel() {
 /*    document.getElementById("panel").setAttribute("class", "panel_expanded");
     document.getElementById("panel_collapsed").setAttribute("class", "invisible");
     document.getElementById("panel_expanded").setAttribute("class", "visible");*/
-    $('#panel').toggleClass('panel_expanded panel_collapsed');
-    $('#panel_collapsed').toggleClass('visible invisible');
-    $('#panel_expanded').toggleClass('visible invisible');
+    //$('#panel').toggleClass('panel_expanded panel_collapsed');
+    //$('#panel_collapsed').toggleClass('visible invisible');
+    //$('#panel_expanded').toggleClass('visible invisible');
+	Slide();
 }
 function collapsePanel() {
 /*    document.getElementById("panel").setAttribute("class", "panel_collapsed");
     document.getElementById("panel_collapsed").setAttribute("class", "visible");
     document.getElementById("panel_expanded").setAttribute("class", "invisible");*/
-    $('#panel').toggleClass('panel_expanded panel_collapsed');
-    $('#panel_collapsed').toggleClass('visible invisible');
-    $('#panel_expanded').toggleClass('visible invisible');
+    //$('#panel').toggleClass('panel_expanded panel_collapsed');
+    //$('#panel_collapsed').toggleClass('visible invisible');
+    //$('#panel_expanded').toggleClass('visible invisible');
+	Slide();
     updateMap();
 }
 
