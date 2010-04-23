@@ -95,6 +95,32 @@ function collapsePanel() {
     updateMap();
 }
 
+function addParam(id, text)
+{
+	var panel = document.getElementById("factors_expanded");
+	var item = document.createElement("li");
+	var div = document.createElement("div");
+	var div2 = document.createElement("div");
+	var div3 = document.createElement("div");
+	item.innerText = text;
+	item.setAttribute("id", id);
+	item.setAttribute("onclick", "\"addParam('" + id + "', '" + text + "');\"");
+	item.setAttribute("class", "factor active");
+	div.setAttribute("class", "slider");
+	div2.setAttribute("class", "slider-handle");
+	div3.setAttribute("class", "factor_weight");
+	div3.innerText = "0";
+	div.appendChild(div2);
+	item.appendChild(div);
+	item.appendChild(div3);
+	panel.appendChild(item);
+}
+
+function clearParams()
+{
+	$('#factors_expanded li').remove();
+}
+
 /*// factors in the panel
 function checkParameter(chk) {
     if (chk.checked) {
@@ -157,6 +183,25 @@ $('.factor_checkbox').change(function() {
         // we should test whether we are removing the '%' symbol or not
         //$(this).siblings().last().remove();
     }
+});
+
+$('.slider-handle').draggable({
+	containment:'parent',
+	axis:'x',
+	drag:function(e,ui){
+		/* The drag function is called on every drag movement, no matter how minute */
+		if(!this.par)
+		{
+			/* Initializing the variables only on the first drag move for performance */
+			this.par = $(this).parent();
+			this.parWidth = this.par.width();
+			this.width = $(this).width();
+		}
+        
+		var ratio = ui.position.left/(this.parWidth-this.width);
+		ratio = Math.round(ratio*100);
+		this.par.siblings().last().html(ratio);
+	}
 });
 
 function updateMap() {

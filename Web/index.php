@@ -35,16 +35,18 @@ $dcm = new dataClassManager();
         <!--<div id="panel" class="panel_collapsed">//-->
         <div id="panel_collapsed" class="visible">
             <a id="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>
+			<br/>
+			<a id="panel_trigger" onclick="updateMap();">Refresh map!</a><a id="panel_trigger" onclick="clearParams();">Clear parameters</a>
+			<br/><br/>
+            <ul id="factors_expanded">
+            </ul><!--factors_expanded-->
         </div><!--panel_collapsed-->
 
         <div id="panel_expanded" class="visible">
             <a id="panel_trigger" onclick="collapsePanel();">&lsaquo; <?php print($Definition["Close"]); ?></a>
-            <ul id="factors_expanded">
+            <ul id="factors_expanded_inactive">
             <?php 
-                foreach ($dcm->getParameters() as $parameter) print("<li id='{$parameter['id']}' class='factor'>
-                                                                        <input type='checkbox' class='factor_checkbox'/>
-                                                                        {$parameter['_value']}
-                                                                     </li>");
+                foreach ($dcm->getParameters() as $parameter) print("<li onclick=\"addParam('{$parameter['id']}', '{$parameter['_value']}');\" id='{$parameter['id']}' class='factor'>{$parameter['_value']}</li>");
             ?>
             </ul><!--factors_expanded-->
             </div><!--panel_expanded-->
