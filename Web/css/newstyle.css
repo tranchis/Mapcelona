@@ -245,6 +245,10 @@ td {
     padding:30px;
 }
 
+#floater_mapcelona_logo {
+    margin-left:-10px;
+}
+
 #floater_mapcelona p {
     margin-top:39px;
 }
