@@ -8,7 +8,7 @@
     </a>
     <a class="floater_close">
         <div id="floater_mapcelona">
-            <img src="<?=IMAGES_PATH?>logo_t.png" />
+            <img src="<?=IMAGES_PATH?>logo_trans.png" />
             <p><? echo $Definition["Go_Devel"]; ?></p>
         </div>    
     </a>
