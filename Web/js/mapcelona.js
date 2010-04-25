@@ -5,9 +5,11 @@ $('.floater_close').bind('click', function() {
 });
 
 // loading the map
-var map =new GMap2(document.getElementById("map"));
+var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
-map.setCenter(new GLatLng(41.387917,2.169919), 12);
+map.setCenter(new GLatLng(41.40,2.17), 12);
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(150,45), new GScreenSize(300,90));
+map.addOverlay(logo);
 var kml;
 var overlaid = false;
 
