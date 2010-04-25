@@ -27,10 +27,10 @@ $Definition["Close"] = 'Tanca';
 // About
 $Definition["AboutText"] = "<p>Mapcelona ha estat desenvolupat en el context del concurs Abredatos per quatre membres del grup d’Enginyeria del Coneixement i Aprenentatge Automàtic (<a href='http://www.kemlg.upc.edu'>KEMLg</a>) de la Universitat Politècnica de Catalunya (UPC).</p>
 <p>L’objectiu de Mapcelona és facilitar l’accés i visualització de dades provinents de la Generalitat de Catalunya i l’Ajuntament de Barcelona.</p>
-<p>Aquestes dades s’han extret majoritariament de PDFs i han estat modelades en RDF per a que, a banda de ser utilitzades a Mapcelona, altres aplicacions puguin accedir a elles sense necessitat de tornar a realitzar la pesada tasca d’extrere-les.</p>
-<p>L’aplicació permet escollir aquells paràmetres que es vulguin observar i detallar el seu interés indicant un pes per a cadascun d’ells. Aquests paràmetres ponderats i normalitzats s’aglutinen en un indicador que s’utilitza per generar un mapa de temperatura. Aquest mapa mostra el valor de l’indicador pels diferentes barris i districtes de Barcelona.</p>
+<p>Aquestes dades s’han extret majoritariament de PDFs i han estat modelades en RDF per a que, a banda de ser utilitzades a Mapcelona, altres aplicacions puguin accedir a elles sense necessitat de tornar a realitzar la feixuga tasca d’extreure-les.</p>
+<p>L’aplicació permet escollir aquells paràmetres que es vulguin observar i detallar el seu interès indicant un pes per a cadascun d’ells. Aquests paràmetres ponderats i normalitzats s’aglutinen en un indicador que s’utilitza per generar un mapa de temperatura. Aquest mapa mostra el valor de l’indicador pels diferentes barris i districtes de Barcelona.</p>
 <p>En la llista desplegable d’exemples es mostren conjunts de paràmetres i ponderacions predefinits: jove, ancià i parella amb fills.</p>
-<p>En el cas de la parella amb fills, es mostra com interessos la presència de col·legis, centres sanitaris, parcs i una tasa de crims baixa. L’aplicació pren les dades emmagatzamades, les normalitza i mostra aquells barris que tenen millors valores pels paràmetres seleccionats.</p>
+<p>En el cas de la parella amb fills, per exemple, es mostra com interessos la presència de col·legis, centres sanitaris, parcs i una taxa de crims baixa. L’aplicació pren les dades emmagatzemades, les normalitza i mostra aquells barris que tenen millors valors pels paràmetres seleccionats.</p>
 <p>Finalment, destacar que s’ha contactat amb l’Ajuntament de Barcelona i, a banda de l’interès suscitat per aquesta iniciativa, és possible que el feedback obtingut a Mapcelona sigui emprat per saber quines dades públiques tenen major preferència per ésser alliberades segons el punt de vista del ciutadà.</p>
 <br />
 <br />
