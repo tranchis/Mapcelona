@@ -14,17 +14,15 @@ include LANG_PATH.$lang.'.php';
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <title>mapcelona</title>
-        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ" type="text/javascript"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <link rel="shortcut icon" href="<?=IMAGES_PATH?>favicon.ico" type="image/x-icon">
+        <title>mapcelona - <? print($Definition["We"]); ?></title>
         <link rel="stylesheet" type="text/css" href="./css/newstyle.css" />
     </head>
     <body>
         <? include('header2.php'); ?>
-        <div id="we">
-            <img src="nosaltres.jpg"></br></br>
-            Luis, Miquel, Sergio, Ignasi.
+        <div id="we" class="gradient">
+            <img src="<?=IMAGES_PATH?>nosaltres.jpg"></br></br>
+            Luis (<a href="http://twitter.com/luisjoliva">@luisjoliva</a>), Miquel (<a href="http://twitter.com/msonsona">@msonsona</a>), Sergio (<a href="http://twitter.com/sergioalvarez">@sergioalvarez</a>), Ignasi.
         </div>
     </body>
 </html>

@@ -17,9 +17,9 @@ echo'
         |
         <a href="#" onclick="">'.$Definition["Help"].'</a>
         |
-        <a href="?lang=ca" onclick=""><img src="'.IMAGES_PATH.'cat_w.png" alt="català" class="flag" /></a>
-        <a href="?lang=es" onclick=""><img src="'.IMAGES_PATH.'esp_w.png" alt="español" class="flag" /></a>
-        <a href="?lang=en" onclick=""><img src="'.IMAGES_PATH.'eng_w.png" alt="english" class="flag" /></a>
+        <a href="?lang=ca" onclick=""><img src="'.IMAGES_PATH.'comp/catalan.png" alt="català" class="flag" /></a>
+        <a href="?lang=es" onclick=""><img src="'.IMAGES_PATH.'comp/castellano.png" alt="español" class="flag" /></a>
+        <a href="?lang=en" onclick=""><img src="'.IMAGES_PATH.'comp/english.png" alt="english" class="flag" /></a>
     </div><!--/navigation-->
     <div id="spacer"></div>
     <div id="actionlist">

@@ -20,7 +20,7 @@ $dcm = new dataClassManager();
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="keywords" content="map barcelona socioeconomic indicators">
         <meta name="description" content="Mapcelona is a mashup between Google Maps and several socioeconomic indicators obtained from official documents of the Local council and other public administrations.">
-	<link rel="shortcut icon" href="<?=CSS_PATH ?>/images/favicon.ico" type="image/x-icon">
+	    <link rel="shortcut icon" href="<?=IMAGES_PATH?>favicon.ico" type="image/x-icon">
         <title>mapcelona</title>
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ" type="text/javascript"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
@@ -32,25 +32,23 @@ $dcm = new dataClassManager();
            // if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
            //            else $_SESSION['floater'] ? include('floater.php'): false;
         ?>
-        <!--<div id="panel" class="panel_collapsed">//-->
-        <div id="panel_collapsed" class="visible">
+        <div id="panel">
             <a id="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>
 			<br/>
 			<a id="panel_trigger" onclick="updateMap();">Refresh map!</a><a id="panel_trigger" onclick="clearParams();">Clear parameters</a>
 			<br/><br/>
             <ul id="factors_expanded">
             </ul><!--factors_expanded-->
-        </div><!--panel_collapsed-->
+        </div><!--panel-->
 
-        <div id="panel_expanded" class="visible">
+        <div id="panel_expanded" style="display:none;">
             <a id="panel_trigger" onclick="collapsePanel();">&lsaquo; <?php print($Definition["Close"]); ?></a>
             <ul id="factors_expanded_inactive">
             <?php 
                 foreach ($dcm->getParameters() as $parameter) print("<li onclick=\"addParam('{$parameter['id']}', '{$parameter['_value']}');\" id='{$parameter['id']}' class='factor'>{$parameter['_value']}</li>");
             ?>
             </ul><!--factors_expanded-->
-            </div><!--panel_expanded-->
-        </div><!--/panel-->
+        </div><!--panel_expanded-->
         <div id="map">&nbsp;</div>
         <div id="spacer"></div>
         <script type="text/javascript" src="<?=JS_PATH?>mapcelona.js"></script>

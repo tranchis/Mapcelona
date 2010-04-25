@@ -1,5 +1,5 @@
 <div id="overlay"></div>
-<div id="floater">
+<div id="floater" class="gradient">
     <a href="http://www.mapcelona.org/">
         <div id="floater_abredatos">
             <img src="<?=IMAGES_PATH?>abredatos.png" />

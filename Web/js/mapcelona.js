@@ -4,7 +4,6 @@ $('.floater_close').bind('click', function() {
   $('#floater').addClass('invisible');
 });
 
-
 // loading the map
 var map =new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
@@ -23,7 +22,7 @@ function hidePolygons() {
     map.removeOverlay(kml);
 }
 
-// handling the panel
+/*// handling the panel
 var sliderIntervalId = 0;
 var totalHeight = 700;
 var sliderHeight = 232;
@@ -74,24 +73,14 @@ function SlideDownRun()
          sliderHeight = totalHeight;
       slider.style.width = sliderHeight + 'px';
    }
-}
+}*/
 function expandPanel() {
-/*    document.getElementById("panel").setAttribute("class", "panel_expanded");
-    document.getElementById("panel_collapsed").setAttribute("class", "invisible");
-    document.getElementById("panel_expanded").setAttribute("class", "visible");*/
-    //$('#panel').toggleClass('panel_expanded panel_collapsed');
-    //$('#panel_collapsed').toggleClass('visible invisible');
-    //$('#panel_expanded').toggleClass('visible invisible');
-	Slide();
+	$('#panel_expanded').toggle('slide',{},'slow');
+	//Slide();
 }
 function collapsePanel() {
-/*    document.getElementById("panel").setAttribute("class", "panel_collapsed");
-    document.getElementById("panel_collapsed").setAttribute("class", "visible");
-    document.getElementById("panel_expanded").setAttribute("class", "invisible");*/
-    //$('#panel').toggleClass('panel_expanded panel_collapsed');
-    //$('#panel_collapsed').toggleClass('visible invisible');
-    //$('#panel_expanded').toggleClass('visible invisible');
-	Slide();
+	$('#panel_expanded').toggle('slide',{},'slow');
+	//Slide();
     updateMap();
 }
 
@@ -119,6 +108,7 @@ function addParam(id, text)
 function clearParams()
 {
 	$('#factors_expanded li').remove();
+	hidePolygons();
 }
 
 /*// factors in the panel

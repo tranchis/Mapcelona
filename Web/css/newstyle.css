@@ -53,7 +53,7 @@ table {
 /* mapcelona !! */
 
 body {
-    overflow:hidden;
+    overflow:auto;
     font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
 }
 
@@ -127,19 +127,21 @@ td {
     clear:both;
 }
 
-#panel_collapsed {
+#panel {
     float:left;
     width:20%;
-    height:100%;
+    height:80%;
     overflow:auto;
 	background-color:#FFFFFF;
 }
 
 #panel_expanded {
-    /* width:100% !important; */
+    background-color:#FFFFFF;
+    height:80%;
+    left:20%;
+	overflow:auto;
+	position:absolute;
     z-index:10;
-	position:absolute;left:20%;
-	     right:100%;background-color:#FFFFFF;overflow:auto;
 }
 
 #panel_trigger {
@@ -150,6 +152,28 @@ td {
 
 #factors_expanded {
     display:block;
+}
+
+#factors_expanded_inactive {
+    float:left;
+    margin:10px;
+}
+
+li.factor {
+    margin:5px;
+    padding:5px;
+}
+
+li.factor:hover {
+    background: #f6f6f6; /* for non-css3 browsers */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e6e6e6'); /* for IE */
+        background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e6e6e6)); /* for webkit browsers */
+        background: -moz-linear-gradient(top,  #f6f6f6,  #e6e6e6); /* for firefox 3.6+ */
+    border-bottom:1px solid #ddd;
+    border-top:1px solid #fff;
+    cursor:move;
+    padding:4px;
+    z-index:20;
 }
 
 .slider {
@@ -176,23 +200,27 @@ td {
 
 #map {
     float:right;
-    height:100%;
+    height:80%;
     width:80%;
     overflow:hidden;
 }
 
-#about, #we {
-    height:100%;
+#about {
     padding:20px;
-    background: #f6f6f6; /* for non-css3 browsers */
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #fff,  #f6f6f6); /* for firefox 3.6+ */
 }
 
-#about a {
+#we {
+    height:80%;
+    overflow:hidden;
+    padding:20px;
+}
+
+#about a, #we a {
     text-decoration:underline !important;
+}
+
+#about p {
+    padding:10px;
 }
 
 /* floater */
@@ -210,10 +238,6 @@ td {
 }
 
 #floater {
-    background:#fff;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #fff,  #f6f6f6); /* for firefox 3.6+ */
     border:3px solid #000;
     border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;
     left:50%;
@@ -246,7 +270,7 @@ td {
 }
 
 #floater_mapcelona_logo {
-    margin-left:-10px;
+    margin-left:-25px;
 }
 
 #floater_mapcelona p {
@@ -263,6 +287,16 @@ td {
 
 .floater_close {
     cursor:pointer;
+}
+
+/* utils */
+
+.gradient {
+    background: #f6f6f6; /* for non-css3 browsers */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #fff,  #f6f6f6); /* for firefox 3.6+ */
 }
 
 .invisible {
