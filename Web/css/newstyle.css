@@ -240,6 +240,7 @@ li.factor:hover {
 #floater {
     border:3px solid #000;
     border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;
+    box-shadow:0 0 15px #000;-moz-box-shadow:0 0 15px #000;-webkit-box-shadow:0 0 15px #000;
     left:50%;
     margin:-140px 0 0 -300px !important;
     opacity:1 !important;
