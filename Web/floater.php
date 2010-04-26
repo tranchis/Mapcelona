@@ -1,6 +1,6 @@
 <div id="overlay"></div>
 <div id="floater" class="gradient">
-    <a href="http://www.mapcelona.org/">
+    <a href="http://www.mapcelona.org?redirect=true">
         <div id="floater_abredatos">
             <img src="<?=IMAGES_PATH?>abredatos.png" />
             <p><? echo $Definition["Go_Abredatos"]; ?></p>
