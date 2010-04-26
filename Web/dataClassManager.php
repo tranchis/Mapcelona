@@ -63,7 +63,7 @@ print_r($neighbourhoodValues);
                                                                     dis.id={$neighbourhoods[$idNeighbourhood]['district_id']}
                         ORDER BY dis.id");
 */
-$result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
+                $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
                         FROM district dis JOIN district_value dv, dataclass d  ON dv.district_id=dis.id AND
                                                                     dv.dataclass_id={$dataclass_id} AND
                                                                     dv.age={$maxAge} AND
