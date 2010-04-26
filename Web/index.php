@@ -35,7 +35,7 @@ $dcm = new dataClassManager();
         <div id="panel">
             <a id="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>
 			<br/>
-			<a id="panel_trigger" onclick="updateMap();">Refresh map!</a><a id="panel_trigger" onclick="clearParams();">Clear parameters</a>
+			<a id="panel_trigger" onclick="updateMap();"><?php print($Definition['RefreshMap']); ?></a><a id="panel_trigger" onclick="clearParams();"><?php print($Definition['ClearParams']); ?></a>
 			<br/><br/>
             <ul id="factors_expanded">
             </ul><!--factors_expanded-->

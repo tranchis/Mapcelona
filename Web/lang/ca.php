@@ -20,9 +20,12 @@ $Definition['Who'] = 'Qui és mapcelona?';
 $Definition['Sources'] = 'Quines fonts?';
 $Definition['BasedOn'] = 'Interioritats';
 
+
 // Panel
 $Definition["TuneParams"] = 'Personalitza paràmetres';
 $Definition["Close"] = 'Tanca';
+$Definition['RefreshMap'] = 'Refresca mapa';
+$Definition['ClearParams'] = 'Neteja par&agrave;metres';
 
 // About
 $Definition["AboutText"] = "<p>Mapcelona ha estat desenvolupat en el context del concurs Abredatos per quatre membres del grup d’Enginyeria del Coneixement i Aprenentatge Automàtic (<a href='http://www.kemlg.upc.edu'>KEMLg</a>) de la Universitat Politècnica de Catalunya (UPC).</p>

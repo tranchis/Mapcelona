@@ -23,6 +23,8 @@ $Definition['BasedOn'] = 'Under the hood';
 // Panel
 $Definition["TuneParams"] = 'Tune parameters';
 $Definition["Close"] = 'Close';
+$Definition['RefreshMap'] = 'Refresh map!';
+$Definition['ClearParams'] = 'Clear parameters';
 
 // About
 $Definition["AboutText"] = "<p>Mapcelona has been developed in the context of Abredatos contest by four members of the Knowledge Engineering and Machine Learning group (<a href='http://www.kemlg.upc.edu'>KEMLg</a>) in the Technical University of Catalonia (UPC).</p>

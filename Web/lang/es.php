@@ -23,6 +23,8 @@ $Definition['BasedOn'] = 'Interioridades';
 // Panel
 $Definition["TuneParams"] = 'Personaliza parámetros';
 $Definition["Close"] = 'Cierra';
+$Definition['RefreshMap'] = 'Refrescar mapa';
+$Definition['ClearParams'] = 'Limpiar par&aacute;metros';
 
 // About
 $Definition["AboutText"] = "<p>Mapcelona ha sido desarrollado en el contexto del concurso Abredatos por cuatro miembros del grupo de Ingeniería del Conocimiento y Aprendizaje Automático (<a href='http://www.kemlg.upc.edu'>KEMLg</a>) de la Universidad Politécnica de Cataluña (UPC).</p>
