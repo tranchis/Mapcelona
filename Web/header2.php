@@ -21,12 +21,12 @@
             <!--<tr height="5"><td colspan="9"></td></tr>//-->
             <tr height="25" bgcolor="#FFFFFF">
                 <td width="50"></td>
-                <td><!--<img src="./css/images/comp/home_<?php print($lang); ?>.png"/>//--></td>
+                <td><!--<img src="./css/images/comp/home_<?php print($_SESSION['lang']); ?>.png"/>//--></td>
                 <td></td>
-                <td><img src="./css/images/comp/examples_<?php  print($lang); ?>.png" /></td>
+                <td><img src="./css/images/comp/examples_<?php  print($_SESSION['lang']); ?>.png" /></td>
                 <td></td>
-                <td><img src="./css/images/comp/download_<?php  print($lang); ?>.png" /></td>
-                <td><img src="./css/images/comp/share_<?php  print($lang); ?>.png" /></td>
+                <td><img src="./css/images/comp/download_<?php  print($_SESSION['lang']); ?>.png" /></td>
+                <td><img src="./css/images/comp/share_<?php  print($_SESSION['lang']); ?>.png" /></td>
                 <td></td>
             </tr>
 
