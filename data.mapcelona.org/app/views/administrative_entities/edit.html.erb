@@ -1,0 +1,16 @@
+<h1>Editing administrative_entity</h1>
+
+<% form_for(@administrative_entity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @administrative_entity %> |
+<%= link_to 'Back', administrative_entities_path %>

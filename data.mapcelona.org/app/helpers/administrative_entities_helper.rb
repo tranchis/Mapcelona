@@ -1,0 +1,2 @@
+module AdministrativeEntitiesHelper
+end
