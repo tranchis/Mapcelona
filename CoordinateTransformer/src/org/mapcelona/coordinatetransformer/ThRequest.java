@@ -33,27 +33,33 @@ public class ThRequest extends Thread
 		
 		try
 		{
-			is = s.getInputStream();
-			br = new BufferedReader(new InputStreamReader(is));
-			request = br.readLine();
-			st = new StringTokenizer(request, ",");
-			x = Float.parseFloat(st.nextToken());
-			y = Float.parseFloat(st.nextToken());
-			
-			try
+			while(s.isConnected())
 			{
-				res = t.parse(x, y);
-				s.getOutputStream().write(res.getBytes());
-			}
-			catch (MismatchedDimensionException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			catch (TransformException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				is = s.getInputStream();
+				br = new BufferedReader(new InputStreamReader(is));
+				request = br.readLine();
+				System.out.println("Request arrived: " + request);
+				st = new StringTokenizer(request, ",");
+				x = Float.parseFloat(st.nextToken());
+				y = Float.parseFloat(st.nextToken());
+
+				try
+				{
+					res = t.parse(x, y);
+					System.out.println("Response: " + res);
+					res = res + "\n";
+					s.getOutputStream().write(res.getBytes());
+				}
+				catch (MismatchedDimensionException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				catch (TransformException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			s.close();
 		}
