@@ -12,7 +12,7 @@
                 <td width="10%"></td>
                 <td aligh="right" width="15%">
                     <table><tr>
-                <td align="center" width="30"><a href="./about2.php"><img src="./css/images/comp/help.png"/></a></td>
+                <td align="center" width="30"><a href="./about.php"><img src="./css/images/comp/help.png"/></a></td>
                 <td align="center" width="30"><a href="./we.php"><img src="./css/images/comp/we.png"/></a></td>
                         </tr></table>
                 <!--<td width="10%" align="right"><img src="./css/images/comp/banner_right.png"/></td>//-->

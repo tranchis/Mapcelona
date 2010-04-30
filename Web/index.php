@@ -24,12 +24,15 @@ $dcm = new dataClassManager();
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ" type="text/javascript"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>newstyle.css" />
+        <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
     </head>
     <body>
-        <? include('header2.php'); include('floater.php');
-           // if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
-           //            else $_SESSION['floater'] ? include('floater.php'): false;
+        <? include('header2.php'); 
+           /*
+include('floater.php');
+           if (!isset($_SESSION['floater'])) { include('floater.php'); $_SESSION['floater']=false; }
+           else $_SESSION['floater'] ? include('floater.php'): false;
+*/
         ?>
         <div id="panel">
             <a id="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>

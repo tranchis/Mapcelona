@@ -6,7 +6,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+caption {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -14,6 +14,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 body {
 	line-height: 1;
@@ -52,8 +53,7 @@ table {
 /* mapcelona !! */
 
 body {
-    margin:3px 0 0;
-    overflow:hidden;
+    overflow:auto;
     font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
 }
 
@@ -62,9 +62,12 @@ a {
     color:#222;
 }
 
+a:hover {
+	color:#0066a1;
+}
+
 #header {
-    height:90px;
-    width:100%;
+	height:20%;
 }
 
 #logo{
@@ -72,8 +75,8 @@ a {
     display:block;
     height:90px;
     width:300px;
-    position:relative;
     float:left;
+    margin-left:5%;
 }
 #languages{
     float:right;
@@ -116,6 +119,8 @@ a {
     text-align:right;
     padding-right:8px;
     font-size: 90%;
+    position: relative;
+    top: 70px;
 }
 
 #navigation a, #actionlist a {
@@ -129,12 +134,17 @@ a {
 #panel {
     float:left;
     width:20%;
-    height:100%;
+    height:80%;
     overflow:auto;
+	background-color:#FFFFFF;
 }
 
-div.panel_expanded {
-    width:100% !important;
+#panel_expanded {
+    background-color:#FFFFFF;
+    height:80%;
+    left:20%;
+	overflow:auto;
+	position:absolute;
     z-index:10;
 }
 
@@ -146,6 +156,28 @@ div.panel_expanded {
 
 #factors_expanded {
     display:block;
+}
+
+#factors_expanded_inactive {
+    float:left;
+    margin:10px;
+}
+
+li.factor {
+    margin:5px;
+    padding:5px;
+}
+
+li.factor:hover {
+    background: #f6f6f6; /* for non-css3 browsers */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e6e6e6'); /* for IE */
+        background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e6e6e6)); /* for webkit browsers */
+        background: -moz-linear-gradient(top,  #f6f6f6,  #e6e6e6); /* for firefox 3.6+ */
+    border-bottom:1px solid #ddd;
+    border-top:1px solid #fff;
+    cursor:move;
+    padding:4px;
+    z-index:20;
 }
 
 .slider {
@@ -172,31 +204,111 @@ div.panel_expanded {
 
 #map {
     float:right;
-    height:100%;
+    height:80%;
     width:80%;
     overflow:hidden;
 }
 
 #about {
-    float:right;
-    height:100%;
-    width:80%;
-    
+    padding:20px;
+}
+
+#we {
+    height:80%;
+    overflow:hidden;
+    padding:20px;
+}
+
+#about a, #we a {
+    text-decoration:underline !important;
+}
+
+#about p {
+    padding:10px;
+}
+
+/* floater */
+
+#overlay {
+    background:#efefef;
+    height:100% !important;
+    width:100% !important;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:50;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+}
+
+#floater {
+    border:3px solid #000;
+    border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px;
+    box-shadow:0 0 15px #000; -moz-box-shadow:0 0 15px #000; -webkit-box-shadow:0 0 15px #000;
+    left:50%;
+    margin:-140px 0 0 -300px !important;
+    opacity:1 !important;
+    filter:alpha(opacity=100) !important;
+    position:absolute;
+    top:50%;
+    width:600px;
+    z-index:100;
+}
+
+#floater p {
+    margin-top:20px;
+    text-align:center;
+    text-shadow:1px 1px 0 #fff;
+}
+
+#floater_abredatos {
+    float:left;
+    padding:30px;
+    text-align:center;
+    width:40%;
+}
+
+#floater_mapcelona {
+    margin-left:270px;
+    margin-top:50px;
+    padding:30px;
+}
+
+#floater_mapcelona_logo {
+    margin-left:-25px;
+}
+
+#floater_mapcelona p {
+    margin-top:39px;
+}
+
+#floater_close {
+    height:25px;
+    position:absolute;
+    right:-12px;
+    top:-12px;
+    width:25px;
+}
+
+.floater_close {
+    cursor:pointer;
+}
+
+/* utils */
+
+.gradient {
     background: #f6f6f6; /* for non-css3 browsers */
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #fff,  #f6f6f6); /* for firefox 3.6+ */
 }
 
-#logo_abredatos {
-    margin:0 auto;
-}
-
 .invisible {
-    display:none;
+    display:none !important;
 }
 
 .visible {
-    display:block;
+    display:block !important;
 }

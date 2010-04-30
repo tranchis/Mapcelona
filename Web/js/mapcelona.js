@@ -8,7 +8,7 @@ $('.floater_close').bind('click', function() {
 var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
-var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(150,45), new GScreenSize(300,90));
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,40), new GScreenSize(135,40));
 map.addOverlay(logo);
 var kml;
 var overlaid = false;
@@ -16,8 +16,13 @@ var overlaid = false;
 // maps functions
 function showPolygons(url) {
     if(overlaid) hidePolygons();
-    kml = new GGeoXml(url);
+    kml = new GGeoXml(url/*,function() {
+          if (geoxml.loadedCorrectly()) {
+            kml.gotoDefaultViewport(map);
+          }
+        }*/);
     map.addOverlay(kml);
+    //setTimeout("var kml2 = new GGeoXml('http://www.mapcelona.org/devel/docAjCEC.kml');map.addOverlay(kml2);",5000);
     overlaid = true;
 }
 function hidePolygons() {
