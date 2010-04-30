@@ -99,13 +99,14 @@ function addParam(id, text)
 {
 	var panel = document.getElementById("factors_expanded");
 	var item = document.createElement("li");
-	var div = document.createElement("div");
-	var div2 = document.createElement("div");
-	var div3 = document.createElement("div");
+	var bar = document.createElement("input");
 	item.innerText = text;
 	item.setAttribute("id", id);
 	item.setAttribute("onclick", "\"addParam('" + id + "', '" + text + "');\"");
 	item.setAttribute("class", "factor active");
+	var div = document.createElement("div");
+	var div2 = document.createElement("div");
+	var div3 = document.createElement("div");
 	div.setAttribute("class", "slider");
 	div2.setAttribute("class", "slider-handle");
 	div3.setAttribute("class", "factor_weight");
@@ -113,6 +114,15 @@ function addParam(id, text)
 	div.appendChild(div2);
 	item.appendChild(div);
 	item.appendChild(div3);
+
+	//<input name="slider1" id="slider-r" type="text" title="Range: 0 - 255" class="fd_range_0_255 fd_classname_extraclass fd_callback_updateColor" value="128" />
+	bar.setAttribute("name", "slider1");
+	bar.setAttribute("id", "slider-r");
+	bar.setAttribute("type", "text");
+	bar.setAttribute("class", "fd_range_0_255 fd_classname_extraclass fd_callback_updateColor");
+	bar.setAttribute("value", "100");
+	item.appendChild(bar);
+
 	panel.appendChild(item);
 }
 

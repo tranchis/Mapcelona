@@ -26,6 +26,7 @@ $dcm = new dataClassManager();
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>newstyle.css" />
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?=CSS_PATH?>slider.css" />
     </head>
     <body>
         <? include('header2.php'); include('floater.php');
@@ -39,7 +40,7 @@ $dcm = new dataClassManager();
 			<a id="panel_trigger" onclick="updateMap();">Refresh map!</a><a id="panel_trigger" onclick="clearParams();">Clear parameters</a>
 			<br/><br/>
             <ul id="factors_expanded">
-            </ul><!--factors_expanded-->
+			</ul><!--factors_expanded-->
         </div><!--panel_collapsed-->
 
         <div id="panel_expanded" class="visible">
@@ -54,6 +55,7 @@ $dcm = new dataClassManager();
         <div id="map">&nbsp;</div>
         <div id="spacer"></div>
         <script type="text/javascript" src="<?=JS_PATH?>mapcelona.js"></script>
+		<script type="text/javascript" src="<?=JS_PATH?>slider.js"></script>
         <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
