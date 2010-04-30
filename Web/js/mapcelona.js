@@ -4,26 +4,32 @@ $('.floater_close').bind('click', function() {
   $('#floater').addClass('invisible');
 });
 
-
 // loading the map
-var map =new GMap2(document.getElementById("map"));
+var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
-map.setCenter(new GLatLng(41.387917,2.169919), 12);
+map.setCenter(new GLatLng(41.40,2.17), 12);
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,40), new GScreenSize(135,40));
+map.addOverlay(logo);
 var kml;
 var overlaid = false;
 
 // maps functions
 function showPolygons(url) {
     if(overlaid) hidePolygons();
-    kml = new GGeoXml(url);
+    kml = new GGeoXml(url/*,function() {
+          if (geoxml.loadedCorrectly()) {
+            kml.gotoDefaultViewport(map);
+          }
+        }*/);
     map.addOverlay(kml);
+    //setTimeout("var kml2 = new GGeoXml('http://www.mapcelona.org/devel/docAjCEC.kml');map.addOverlay(kml2);",5000);
     overlaid = true;
 }
 function hidePolygons() {
     map.removeOverlay(kml);
 }
 
-// handling the panel
+/*// handling the panel
 var sliderIntervalId = 0;
 var totalHeight = 700;
 var sliderHeight = 232;
@@ -74,24 +80,14 @@ function SlideDownRun()
          sliderHeight = totalHeight;
       slider.style.width = sliderHeight + 'px';
    }
-}
+}*/
 function expandPanel() {
-/*    document.getElementById("panel").setAttribute("class", "panel_expanded");
-    document.getElementById("panel_collapsed").setAttribute("class", "invisible");
-    document.getElementById("panel_expanded").setAttribute("class", "visible");*/
-    //$('#panel').toggleClass('panel_expanded panel_collapsed');
-    //$('#panel_collapsed').toggleClass('visible invisible');
-    //$('#panel_expanded').toggleClass('visible invisible');
-	Slide();
+	$('#panel_expanded').toggle('slide',{},'slow');
+	//Slide();
 }
 function collapsePanel() {
-/*    document.getElementById("panel").setAttribute("class", "panel_collapsed");
-    document.getElementById("panel_collapsed").setAttribute("class", "visible");
-    document.getElementById("panel_expanded").setAttribute("class", "invisible");*/
-    //$('#panel').toggleClass('panel_expanded panel_collapsed');
-    //$('#panel_collapsed').toggleClass('visible invisible');
-    //$('#panel_expanded').toggleClass('visible invisible');
-	Slide();
+	$('#panel_expanded').toggle('slide',{},'slow');
+	//Slide();
     updateMap();
 }
 
@@ -129,6 +125,7 @@ function addParam(id, text)
 function clearParams()
 {
 	$('#factors_expanded li').remove();
+	hidePolygons();
 }
 
 /*// factors in the panel
