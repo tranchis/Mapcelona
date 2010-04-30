@@ -308,6 +308,7 @@ public class Rdf2SqlConnector
 			"PREFIX : <http://www.mapcelona.org/barcelona.owl#>\n" +	
 			"SELECT ?r ?s WHERE {\n" +
 			"?r rdf:type demo:PieceOfData.\n" +	
+			"?r demo:hasMapping \"% verd urbˆ\"." +
 			"?s rdf:type city:Neighbourhood.\n" +			
 			"?r demo:refersTo ?s.\n" +			
 			"}";
