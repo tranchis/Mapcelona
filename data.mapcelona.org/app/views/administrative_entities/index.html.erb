@@ -1,0 +1,20 @@
+<h1>Listing administrative_entities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @administrative_entities.each do |administrative_entity| %>
+  <tr>
+    <td><%=h administrative_entity.name %></td>
+    <td><%= link_to 'Show', administrative_entity %></td>
+    <td><%= link_to 'Edit', edit_administrative_entity_path(administrative_entity) %></td>
+    <td><%= link_to 'Destroy', administrative_entity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New administrative_entity', new_administrative_entity_path %>
