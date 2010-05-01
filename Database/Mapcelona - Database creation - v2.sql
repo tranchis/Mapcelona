@@ -90,3 +90,31 @@ CREATE TABLE IF NOT EXISTS _translation
 	CONSTRAINT FK_translation_0 FOREIGN KEY (language_id) REFERENCES _language (id),
 	CONSTRAINT FK_translation_1 FOREIGN KEY (dataclass_id) REFERENCES dataclass (id)
 ) TYPE = INNODB;
+
+CREATE TABLE IF NOT EXISTS groups
+(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	name VARCHAR (255) UNIQUE,
+	CONSTRAINT PK_groups PRIMARY KEY (id)
+) TYPE = INNODB;
+
+CREATE TABLE IF NOT EXISTS belongs_to
+(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	from_group_id INT UNSIGNED,
+	to_group_id INT UNSIGNED,
+	CONSTRAINT PK_belongs_to PRIMARY KEY (id),
+	CONSTRAINT FK_belongs_to_0 FOREIGN KEY (from_group_id) REFERENCES groups (id),
+	CONSTRAINT FK_belongs_to_1 FOREIGN KEY (to_group_id) REFERENCES groups (id)
+) TYPE = INNODB;
+
+CREATE TABLE IF NOT EXISTS children
+(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	parent_id INT UNSIGNED NOT NULL,
+	child_id INT UNSIGNED NOT NULL,
+	CONSTRAINT PK_children PRIMARY KEY (id),
+	CONSTRAINT UNIQUE_children UNIQUE (parent_id, child_id),
+	CONSTRAINT FK_children_0 FOREIGN KEY (parent_id) REFERENCES groups (id),
+	CONSTRAINT FK_children_1 FOREIGN KEY (child_id) REFERENCES dataclass (id)
+) TYPE = INNODB;
