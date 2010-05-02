@@ -31,6 +31,9 @@ class Entity
     uri = 'http://data.mapcelona.org/entities/' + id
     rs = @@repository.query([RDF::URI.new(uri), nil, nil])
     entity = self.new
+    if rs.empty?
+      rs = @@repository.query([nil, @@hasName, id])
+    end
     rs.each_statement do |r|
       entity.statements << r
       if r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasName"
