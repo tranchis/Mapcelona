@@ -1,4 +1,5 @@
 require 'rdf/cassandra'
+require 'geonames'
 
 class Entity
   @@repository = RDF::Cassandra::Repository.new(:servers => "127.0.0.1:9160")
@@ -32,7 +33,12 @@ class Entity
     rs = @@repository.query([RDF::URI.new(uri), nil, nil])
     entity = self.new
     if rs.empty?
-      rs = @@repository.query([nil, @@hasName, id])
+      sc = Geonames::ToponymSearchCriteria.new
+      sc.q = id
+      r = Geonames::WebService.search sc
+      topo = r.toponyms[0]
+      uri = 'http://data.mapcelona.org/entities/' + topo
+      rs = @@repository.query([RDF::URI.new(uri), nil, nil])
     end
     rs.each_statement do |r|
       entity.statements << r
