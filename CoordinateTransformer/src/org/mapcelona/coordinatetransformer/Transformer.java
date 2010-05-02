@@ -33,7 +33,7 @@ public class Transformer
 		gdp = new GeneralDirectPosition(x, y);
 		dp = mt.transform(gdp, null);
 		
-		res = dp.getCoordinate()[1] + "," + dp.getCoordinate()[0];
+		res = dp.getCoordinate()[0] + "," + dp.getCoordinate()[1];
 		
 		return res;
 	}
