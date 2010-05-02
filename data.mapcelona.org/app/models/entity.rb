@@ -36,7 +36,7 @@ class Entity
       sc = Geonames::ToponymSearchCriteria.new
       sc.q = id
       r = Geonames::WebService.search sc
-      topo = r.toponyms[0]
+      topo = r.toponyms[0].to_s
       uri = 'http://data.mapcelona.org/entities/' + topo
       rs = @@repository.query([RDF::URI.new(uri), nil, nil])
     end
