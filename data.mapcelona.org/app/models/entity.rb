@@ -42,7 +42,7 @@ class Entity
       if rs.empty?
         sc.q = nil
         sc.feature_codes = ["PCLI", "TERR", "PCLD", "PCLI", "PPLA"]
-        sc.sc.name_equals = id.gsub(", The", "")
+        sc.name_equals = id.gsub(", The", "")
         r = Geonames::WebService.search sc
         topo = r.toponyms[0].geoname_id.to_s
         uri = 'http://data.mapcelona.org/entities/' + topo
