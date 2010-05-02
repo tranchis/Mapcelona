@@ -42,8 +42,8 @@ def get_kml(st)
   }
 end
 
-repository = RDF::Cassandra::Repository.new(:servers => "127.0.0.1:9160")
-xml_data = File.open('/Users/sergio/Desktop/Municipis.gml').read
+repository = RDF::Cassandra::Repository.new(:servers => "147.83.200.118:80")
+xml_data = File.open('./Municipis.gml').read
 sc = Geonames::ToponymSearchCriteria.new
 sc.country_code = "ES"
 
@@ -53,7 +53,6 @@ cc = CoordinateConverter.new
 doc = REXML::Document.new(xml_data)
 title = ""
 links = []
-kml = ""
 doc.elements.each('gml:FeatureCollection/gml:featureMember/idec:Municipis') do |ele|
   ele.elements.each('idec:NOM_MUNI') do |nom|
     title = nom.text
@@ -66,45 +65,57 @@ doc.elements.each('gml:FeatureCollection/gml:featureMember/idec:Municipis') do |
     id = topo.geoname_id
     obj = RDF::URI.new('http://sws.geonames.org/' + r.toponyms[0].geoname_id + '/about.rdf')
     subj = RDF::URI.new('http://data.mapcelona.org/entities/' + r.toponyms[0].geoname_id)
-    rs = repository.query([subj, sameas, obj])
-    #rs = repository.query([subj, hasName, nil])
-    if rs.empty?
-      poly = []
-      ele.elements.each('idec:the_geom/gml:MultiPolygon/gml:polygonMember') do |pm|
-        pm.elements.each('gml:Polygon') do |polygon|
-          coords = []
-          polygon.elements.each('gml:outerBoundaryIs/gml:LinearRing/gml:coordinates') do |coord|
-            coord.text.split.each do |xy|
-              s.puts(xy)
-              coords << s.gets.chomp
+    done = false
+    while !done
+      begin
+        rs = repository.query([subj, sameas, obj])
+        #rs = repository.query([subj, hasName, nil])
+        if rs.empty?
+          poly = []
+          ele.elements.each('idec:the_geom/gml:MultiPolygon/gml:polygonMember') do |pm|
+            pm.elements.each('gml:Polygon') do |polygon|
+              coords = []
+              polygon.elements.each('gml:outerBoundaryIs/gml:LinearRing/gml:coordinates') do |coord|
+                coord.text.split.each do |xy|
+                  puts xy
+                  s.puts(xy)
+                  coord_tel = s.gets.chomp
+                  puts coord_tel
+                  coords << coord_tel
+                end
+              end
+              poly << coords
             end
           end
-          poly << coords
-        end
-      end
-      #links << poly
+          #links << poly
 
-      kml << get_kml(poly)
-      print "#{title} => #{poly[0][0]}\n"
-      puts 'http://sws.geonames.org/' + r.toponyms[0].geoname_id + '/about.rdf'
-      poly.each_with_index do |polygon, idx|
-        uri = uri_polygon_base + id + '_' + idx.to_s
-        repository.insert([uri, type, obj_polygon])
-        repository.insert([subj, pred_hasp, uri])
-        polygon.each do |point|
-          x = point.split(',')[0]
-          y = point.split(',')[1]
-          uri_p = uri_point_base + y.gsub('.', '_') + '_' + x.gsub('.', '_')
-          repository.insert([uri_p, type, obj_point])
-          repository.insert([uri, pred_haspt, uri_p])
-          repository.insert([uri_p, pred_lat, y.to_f])
-          repository.insert([uri_p, pred_long, x.to_f])
+          kml = get_kml(poly)
+          print "#{title} => #{poly[0][0]}\n"
+          puts 'http://sws.geonames.org/' + r.toponyms[0].geoname_id + '/about.rdf'
+          poly.each_with_index do |polygon, idx|
+            uri = uri_polygon_base + id + '_' + idx.to_s
+            repository.insert([uri, type, obj_polygon])
+            repository.insert([subj, pred_hasp, uri])
+            polygon.each do |point|
+              x = point.split(',')[0]
+              y = point.split(',')[1]
+              uri_p = uri_point_base + y.gsub('.', '_') + '_' + x.gsub('.', '_')
+              repository.insert([uri_p, type, obj_point])
+              repository.insert([uri, pred_haspt, uri_p])
+              repository.insert([uri_p, pred_lat, y.to_f])
+              repository.insert([uri_p, pred_long, x.to_f])
+            end
+          end
+          repository.insert([subj, type, obj_entity])
+          repository.insert([subj, hasName, r.toponyms[0].name])
+          repository.insert([subj, hasKml, kml])
+          repository.insert([subj, sameas, obj])
         end
+        done = true
+      rescue Thrift::TransportException
+        puts "Cassandra error!"
+        repository = RDF::Cassandra::Repository.new(:servers => "147.83.200.118:80")
       end
-      repository.insert([subj, type, obj_entity])
-      repository.insert([subj, hasName, r.toponyms[0].name])
-      repository.insert([subj, hasKml, kml])
-      repository.insert([subj, sameas, obj])
     end
   end
 end
