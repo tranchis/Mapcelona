@@ -1,5 +1,8 @@
+require 'rdf'
+require 'rdf/cassandra'
+
 class Point
-  @@repository = RDF::Cassandra::Repository.new(:servers => "127.0.0.1:9160")
+  @@repository = RDF::Cassandra::Repository.new(:servers => "147.83.200.118:80")
   @@type = RDF::URI.new("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
   @@obj_entity = RDF::URI.new('http://data.mapcelona.org/mapcelona.owl#Entity')
   attr_accessor :code
