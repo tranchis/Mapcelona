@@ -2,7 +2,7 @@ require 'rdf/cassandra'
 require 'geonames'
 
 class Entity
-  @@repository = RDF::Cassandra::Repository.new(:servers => "127.0.0.1:9160")
+  @@repository = RDF::Cassandra::Repository.new(:servers => "147.83.200.118:80")
   @@type = RDF::URI.new("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
   @@hasName = RDF::URI.new("http://data.mapcelona.org/mapcelona.owl#hasName")
   @@kml = RDF::URI.new("http://data.mapcelona.org/mapcelona.owl#hasKml")
