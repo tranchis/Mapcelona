@@ -45,8 +45,22 @@ $dcm = new dataClassManager();
         	</div>
         	<div id="factors_expanded">
 	            <ul id="factors_expanded_list">
-	            <?php 
-	                foreach ($dcm->getParameters() as $parameter) print("<li onclick=\"addParam('{$parameter['id']}', '{$parameter['_value']}');\" id='{$parameter['id']}' class='factor'>{$parameter['_value']}</li>");
+	            <?php
+                        function print_group($group, $expanded=false){
+                            foreach($group as $key=>$value){
+                                if (!is_array($value)) print("<li class='factor' id='{$value}'>{$key}</li>");
+                                else{
+                                    if ($expanded) print("<li class='expandable'>{$key}<ul>");
+                                    else print("<li>{$key}<ul>");
+                                    print_group($value);
+                                    print('</ul></li>');
+                                }
+                            }
+                        }
+                        print_group($dcm->getDataclasses($_SESSION['lang']), true);
+	                
+                            //print("<li onclick=\"addParam('{$parameter['id']}', '{$parameter['_value']}');\" id='{$parameter['id']}' class='factor'>{$parameter['_value']}</li>");
+                        
 	            ?>
 	            </ul>
             </div><!--factors_expanded-->

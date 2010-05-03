@@ -9,17 +9,20 @@ class dataClassManager {
         $this->db = new dbManager();
     }
 
-    private function extractGroups($group){
-
-        $dataclasses=$this->db->launchQuery("SELECT dc.* FROM dataclass dc, children c WHERE c.parent_id={$group['id']} AND c.child_id=dc.id");
-        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['name']]=$dataclass['id'];
-        $subgroups= $this->db->launchQuery("SELECT * FROM groups WHERE id IN (SELECT from_group_id FROM belongs_to WHERE to_group_id={$group['id']})");
-        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['name']]=$this->extractGroups($subgroup);
+    private function extractGroups($group, $language){
+        $dataclasses=$this->db->launchQuery("SELECT dc.id, t._value FROM dataclass dc, children c, _translation t, _language l
+                                             WHERE c.parent_id={$group['id']} AND c.child_id=dc.id AND t.dataclass_id=dc.id AND t.language_id=l.id AND l.name='{$language}'");
+        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['_value']]=$dataclass['id'];
+        $subgroups= $this->db->launchQuery("SELECT g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
+                                            WHERE g.id=b.from_group_id AND b.to_group_id={$group['id']} AND gt.group_id=g.id AND gt.language_id=l.id AND l.name='{$language}'");
+        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['_value']]=$this->extractGroups($subgroup, $language);
         return $result;
     }
-    public function getDataclasses(){
-        $groups=$this->db->launchQuery('SELECT * FROM groups WHERE id NOT IN (SELECT from_group_id FROM belongs_to)');
-        foreach ($groups as $group) $result[$group['name']]=$this->extractGroups($group);
+    public function getDataclasses($language){
+        $groups=$this->db->launchQuery("SELECT distinct g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
+                                        WHERE g.id NOT IN (SELECT from_group_id FROM belongs_to) AND gt.group_id=g.id AND gt.language_id=l.id AND l.name='{$language}'");
+
+        foreach ($groups as $group) $result[$group['_value']]=$this->extractGroups($group, $language);
         return $result;
     }
 
