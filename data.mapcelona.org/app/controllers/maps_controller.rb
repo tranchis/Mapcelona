@@ -13,7 +13,7 @@ class MapsController < ApplicationController
   # GET /maps/1
   # GET /maps/1.xml
   def show
-    @map = Map.find_map(params[:id])
+    @map = Map.find(params[:id])
 
     respond_to do |format|
       #format.html # show.html.erb
