@@ -1,18 +1,27 @@
+// globals
+var factors =  new Array();
+var map_height;
+var panel_padding = 10;
+var panel_height;
+
 // Floater
+/*
 $('.floater_close').bind('click', function() {
   $('#overlay').addClass('invisible');
   $('#floater').addClass('invisible');
 });
+*/
 
 // adjusting layout according to window size
-var map_height = $(window).height() - $('#header').height();
-var panel_padding = 10;
-var panel_height = map_height - panel_padding;
-$('#panel').height(panel_height);
-$('#panel').width($(window).width()*0.20 - panel_padding);
-$('#factors_target').height(panel_height - $('#panel_header').height() - panel_padding - 16);
-$('#panel_expanded').height(map_height);
-$('#map').height(map_height);
+function resizeApp() {
+	map_height = $(window).height() - $('#header').height();
+	panel_height = map_height - panel_padding;
+	$('#panel').height(panel_height);
+	$('#panel').width($(window).width()*0.20 - panel_padding);
+	$('#factors_target').height(panel_height - $('#panel_header').height() - panel_padding - 16);
+	$('#panel_expanded').height(map_height);
+	$('#map').height(map_height);
+}
 
 // loading the map
 var map = new GMap2(document.getElementById("map"));
@@ -20,9 +29,10 @@ map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
 var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,35), new GScreenSize(135,40));
 map.addOverlay(logo);
-var kmls = new Array();
 var kml;
 var overlaid = false;
+
+resizeApp();
 
 // maps functions
 function showPolygons(url) {
@@ -78,13 +88,23 @@ function collapsePanel() {
 }
 
 // factors functions
-$('.factor').draggable({ helper: 'clone', opacity: 0.75, revert: 'invalid', stack: ".factor", zIndex: 1000 });
+$('.factor').draggable({ 
+	helper: 'clone', 
+	opacity: 0.75, 
+	revert: 'invalid', 
+	stack: ".factor", 
+	zIndex: 1000 
+	});
 $('#factors_target').droppable({
-	activate: function(event, ui) {  },
-	drop: function(event, ui) { $('#selected_factors').append(ui.draggable); },
+	accept: '.factor',
+	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
+	drop: function(event, ui) { 
+		// code to be executed when a factor is dropped
+		$('#selected_factors').append(ui.draggable); 
+	},
 	over:function(event, ui) { $('#factors_target').css('margin','2px'); },
 	out:function(event, ui) { $('#factors_target').css('margin','5px'); }
-});
+	});
 
 function addParam(id, text)
 {

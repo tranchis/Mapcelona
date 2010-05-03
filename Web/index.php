@@ -14,7 +14,9 @@ include LANG_PATH.$_SESSION['lang'].'.php';
 include_once('dataClassManager.php');
 $dcm = new dataClassManager();
 ?>
-<html>
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="keywords" content="map barcelona socioeconomic indicators">
@@ -26,7 +28,7 @@ $dcm = new dataClassManager();
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
     </head>
-    <body>
+    <body onunload="GUnload()" onresize="resizeApp()">
         <? include('header.php'); ?>
         <div id="panel">
         	<div id="panel_header" class="panel_header">
