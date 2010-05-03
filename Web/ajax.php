@@ -1,7 +1,7 @@
 <?php
 
 include('dataClassManager.php');
-
+// Limpiar $_GET
 $params = $_GET['params'];
 //$params = '255,77-252,24';
 //echo $params;
@@ -16,6 +16,8 @@ foreach ($pairs as $pair) {
     $exploded_pairs[$var[0]] = $var[1];
 }
 
+// Hacer array_unique en $exploded_pairs y luego un ksort.
+//
 // Generate a random character string
 function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890')
 {
@@ -40,6 +42,7 @@ function rand_str($length = 32, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
 }
 
 $dcm = new dataClassManager();
+// Buscar si existe un fichero llamado doc+toString($exploded_pairs).kml
 @$values=$dcm->getIndicator($exploded_pairs);
 
 //print_r($colors);
@@ -99,6 +102,8 @@ foreach($values as $dataclass => $value)
 }
 
 $randname = rand_str(5);
+// Guardar el fichero como doc+toString($explodedPairs).kml
+// Actualizar indicadores de uso: el string explodedPairs, para saber el nº de veces usada esa combinación y luego cada parámetro por separado
 $filename="./doc" . $randname . ".kml";
 $file = fopen($filename, "w");
 fputs($file, $output);
