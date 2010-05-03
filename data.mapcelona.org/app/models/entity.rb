@@ -54,13 +54,22 @@ class Entity
   def self.get_query_online(id)
     uri = 'http://data.mapcelona.org/entities/' + id
     entity = self.new
+    done = false
     rs = @@repository.query([RDF::URI.new(uri), nil, nil]) do |r|
+      done = true
       entity.statements << r
       if r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasName"
         entity.name = r.object.value.to_s
       elsif r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasKml"
         entity.kml = r.object.value.to_s
       end
+    end
+    if !done
+      sc = Geonames::ToponymSearchCriteria.new
+      sc.q = id
+      r = Geonames::WebService.search sc
+      topo = r.toponyms[0].geoname_id.to_s
+      entity = get_query_online(topo)
     end
     entity
   end
