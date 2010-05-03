@@ -9,7 +9,8 @@ class dataClassManager {
         $this->db = new dbManager();
     }
 
-private function extractGroups($group){
+    private function extractGroups($group){
+
         $dataclasses=$this->db->launchQuery("SELECT dc.* FROM dataclass dc, children c WHERE c.parent_id={$group['id']} AND c.child_id=dc.id");
         if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['name']]=$dataclass['id'];
         $subgroups= $this->db->launchQuery("SELECT * FROM groups WHERE id IN (SELECT from_group_id FROM belongs_to WHERE to_group_id={$group['id']})");
@@ -21,6 +22,7 @@ private function extractGroups($group){
         foreach ($groups as $group) $result[$group['name']]=$this->extractGroups($group);
         return $result;
     }
+
     public function getParameters(){
         // Esto para cuando estén los idiomas
         $sql = "SELECT dc.*, t._value FROM dataclass dc, _translation t, _language l
@@ -50,9 +52,9 @@ private function extractGroups($group){
         $neighbourhoods = $aux;
 
         foreach ($dataClassWeights as $dataclass_id=>$dataclass_weight) {
-            $rawValues=null; 
+            $rawValues=null;
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
-           
+
 //print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
@@ -134,7 +136,7 @@ foreach($colours as $color)
             $difference = $max - $min;
             // print($min.' '.$max.' '.$difference);
             foreach($values as $key=>$value){
-                
+
                 if ($difference>0)
 					{
 						$norm = 0;
