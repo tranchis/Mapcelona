@@ -19,7 +19,7 @@ include LANG_PATH.$_SESSION['lang'].'.php';
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
     </head>
     <body>
-        <? include('header2.php'); ?>
+        <? include('header.php'); ?>
         <div id="about" class="gradient">
             <? print($Definition["AboutText"]); ?>
         </div>

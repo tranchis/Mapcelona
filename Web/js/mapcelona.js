@@ -4,12 +4,23 @@ $('.floater_close').bind('click', function() {
   $('#floater').addClass('invisible');
 });
 
+// adjusting layout according to window size
+var map_height = $(window).height() - $('#header').height();
+var panel_padding = 10;
+var panel_height = map_height - panel_padding;
+$('#panel').height(panel_height);
+$('#panel').width($(window).width()*0.20 - panel_padding);
+$('#factors_target').height(panel_height - $('#panel_header').height() - panel_padding - 16);
+$('#panel_expanded').height(map_height);
+$('#map').height(map_height);
+
 // loading the map
 var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
-var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,40), new GScreenSize(135,40));
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,35), new GScreenSize(135,40));
 map.addOverlay(logo);
+var kmls = new Array();
 var kml;
 var overlaid = false;
 
@@ -22,78 +33,62 @@ function showPolygons(url) {
           }
         }*/);
     map.addOverlay(kml);
-    //setTimeout("var kml2 = new GGeoXml('http://www.mapcelona.org/devel/docAjCEC.kml');map.addOverlay(kml2);",5000);
     overlaid = true;
 }
 function hidePolygons() {
     map.removeOverlay(kml);
 }
 
-/*// handling the panel
-var sliderIntervalId = 0;
-var totalHeight = 700;
-var sliderHeight = 232;
-var sliding = false;
-var slideSpeed = 60;
-function Slide()
-{
-   if(sliding)
-      return;
-   sliding = true;
-   if(sliderHeight == totalHeight)
-      sliderIntervalId = setInterval('SlideUpRun()', 30);
-   else
-      sliderIntervalId = setInterval('SlideDownRun()', 30);
+function updateMap() {
+    // collect all active factors and their weights
+    var arrayOfIds = new Array();
+    var arrayOfWeights = new Array();
+    $('.active').each(function(){
+        arrayOfIds.push($(this).attr('id'));
+    });
+    $('.factor_weight').each(function(){
+        arrayOfWeights.push($(this).html());
+    });
+    if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
+        // encode all the values in the string to be sent
+        var datastring = '';
+        for(var i in arrayOfIds) {
+            datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
+        }
+        datastring = datastring.substring(1);
+        datastring = 'params=' + datastring;
+        // make the ajax call
+        $.ajax({
+            url:'http://www.mapcelona.org/devel/ajax.php',
+            data:datastring,
+            success: function(url){showPolygons(url);}
+        });
+    }
 }
-function SlideUpRun()
-{
-   slider = document.getElementById('panel_expanded');
-   if(sliderHeight <= 0)
-   {
-      sliding = false;
-      sliderHeight = 0;
-      slider.style.width = '0px';
-      clearInterval(sliderIntervalId);
-   }
-   else
-   {
-      sliderHeight -= slideSpeed;
-      if(sliderHeight < 0)
-         sliderHeight = 0;
-      slider.style.width = sliderHeight + 'px';
-   }
-}
-function SlideDownRun()
-{
-   slider = document.getElementById('panel_expanded');
-   if(sliderHeight >= totalHeight)
-   {
-      sliding = false;
-      sliderHeight = totalHeight;
-      slider.style.width = totalHeight + 'px';
-      clearInterval(sliderIntervalId);
-   }
-   else
-   {
-      sliderHeight += slideSpeed;
-      if(sliderHeight > totalHeight)
-         sliderHeight = totalHeight;
-      slider.style.width = sliderHeight + 'px';
-   }
-}*/
+
+// panel functions
 function expandPanel() {
 	$('#panel_expanded').toggle('slide',{},'slow');
-	//Slide();
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 2 * panel_padding - 2);
 }
+
 function collapsePanel() {
 	$('#panel_expanded').toggle('slide',{},'slow');
-	//Slide();
     updateMap();
 }
 
+// factors functions
+$('.factor').draggable({ helper: 'clone', opacity: 0.75, revert: 'invalid', stack: ".factor", zIndex: 1000 });
+$('#factors_target').droppable({
+	activate: function(event, ui) {  },
+	drop: function(event, ui) { $('#selected_factors').append(ui.draggable); },
+	over:function(event, ui) { $('#factors_target').css('margin','2px'); },
+	out:function(event, ui) { $('#factors_target').css('margin','5px'); }
+});
+
 function addParam(id, text)
 {
-	var panel = document.getElementById("factors_expanded");
+	var panel = document.getElementById("selected_factors");
 	var item = document.createElement("li");
 	var bar = document.createElement("input");
 	item.innerText = text;
@@ -124,41 +119,11 @@ function addParam(id, text)
 
 function clearParams()
 {
-	$('#factors_expanded li').remove();
+	$('#selected_factors li').remove();
 	hidePolygons();
 }
 
-/*// factors in the panel
-function checkParameter(chk) {
-    if (chk.checked) {
-        // add the slider
-        chk.parentNode.innerHTML += '<div class="slider"><div class="slider-handle"></div></div><span>0</span>';
-        
-        
-        $('.slider-handle').draggable({
-            containment:'parent',
-            axis:'x',
-            drag:function(e,ui){
-                // The drag function is called on every drag movement, no matter how minute
-                if(!this.par)
-                {
-                    // Initializing the variables only on the first drag move for performance 
-                    this.par = $(this).parent();
-                    this.parWidth = this.par.width();
-                    this.width = $(this).width();
-                }
-                
-                var maxValue = this.parWidth-this.width;
-                var ratio = ui.position.left/maxValue;
-                ratio = Math.round(ratio*100);
-                this.par.siblings().last().html(ratio + ' %');
-            }
-        });
-    } else {
-        //chk.parentNode.innerHTML 
-    }
-}*/
-
+/*
 $('.factor_checkbox').change(function() {
     if ($(this).is(':checked')) {
         $(this).parent().addClass('active');
@@ -169,10 +134,10 @@ $('.factor_checkbox').change(function() {
     		containment:'parent',
     		axis:'x',
     		drag:function(e,ui){
-    			/* The drag function is called on every drag movement, no matter how minute */
+    			// The drag function is called on every drag movement, no matter how minute
     			if(!this.par)
     			{
-    				/* Initializing the variables only on the first drag move for performance */
+    				// Initializing the variables only on the first drag move for performance
     				this.par = $(this).parent();
     				this.parWidth = this.par.width();
     				this.width = $(this).width();
@@ -196,10 +161,10 @@ $('.slider-handle').draggable({
 	containment:'parent',
 	axis:'x',
 	drag:function(e,ui){
-		/* The drag function is called on every drag movement, no matter how minute */
+		// The drag function is called on every drag movement, no matter how minute 
 		if(!this.par)
 		{
-			/* Initializing the variables only on the first drag move for performance */
+			// Initializing the variables only on the first drag move for performance 
 			this.par = $(this).parent();
 			this.parWidth = this.par.width();
 			this.width = $(this).width();
@@ -210,30 +175,13 @@ $('.slider-handle').draggable({
 		this.par.siblings().last().html(ratio);
 	}
 });
+*/
 
-function updateMap() {
-    // collect all active factors and their weights
-    var arrayOfIds = new Array();
-    var arrayOfWeights = new Array();
-    $('.active').each(function(){
-        arrayOfIds.push($(this).attr('id'));
-    });
-    $('.factor_weight').each(function(){
-        arrayOfWeights.push($(this).html());
-    });
-    if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
-        // encode all the values in the string to be sent
-        var datastring = '';
-        for(var i in arrayOfIds) {
-            datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
-        }
-        datastring = datastring.substring(1);
-        datastring = 'params=' + datastring;
-        // make the ajax call
-        $.ajax({
-            url:'http://www.mapcelona.org/devel/ajax.php',
-            data:datastring,
-            success: function(url){showPolygons(url);}
-        });
-    }
+// utils
+
+// parse a string containing an integer and the substring "px" and return the integer value
+function parsePixels(pixels, defaultValue) {
+	var parsedValue = parseInt(pixels.substring(0,pixels.length-2));
+	if(typeof parsedValue == 'Integer') return parsedValue;
+	else return defaultValue;
 }

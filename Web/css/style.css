@@ -63,11 +63,11 @@ a {
 }
 
 a:hover {
-	color:#0066a1;
+	color:#0066a1 !important;
 }
 
 #header {
-	height:20%;
+/* 	height:110px; */
 }
 
 #logo{
@@ -77,29 +77,7 @@ a:hover {
     width:300px;
     float:left;
     margin-left:5%;
-}
-#languages{
-    float:right;
-    position:relative;
-}
-#language1{
-    background:url("./images/cat_w.png") no-repeat scroll center center transparent;
-    position:relative;
-    height:30px;
-    width:20px;
-}
-#language2{
-    background:url("./images/esp_w.png") no-repeat scroll center center transparent;
-    position:relative;
-    height:30px;
-    width:20px;
-
-}
-#language3{
-    background:url("./images/eng_w.png") no-repeat scroll center center transparent;
-    position:relative;
-    height:30px;
-    width:20px;
+    margin-top:10px;
 }
 
 #navigation {
@@ -108,22 +86,34 @@ a:hover {
     padding:10px 0 7px 0;
 }
 
+#languages{
+	float:right;
+    margin-right:5%;
+    margin-top:20px;
+}
+
+#nav_links {
+	float:right;
+    margin-right:5%;
+    margin-top:20px;
+}
+
 #actionlist {
+/*
     height:20px;
     line-height:20px;
-    background:#ddd;
-    border-width:1px 0;
-    border-style:solid;
-    border-top-color:#f6f6f6;
-    border-bottom-color:#c4c4c4;
+*/
+	float:right;
     text-align:right;
     padding-right:8px;
+/*
     font-size: 90%;
     position: relative;
     top: 70px;
+*/
 }
 
-#navigation a, #actionlist a {
+#actionlist a {
     padding:0 5px;
 }
 
@@ -132,35 +122,35 @@ a:hover {
 }
 
 #panel {
-    float:left;
-    width:20%;
-    height:80%;
-    overflow:auto;
 	background-color:#FFFFFF;
+    float:left;
+    height:80%;
+    padding:5px;
+    width:20%;
 }
 
 #panel_expanded {
     background-color:#FFFFFF;
     height:80%;
     left:20%;
-	overflow:auto;
 	position:absolute;
+	width:50%;
     z-index:10;
 }
 
-#panel_trigger {
-    float:right;
+.panel_header, .panel_footer {
+	text-align:right;
+	padding:5px;
+}
+
+a.panel_trigger {
     padding:5px;
     cursor:pointer;
 }
 
 #factors_expanded {
     display:block;
-}
-
-#factors_expanded_inactive {
-    float:left;
-    margin:10px;
+	overflow:auto;
 }
 
 li.factor {
@@ -168,7 +158,7 @@ li.factor {
     padding:5px;
 }
 
-li.factor:hover {
+#factors_expanded_list > li.factor:hover {
     background: #f6f6f6; /* for non-css3 browsers */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e6e6e6'); /* for IE */
         background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e6e6e6)); /* for webkit browsers */
@@ -176,8 +166,14 @@ li.factor:hover {
     border-bottom:1px solid #ddd;
     border-top:1px solid #fff;
     cursor:move;
-    padding:4px;
+    padding:4px 5px;
     z-index:20;
+}
+
+#factors_target {
+	border:3px dashed silver;
+	margin:5px;
+	overflow:auto;
 }
 
 .slider {
@@ -206,7 +202,6 @@ li.factor:hover {
     float:right;
     height:80%;
     width:80%;
-    overflow:hidden;
 }
 
 #about {
@@ -296,6 +291,13 @@ li.factor:hover {
 
 /* utils */
 
+#notification {
+	background:#efefef;
+	margin:0 auto;
+	position:fixed;
+	text-align:center;
+}
+
 .gradient {
     background: #f6f6f6; /* for non-css3 browsers */
 
@@ -303,6 +305,12 @@ li.factor:hover {
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #fff,  #f6f6f6); /* for firefox 3.6+ */
+}
+
+.rounded {
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
 }
 
 .invisible {

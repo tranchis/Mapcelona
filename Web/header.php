@@ -1,11 +1,16 @@
 <div id="header">
-    <a id="logo" href="/" alt="mapcelona"></a>
+	<div id="notification"></div>
+    <a id="logo" href="<?=BASE_PATH?>" alt="mapcelona"></a>
     <div id="navigation">
-        <a href="?lang=ca"><img src="<?=IMAGES_PATH?>comp/catalan.png" alt="català" class="flag" /></a>
-        <a href="?lang=es"><img src="<?=IMAGES_PATH?>comp/castellano.png" alt="español" class="flag" /></a>
-        <a href="?lang=en"><img src="<?=IMAGES_PATH?>comp/english.png" alt="english" class="flag" /></a>
-        <a href="./about.php"><img src="<?=IMAGES_PATH?>comp/help.png" alt="<? print($Definition["About"]); ?>" /></a>
-        <a href="./we.php"><img src="<?=IMAGES_PATH?>comp/we.png" alt="<? print($Definition["We"]); ?>" /></a>
+        <div id="nav_links">
+	        <a href="<?=BASE_PATH?>/about.php"><img src="<?=IMAGES_PATH?>comp/help.png" alt="<? print($Definition["About"]); ?>" /></a>
+	        <a href="<?=BASE_PATH?>/we.php"><img src="<?=IMAGES_PATH?>comp/we.png" alt="<? print($Definition["We"]); ?>" /></a>
+	    </div>
+    	<div id="languages">
+	        <a href="?lang=ca"><img src="<?=IMAGES_PATH?>comp/catalan.png" alt="català" class="flag" /></a>
+	        <a href="?lang=es"><img src="<?=IMAGES_PATH?>comp/castellano.png" alt="español" class="flag" /></a>
+	        <a href="?lang=en"><img src="<?=IMAGES_PATH?>comp/english.png" alt="english" class="flag" /></a>
+        </div>
     </div><!--/navigation-->
     <div id="spacer"></div>
     <div id="actionlist">

@@ -18,7 +18,7 @@ include LANG_PATH.$_SESSION['lang'].'.php';
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
     </head>
     <body>
-        <? include('header2.php'); ?>
+        <? include('header.php'); ?>
         <div id="we" class="gradient">
             <img src="<?=IMAGES_PATH?>nosaltres.jpg" alt="<? print($Definition["We"]); ?>" /></br></br>
             Luis (<a href="http://twitter.com/luisjoliva">@luisjoliva</a>), Miquel (<a href="http://twitter.com/msonsona">@msonsona</a>), Sergio (<a href="http://twitter.com/sergioalvarez">@sergioalvarez</a>), Ignasi (<a href="http://twitter.com/ignasigomez">@ignasigomez</a>).
