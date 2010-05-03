@@ -18,6 +18,6 @@ class Map
   end
   
   def self.find(id)
-    Entity.find_map(id)
+    Entity.find(id)
   end
 end
