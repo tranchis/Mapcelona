@@ -27,12 +27,11 @@ class Entity
     entities
   end
   
-  def self.find(id)
-    @statements = []
+  def self.get_query(id)
     uri = 'http://data.mapcelona.org/entities/' + id
     rs = @@repository.query([RDF::URI.new(uri), nil, nil])
-    entity = self.new
-    if rs.empty?
+    if false
+    #if rs.empty?
       sc = Geonames::ToponymSearchCriteria.new
       sc.q = id
       r = Geonames::WebService.search sc
@@ -49,6 +48,25 @@ class Entity
         rs = @@repository.query([RDF::URI.new(uri), nil, nil])
       end
     end
+    rs
+  end
+  
+  def self.get_query_online(id)
+    uri = 'http://data.mapcelona.org/entities/' + id
+    entity = self.new
+    rs = @@repository.query([RDF::URI.new(uri), nil, nil]) do |r|
+      entity.statements << r
+      if r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasName"
+        entity.name = r.object.value.to_s
+      elsif r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasKml"
+        entity.kml = r.object.value.to_s
+      end
+    end
+    entity
+  end
+  
+  def self.populate(rs)
+    entity = self.new
     rs.each_statement do |r|
       entity.statements << r
       if r.predicate.to_s.eql? "http://data.mapcelona.org/mapcelona.owl#hasName"
@@ -58,6 +76,12 @@ class Entity
       end
     end
     entity
+  end
+  
+  def self.find(id)
+    @statements = []
+    entity = get_query_online(id)
+    #entity = populate(rs)
   end
   
   def to_s
