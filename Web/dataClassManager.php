@@ -9,6 +9,18 @@ class dataClassManager {
         $this->db = new dbManager();
     }
 
+private function extractGroups($group){
+        $dataclasses=$this->db->launchQuery("SELECT dc.* FROM dataclass dc, children c WHERE c.parent_id={$group['id']} AND c.child_id=dc.id");
+        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['name']]=$dataclass['id'];
+        $subgroups= $this->db->launchQuery("SELECT * FROM groups WHERE id IN (SELECT from_group_id FROM belongs_to WHERE to_group_id={$group['id']})");
+        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['name']]=$this->extractGroups($subgroup);
+        return $result;
+    }
+    public function getDataclasses(){
+        $groups=$this->db->launchQuery('SELECT * FROM groups WHERE id NOT IN (SELECT from_group_id FROM belongs_to)');
+        foreach ($groups as $group) $result[$group['name']]=$this->extractGroups($group);
+        return $result;
+    }
     public function getParameters(){
         // Esto para cuando estén los idiomas
         $sql = "SELECT dc.*, t._value FROM dataclass dc, _translation t, _language l
