@@ -33,12 +33,15 @@ $dcm = new dataClassManager();
         <div id="panel">
         	<div id="panel_header" class="panel_header">
 	            <a class="panel_trigger" onclick="expandPanel();"><?php print($Definition["TuneParams"]); ?> &rsaquo;</a>
-				<a class="panel_trigger" onclick="updateMap();"><?php print($Definition['RefreshMap']); ?></a>
-				<a class="panel_trigger" onclick="clearParams();"><?php print($Definition['ClearParams']); ?></a>
 			</div>
 			<div id="factors_target" class="rounded">
             	<ul id="selected_factors"></ul><!--selected_factors-->
+            	<p id="drag_help" class="visible"><?php print($Definition['DragFactors']); ?></p>
             </div><!--factors_target-->
+            <div id="panel_footer" class="panel_footer">
+				<a id="trigger_clear_params" class="panel_trigger" onclick="clearParams();"><?php print($Definition['ClearParams']); ?></a>
+				<a id="trigger_update_map" class="panel_trigger rounded" onclick="updateMap();"><?php print($Definition['RefreshMap']); ?></a>
+			</div>
         </div><!--panel-->
 
         <div id="panel_expanded" style="display:none;">

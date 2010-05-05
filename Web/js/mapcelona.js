@@ -18,8 +18,9 @@ function resizeApp() {
 	panel_height = map_height - panel_padding;
 	$('#panel').height(panel_height);
 	$('#panel').width($(window).width()*0.20 - panel_padding);
-	$('#factors_target').height(panel_height - $('#panel_header').height() - panel_padding - 16);
-	$('#panel_expanded').height(map_height);
+	$('#factors_target').height(panel_height - $('#panel_header').height() - $('#panel_footer').height() - 2 * panel_padding - 16);
+	$('#panel_expanded').height(map_height); // !! Test: expand panel and then resize window to see if the resizing affects the layout of the expanded panel. If it affects, just copy the calculation from below in here
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 2 * panel_padding - 2);
 	$('#map').height(map_height);
 }
 
@@ -49,7 +50,8 @@ function hidePolygons() {
     map.removeOverlay(kml);
 }
 
-function updateMap() {
+function updateMap() { // !!!! we should check whether the array of factors has changed since last update or not in order to avoid unnecessary computation and data transfer
+
     // collect all active factors and their weights
     var arrayOfIds = new Array();
     var arrayOfWeights = new Array();
@@ -95,12 +97,15 @@ $('.factor').draggable({
 	stack: ".factor", 
 	zIndex: 1000 
 	});
+
 $('#factors_target').droppable({
 	accept: '.factor',
 	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
 	drop: function(event, ui) { 
 		// code to be executed when a factor is dropped
-		$('#selected_factors').append(ui.draggable); 
+		$('#selected_factors').append(ui.draggable); // we should clone the element in order not to loose it in the overall list (and disable it visually and functionally)
+		if($('#drag_help').hasClass('visible')) $('#drag_help').addClass('invisible');
+		factors.push(ui.draggable.attr('id')); // add the id of the factor in the array
 	},
 	over:function(event, ui) { $('#factors_target').css('margin','2px'); },
 	out:function(event, ui) { $('#factors_target').css('margin','5px'); }
@@ -140,6 +145,7 @@ function addParam(id, text)
 function clearParams()
 {
 	$('#selected_factors li').remove();
+	if( $('#drag_help').hasClass('invisible') ) $('#drag_help').addClass('visible');
 	hidePolygons();
 }
 
