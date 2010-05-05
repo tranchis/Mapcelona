@@ -21,7 +21,7 @@ $Definition['Sources'] = '¿Qué fuentes?';
 $Definition['BasedOn'] = 'Interioridades';
 
 // Panel
-$Definition["TuneParams"] = 'Personaliza parámetros';
+$Definition["TuneParams"] = 'Selecciona parámetros';
 $Definition["Close"] = 'Cierra';
 $Definition['RefreshMap'] = 'Actualiza mapa';
 $Definition['ClearParams'] = 'Borra';

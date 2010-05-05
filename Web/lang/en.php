@@ -21,7 +21,7 @@ $Definition['Sources'] = 'Which sources?';
 $Definition['BasedOn'] = 'Under the hood';
 
 // Panel
-$Definition["TuneParams"] = 'Tune features';
+$Definition["TuneParams"] = 'Select features';
 $Definition["Close"] = 'Close';
 $Definition['RefreshMap'] = 'Update map';
 $Definition['ClearParams'] = 'Clear';

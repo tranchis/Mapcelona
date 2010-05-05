@@ -22,7 +22,7 @@ $Definition['BasedOn'] = 'Interioritats';
 
 
 // Panel
-$Definition["TuneParams"] = 'Personalitza paràmetres';
+$Definition["TuneParams"] = 'Selecciona paràmetres';
 $Definition["Close"] = 'Tanca';
 $Definition['RefreshMap'] = 'Actualitza mapa';
 $Definition['ClearParams'] = 'Esborra';
