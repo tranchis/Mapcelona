@@ -55,7 +55,7 @@ $dcm = new dataClassManager();
                             foreach($group as $key=>$value){
                                 if (!is_array($value)) print("<li class='factor' id='{$value}'>{$key}</li>");
                                 else{
-                                    if ($expanded) print("<li class='expandable'>{$key}<ul>");
+                                    if ($expanded) print("<li class='expandable'><h3><a href='#' class='expandable_trigger'>{$key}</a></h3><ul>");
                                     else print("<li>{$key}<ul>");
                                     print_group($value);
                                     print('</ul></li>');

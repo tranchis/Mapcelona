@@ -19,21 +19,21 @@ function resizeApp() {
 	$('#panel').height(panel_height);
 	$('#panel').width($(window).width()*0.20 - panel_padding);
 	$('#factors_target').height(panel_height - $('#panel_header').height() - $('#panel_footer').height() - 2 * panel_padding - 16);
-	$('#panel_expanded').height(map_height); // !! Test: expand panel and then resize window to see if the resizing affects the layout of the expanded panel. If it affects, just copy the calculation from below in here
-	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 2 * panel_padding - 2);
+	$('#panel_expanded').height(map_height);
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 3 * panel_padding - 2);
 	$('#map').height(map_height);
 }
+
+resizeApp();
 
 // loading the map
 var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
-var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0.05,'fraction','fraction'), new GScreenPoint(68,35), new GScreenSize(135,40));
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0,'fraction','fraction'), new GScreenPoint(68,0), new GScreenSize(135,40));
 map.addOverlay(logo);
 var kml;
 var overlaid = false;
-
-resizeApp();
 
 // maps functions
 function showPolygons(url) {
@@ -81,7 +81,7 @@ function updateMap() { // !!!! we should check whether the array of factors has 
 // panel functions
 function expandPanel() {
 	$('#panel_expanded').toggle('slide',{},'slow');
-	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 2 * panel_padding - 2);
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 3 * panel_padding - 2);
 }
 
 function collapsePanel() {
@@ -90,12 +90,25 @@ function collapsePanel() {
 }
 
 // factors functions
-$('.factor').draggable({ 
-	helper: 'clone', 
-	opacity: 0.75, 
-	revert: 'invalid', 
-	stack: ".factor", 
-	zIndex: 1000 
+/*
+$('.expandable').click(function() {
+			$(this).children().last().toggle('blind');
+			return false;
+		});
+*/
+		
+$('.expandable .expandable_trigger').click(function() {
+	$(this).parent().next().toggle('slow');
+	return false;
+}).parent().next().hide();
+
+$('.factor').draggable({
+	helper: function(event) {
+				return $('<li class="factor" style="width:'+$('#panel').width()+';padding:5px;">'+$(this).html()+'</li>');
+			},
+	opacity: 0.75,
+	revert: 'invalid',
+	zIndex: 1000
 	});
 
 $('#factors_target').droppable({
@@ -103,12 +116,16 @@ $('#factors_target').droppable({
 	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
 	drop: function(event, ui) { 
 		// code to be executed when a factor is dropped
-		$('#selected_factors').append(ui.draggable); // we should clone the element in order not to loose it in the overall list (and disable it visually and functionally)
-		if($('#drag_help').hasClass('visible')) $('#drag_help').addClass('invisible');
-		factors.push(ui.draggable.attr('id')); // add the id of the factor in the array
+		$('#selected_factors').append(ui.draggable.clone());
+		if( $('#drag_help').hasClass('visible') ) $('#drag_help').toggleClass('visible invisible');
+		/* $('#drag_help').effect('toggle'); */
+		// add the id of the factor in the array
+		factors.push(ui.draggable.attr('id'));
+		// and disable the factor preventing it being added twice
+		ui.draggable.draggable("option", "disabled", true);
+		ui.draggable.addClass('factor_disabled');
 	},
-	over:function(event, ui) { $('#factors_target').css('margin','2px'); },
-	out:function(event, ui) { $('#factors_target').css('margin','5px'); }
+	over:function(event, ui) { $('#factors_target').effect('highlight'); }
 	});
 
 function addParam(id, text)
@@ -145,7 +162,7 @@ function addParam(id, text)
 function clearParams()
 {
 	$('#selected_factors li').remove();
-	if( $('#drag_help').hasClass('invisible') ) $('#drag_help').addClass('visible');
+	setTimeout("if( $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",1000);
 	hidePolygons();
 }
 
@@ -202,12 +219,3 @@ $('.slider-handle').draggable({
 	}
 });
 */
-
-// utils
-
-// parse a string containing an integer and the substring "px" and return the integer value
-function parsePixels(pixels, defaultValue) {
-	var parsedValue = parseInt(pixels.substring(0,pixels.length-2));
-	if(typeof parsedValue == 'Integer') return parsedValue;
-	else return defaultValue;
-}

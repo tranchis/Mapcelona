@@ -58,7 +58,7 @@ body {
 }
 
 a {
-    text-decoration:none !important;
+    text-decoration:none;
     color:#222;
 }
 
@@ -153,12 +153,11 @@ a.panel_trigger {
 a#trigger_clear_params {
 	color:OrangeRed !important;
 	font-size:small;
-	text-decoration: underline !important;
-	text-shadow:none;
+	text-shadow:none !important;
 }
 
 a#trigger_clear_params:hover {
-	text-shadow:1px 1px 0 orange;
+	text-decoration: underline !important;
 }
 
 a#trigger_update_map {
@@ -216,11 +215,25 @@ p#drag_help {
 #factors_expanded {
     display:block;
 	overflow:auto;
+	padding:5px;
+}
+
+li.expandable {
+	cursor:pointer;
+	margin-left:10px;
+	margin-top:10px;
 }
 
 li.factor {
-    margin:5px;
+    margin-left:15px;
     padding:5px;
+}
+
+li.factor_disabled {
+	background:none !important;
+	border-color:#fdfdfd !important;
+	color:#aaa !important;
+	cursor:default !important;
 }
 
 ul#factors_expanded_list li.factor:hover {
