@@ -1,8 +1,13 @@
 // globals
-var factors =  new Array();
+var factors = [];
+var kmls = [];
 var map_height;
 var panel_padding = 10;
 var panel_height;
+
+function kmlObject(id,kml) {
+	return kmlObject[id] = {id:id,kml:kml};
+} 
 
 // Floater
 /*
@@ -32,26 +37,11 @@ map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
 var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0,'fraction','fraction'), new GScreenPoint(68,0), new GScreenSize(135,40));
 map.addOverlay(logo);
-var kml;
-var overlaid = false;
 
 // maps functions
-function showPolygons(url) {
-    if(overlaid) hidePolygons();
-    kml = new GGeoXml(url/*,function() {
-          if (geoxml.loadedCorrectly()) {
-            kml.gotoDefaultViewport(map);
-          }
-        }*/);
-    map.addOverlay(kml);
-    overlaid = true;
-}
-function hidePolygons() {
-    map.removeOverlay(kml);
-}
-
 function updateMap() { // !!!! we should check whether the array of factors has changed since last update or not in order to avoid unnecessary computation and data transfer
 
+/*
     // collect all active factors and their weights
     var arrayOfIds = new Array();
     var arrayOfWeights = new Array();
@@ -62,7 +52,7 @@ function updateMap() { // !!!! we should check whether the array of factors has 
         arrayOfWeights.push($(this).html());
     });
     if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
-        // encode all the values in the string to be sent
+        // encode all the values in the string to be sent in json should be -> [{id:204,weight:0},...]
         var datastring = '';
         for(var i in arrayOfIds) {
             datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
@@ -73,9 +63,77 @@ function updateMap() { // !!!! we should check whether the array of factors has 
         $.ajax({
             url:'http://www.mapcelona.org/devel/ajax.php',
             data:datastring,
-            success: function(url){showPolygons(url);}
+            success: function(url){loadKml(url);}
         });
     }
+*/
+
+	// new version
+	if($('#panel_expanded').is(":visible")) collapsePanel();
+    if (factors.length > 0) {
+        // encode all the values in the string to be sent in json should be -> [{id:204,weight:0},...]
+        var datastring = '';
+        for(var i in factors) {
+	        datastring += '-' + factors[i] + ',1';
+	        datastring = datastring.substring(1);
+	        datastring = 'params=' + datastring;
+	        // make the ajax call
+	        $.ajax({
+	            url:'http://www.mapcelona.org/devel/ajax.php',
+	            data:datastring,
+	            success: function(url){loadKml(url, factors[i]);}
+	        });
+	        // add the activity indicator
+	        $('#selected_factors li[id='+factors[i]+']').prepend('<img src="./css/images/indicator_white.gif" />');
+	        datastring = '';
+        }
+    }
+}
+
+function loadKml(url, id) {
+	var geoXml = new GGeoXml(url,function() {
+    	if (geoxml.hasLoaded()) {
+        	kml.gotoDefaultViewport(map);
+        	// remove the activity indicator
+        	$('#selected_factors li[id='+id+']').first().remove();
+        	// add the visibility checkbox
+        	$('#selected_factors li[id='+factors[i]+']').prepend('<input type="checkbox" class="factor_checkbox" checked="checked" />');
+        }
+    });
+    kmls.push({id:id,kml:geoXml});
+    map.addOverlay(kmls[kmls.length-1].kml);
+}
+
+function showPolygonsForLayerWithId(id) {
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(kmls[i].id == id) show(kmls[i].kml);
+	};
+}
+
+function hidePolygons() {
+	for(kml in kmls) hide(kml);
+}
+
+function hidePolygonsForLayerWithId(id) {
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(kmls[i].id == id) hide(kmls[i].kml);
+	};
+}
+
+function removeLayers() {
+	for(kml in kmls) map.removeOverlay(kml);
+	kmls = [];
+	factors = [];
+}
+
+function removeLayerWithId(id) {
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(factors[i] == id) {
+	    	map.removeOverlay(kmls[i]);
+	    	kmls.splice(i,1);
+	    	factors.splice(i,1);
+	    }
+	};
 }
 
 // panel functions
@@ -86,21 +144,15 @@ function expandPanel() {
 
 function collapsePanel() {
 	$('#panel_expanded').toggle('slide',{},'slow');
-    updateMap();
 }
 
-// factors functions
-/*
-$('.expandable').click(function() {
-			$(this).children().last().toggle('blind');
-			return false;
-		});
-*/
-		
+// factors functions		
 $('.expandable .expandable_trigger').click(function() {
 	$(this).parent().next().toggle('slow');
 	return false;
 }).parent().next().hide();
+
+$(".factor").dblclick( function () { addFactor($(this)); });
 
 $('.factor').draggable({
 	helper: function(event) {
@@ -114,57 +166,47 @@ $('.factor').draggable({
 $('#factors_target').droppable({
 	accept: '.factor',
 	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
-	drop: function(event, ui) { 
-		// code to be executed when a factor is dropped
-		$('#selected_factors').append(ui.draggable.clone());
-		if( $('#drag_help').hasClass('visible') ) $('#drag_help').toggleClass('visible invisible');
-		/* $('#drag_help').effect('toggle'); */
-		// add the id of the factor in the array
-		factors.push(ui.draggable.attr('id'));
-		// and disable the factor preventing it being added twice
-		ui.draggable.draggable("option", "disabled", true);
-		ui.draggable.addClass('factor_disabled');
+	drop: function(event, ui) { // code to be executed when a factor is dropped
+		addFactor(ui.draggable);
 	},
 	over:function(event, ui) { $('#factors_target').effect('highlight'); }
 	});
-
-function addParam(id, text)
-{
-	var panel = document.getElementById("selected_factors");
-	var item = document.createElement("li");
-	var bar = document.createElement("input");
-	item.innerText = text;
-	item.setAttribute("id", id);
-	item.setAttribute("onclick", "\"addParam('" + id + "', '" + text + "');\"");
-	item.setAttribute("class", "factor active");
-	var div = document.createElement("div");
-	var div2 = document.createElement("div");
-	var div3 = document.createElement("div");
-	div.setAttribute("class", "slider");
-	div2.setAttribute("class", "slider-handle");
-	div3.setAttribute("class", "factor_weight");
-	div3.innerText = "0";
-	div.appendChild(div2);
-	item.appendChild(div);
-	item.appendChild(div3);
-
-	//<input name="slider1" id="slider-r" type="text" title="Range: 0 - 255" class="fd_range_0_255 fd_classname_extraclass fd_callback_updateColor" value="128" />
-	bar.setAttribute("name", "slider1");
-	bar.setAttribute("id", "slider-r");
-	bar.setAttribute("type", "text");
-	bar.setAttribute("class", "fd_range_0_255 fd_classname_extraclass fd_callback_updateColor");
-	bar.setAttribute("value", "100");
-	item.appendChild(bar);
-
-	panel.appendChild(item);
+	
+function addFactor(factor) {
+	// add the id of the factor in the array
+	var id = factor.attr('id');
+	factors.push(id);
+	$('#selected_factors').append(
+		'<li class="factor" id="'+id+'">'+factor.html()+'<a href="#" class="factor_clear" onclick="removeFactor('+id+');></a></li>'
+	);
+	if( $('#drag_help').hasClass('visible') ) $('#drag_help').toggleClass('visible invisible');
+	// and disable the factor preventing it being added twice
+	factor.draggable("option", "disabled", true); // functionally
+	factor.addClass('factor_disabled'); // and visually
 }
 
-function clearParams()
+function removeFactor(id) {
+	$('#selected_factors li[id='+id+']').remove();
+	setTimeout("if($('#selected_factors li').length == 0 && $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",500);
+	removeLayerWithId(id);
+	$('.factor_disabled[id='+id+']').removeClass('factor_disabled');
+}
+
+function removeFactors()
 {
 	$('#selected_factors li').remove();
-	setTimeout("if( $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",1000);
-	hidePolygons();
+	setTimeout("if( $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",500);
+	removeLayers();
+	$('.factor_disabled').removeClass('factor_disabled');
 }
+
+$('.factor_checkbox').change(function() {
+	if ($(this).is(':checked')) {
+		showPolygonsForLayerWithId($(this).parent().attr('id'));
+	} else {
+		hidePolygonsForLayerWithId($(this).parent().attr('id'));
+	}
+});
 
 /*
 $('.factor_checkbox').change(function() {

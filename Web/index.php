@@ -39,7 +39,7 @@ $dcm = new dataClassManager();
             	<p id="drag_help" class="visible"><?php print($Definition['DragFactors']); ?></p>
             </div><!--factors_target-->
             <div id="panel_footer" class="panel_footer">
-				<a id="trigger_clear_params" class="panel_trigger" onclick="clearParams();"><?php print($Definition['ClearParams']); ?></a>
+				<a id="trigger_remove_params" class="panel_trigger" onclick="removeFactors();"><?php print($Definition['ClearParams']); ?></a>
 				<a id="trigger_update_map" class="panel_trigger rounded" onclick="updateMap();"><?php print($Definition['RefreshMap']); ?></a>
 			</div>
         </div><!--panel-->

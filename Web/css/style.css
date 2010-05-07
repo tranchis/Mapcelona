@@ -99,18 +99,9 @@ a:hover {
 }
 
 #actionlist {
-/*
-    height:20px;
-    line-height:20px;
-*/
 	float:right;
     text-align:right;
     padding-right:8px;
-/*
-    font-size: 90%;
-    position: relative;
-    top: 70px;
-*/
 }
 
 #actionlist a {
@@ -150,13 +141,13 @@ a.panel_trigger {
     text-shadow:1px 1px 0 #efefef;
 }
 
-a#trigger_clear_params {
+a#trigger_remove_params {
 	color:OrangeRed !important;
 	font-size:small;
 	text-shadow:none !important;
 }
 
-a#trigger_clear_params:hover {
+a#trigger_remove_params:hover {
 	text-decoration: underline !important;
 }
 
@@ -212,6 +203,22 @@ p#drag_help {
     text-shadow:1px 1px 0 #efefef;
 }
 
+ul#selected_factors li.factor {
+    padding:5px;
+}
+
+.factor_clear {
+	float:right;
+    width:16px;
+    height:16px;
+    background-image:url("./images/cross_gray.png");
+}
+
+.factor_clear:hover {
+    background-image:url("./images/cross_black.png");
+}
+
+
 #factors_expanded {
     display:block;
 	overflow:auto;
@@ -224,12 +231,13 @@ li.expandable {
 	margin-top:10px;
 }
 
-li.factor {
+ul#factors_expanded_list li.factor {
+	font-size:90%;
     margin-left:15px;
     padding:5px;
 }
 
-li.factor_disabled {
+ul#factors_expanded_list li.factor_disabled {
 	background:none !important;
 	border-color:#fdfdfd !important;
 	color:#aaa !important;
