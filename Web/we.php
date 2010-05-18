@@ -18,12 +18,18 @@ include LANG_PATH.$_SESSION['lang'].'.php';
         <link rel="shortcut icon" href="<?=IMAGES_PATH?>favicon.ico" type="image/x-icon">
         <title>mapcelona - <? print($Definition["We"]); ?></title>
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
+        <script src="http://platform.twitter.com/anywhere.js?id=nVbpytqOSFNnlV8Hxdybyw&amp;v=1"></script>
     </head>
     <body>
         <? include('header.php'); ?>
         <div id="we" class="gradient">
             <img src="<?=IMAGES_PATH?>nosaltres.jpg" alt="<? print($Definition["We"]); ?>" /></br></br>
-            Luis (<a href="http://twitter.com/luisjoliva">@luisjoliva</a>), Miquel (<a href="http://twitter.com/msonsona">@msonsona</a>), Sergio (<a href="http://twitter.com/sergioalvarez">@sergioalvarez</a>), Ignasi (<a href="http://twitter.com/ignasigomez">@ignasigomez</a>).
+            Luis (@luisjoliva), Miquel (@msonsona), Sergio (@sergioalvarez), Ignasi (@ignasigomez).
         </div>
+        <script type="text/javascript">
+		  twttr.anywhere(function (T) {
+		    T.hovercards();
+		  });
+		</script>
     </body>
 </html>

@@ -1,13 +1,17 @@
 // globals
-var factors = [];
-var kmls = [];
+var factors = []; 	// factors is an array of ids corresponding to selected DataClasses
+var kmls = []; 		// kmls is an array of objects {id:number,kml:GGeoXml}
+
+// globals for the automatic resizing of the layout
 var map_height;
 var panel_padding = 10;
 var panel_height;
 
+/*
 function kmlObject(id,kml) {
 	return kmlObject[id] = {id:id,kml:kml};
 } 
+*/
 
 // Floater
 /*
@@ -74,14 +78,14 @@ function updateMap() { // !!!! we should check whether the array of factors has 
         // encode all the values in the string to be sent in json should be -> [{id:204,weight:0},...]
         var datastring = '';
         for(var i in factors) {
-	        datastring += '-' + factors[i] + ',1';
-	        datastring = datastring.substring(1);
-	        datastring = 'params=' + datastring;
+        	var id = factors[i];
+	        datastring = 'params=' + id + ',1';
 	        // make the ajax call
 	        $.ajax({
 	            url:'http://www.mapcelona.org/devel/ajax.php',
 	            data:datastring,
-	            success: function(url){loadKml(url, factors[i]);}
+	            dataType:'json',
+	            success:function(data){loadKml(data);}
 	        });
 	        // add the activity indicator
 	        $('#selected_factors li[id='+factors[i]+']').prepend('<img src="./css/images/indicator_white.gif" />');
@@ -90,9 +94,10 @@ function updateMap() { // !!!! we should check whether the array of factors has 
     }
 }
 
-function loadKml(url, id) {
+function loadKml(json) {
+/*
 	var geoXml = new GGeoXml(url,function() {
-    	if (geoxml.hasLoaded()) {
+    	if (geoXml.load()) {
         	kml.gotoDefaultViewport(map);
         	// remove the activity indicator
         	$('#selected_factors li[id='+id+']').first().remove();
@@ -100,36 +105,54 @@ function loadKml(url, id) {
         	$('#selected_factors li[id='+factors[i]+']').prepend('<input type="checkbox" class="factor_checkbox" checked="checked" />');
         }
     });
+*/
+	console.log(json);
+    var geoXml = new GGeoXml(json.Url);
+    var id = json.DataClassId;
+    console.log('id = ' + id);
+    GEvent.addListener(geoXml, 'load', function() {
+    	console.log('geoXml triggered event "load" for dataclass with id = ' + id);
+    	//geoXml.gotoDefaultViewport(map);
+    	// remove the activity indicator
+    	$('#selected_factors li[id='+id+']').children().first().remove();
+    	// add the visibility checkbox
+    	$('#selected_factors li[id='+id+']').prepend('<input type="checkbox" class="factor_checkbox" checked="true" />');
+    });
     kmls.push({id:id,kml:geoXml});
     map.addOverlay(kmls[kmls.length-1].kml);
 }
 
 function showPolygonsForLayerWithId(id) {
+	console.log('called showPolygons for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
-	    if(kmls[i].id == id) show(kmls[i].kml);
+	    if(kmls[i].id == id) kmls[i].kml.show(); // map.show(kmls[i].kml);
 	};
 }
 
 function hidePolygons() {
-	for(kml in kmls) hide(kml);
+	console.log('called hideLayers()');
+	for(layer in kmls) layer.kml.hide(); // map.hide(layer.kml);
 }
 
 function hidePolygonsForLayerWithId(id) {
+	console.log('called hidePolygons for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
-	    if(kmls[i].id == id) hide(kmls[i].kml);
+	    if(kmls[i].id == id) kmls[i].kml.hide(); // map.hide(kmls[i].kml); // 
 	};
 }
 
 function removeLayers() {
-	for(kml in kmls) map.removeOverlay(kml);
+	console.log('called removeLayers()');
+	for(layer in kmls) map.removeOverlay(layer.kml);
 	kmls = [];
 	factors = [];
 }
 
 function removeLayerWithId(id) {
+	console.log('called removeLayer for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
 	    if(factors[i] == id) {
-	    	map.removeOverlay(kmls[i]);
+	    	map.removeOverlay(kmls[i].kml);
 	    	kmls.splice(i,1);
 	    	factors.splice(i,1);
 	    }
@@ -152,7 +175,7 @@ $('.expandable .expandable_trigger').click(function() {
 	return false;
 }).parent().next().hide();
 
-$(".factor").dblclick( function () { addFactor($(this)); });
+$(".factor").dblclick( function () { if( !$(this).hasClass('factor_disabled') ) addFactor($(this)); });
 
 $('.factor').draggable({
 	helper: function(event) {
@@ -166,7 +189,8 @@ $('.factor').draggable({
 $('#factors_target').droppable({
 	accept: '.factor',
 	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
-	drop: function(event, ui) { // code to be executed when a factor is dropped
+	drop: function(event, ui) { 
+		// code to be executed when a factor is dropped
 		addFactor(ui.draggable);
 	},
 	over:function(event, ui) { $('#factors_target').effect('highlight'); }
@@ -201,6 +225,7 @@ function removeFactors()
 }
 
 $('.factor_checkbox').change(function() {
+	console.log('checkbox changed!');
 	if ($(this).is(':checked')) {
 		showPolygonsForLayerWithId($(this).parent().attr('id'));
 	} else {

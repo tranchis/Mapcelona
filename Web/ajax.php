@@ -8,12 +8,14 @@ $params = $_GET['params'];
 $pairs = explode('-',$params);
 //print_r($pairs);
 $exploded_pairs = array();
+$data_class_ID = 0;
 foreach ($pairs as $pair) {
     $var = explode(',',$pair);
     //print_r($var);
     //print($var[0]);
     //print($var[1]);
-    $exploded_pairs[$var[0]] = $var[1];
+    $data_class_ID = $var[0];
+    $exploded_pairs[$data_class_ID] = $var[1];    
 }
 
 // Hacer array_unique en $exploded_pairs y luego un ksort.
@@ -109,6 +111,7 @@ $file = fopen($filename, "w");
 fputs($file, $output);
 fclose ($file);
 
-echo "http://www.mapcelona.org/devel/doc". $randname .".kml";
+/* echo "http://www.mapcelona.org/devel/doc". $randname .".kml"; */
+echo '{"DataClassId":'. $data_class_ID .',"Url":"http://www.mapcelona.org/devel/doc'. $randname .'.kml"}';
 
 ?>
