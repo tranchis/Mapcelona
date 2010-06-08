@@ -1,0 +1,22 @@
+<h1>Listing coordinates</h1>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+
+<% @coordinates.each do |coordinate| %>
+  <tr>
+    <td><%=h coordinate.x %></td>
+    <td><%=h coordinate.y %></td>
+    <td><%= link_to 'Show', coordinate %></td>
+    <td><%= link_to 'Edit', edit_coordinate_path(coordinate) %></td>
+    <td><%= link_to 'Destroy', coordinate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New coordinate', new_coordinate_path %>

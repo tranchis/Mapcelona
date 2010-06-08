@@ -9,14 +9,25 @@ class dataClassManager {
         $this->db = new dbManager();
     }
 
+private function extractGroups($group){
+        $dataclasses=$this->db->launchQuery("SELECT dc.* FROM dataclass dc, children c WHERE c.parent_id={$group['id']} AND c.child_id=dc.id");
+        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['name']]=$dataclass['id'];
+        $subgroups= $this->db->launchQuery("SELECT * FROM groups WHERE id IN (SELECT from_group_id FROM belongs_to WHERE to_group_id={$group['id']})");
+        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['name']]=$this->extractGroups($subgroup);
+        return $result;
+    }
+    public function getDataclasses(){
+        $groups=$this->db->launchQuery('SELECT * FROM groups WHERE id NOT IN (SELECT from_group_id FROM belongs_to)');
+        foreach ($groups as $group) $result[$group['name']]=$this->extractGroups($group);
+        return $result;
+    }
     public function getParameters(){
         // Esto para cuando estén los idiomas
         $sql = "SELECT dc.*, t._value FROM dataclass dc, _translation t, _language l
                 WHERE dc.id=t.dataclass_id AND t.language_id=l.id AND l.name=";
-        if (isset($_SESSION['lang'])) $sql.=$_SESSION['lang'];
+        if (isset($_SESSION['lang'])) $sql.="'{$_SESSION['lang']}'";
         else $sql.="'en'";
-        //return $this->db->launchQuery('SELECT * FROM dataclass ORDER BY name');
-        return $this->db->launchQuery($sql);
+        return $this->db->launchQuery($sql); // 'SELECT * FROM dataclass ORDER BY name');
     }
     // Given a dataclass, the function returns a list of the values that each district has on this dataclass
     public function getDistrictValues($dataclass_id){
@@ -42,6 +53,7 @@ class dataClassManager {
             $rawValues=null; 
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
            
+print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
             foreach($neighbourhoods as $key=>$value) if (!in_array($key, $keys)) $noValues[]=$key;
@@ -55,15 +67,25 @@ class dataClassManager {
                                                                          dv.age={$maxAge} AND
                                                                          dis.id={$neighbourhoods[$idNeighbourhood]['district_id']}
                         ORDER BY dis.id"); print('<br>');*/
+/*
                 $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age
                         FROM district dis JOIN district_value dv ON dv.district_id=dis.id AND
                                                                     dv.dataclass_id={$dataclass_id} AND
                                                                     dv.age={$maxAge} AND
                                                                     dis.id={$neighbourhoods[$idNeighbourhood]['district_id']}
                         ORDER BY dis.id");
+*/
+                $result= $this->db->launchQuery("SELECT dis.*, dv._value, dv.age, d.direction
+                        FROM district dis JOIN district_value dv, dataclass d  ON dv.district_id=dis.id AND
+                                                                    dv.dataclass_id={$dataclass_id} AND
+                                                                    dv.age={$maxAge} AND
+                                                                    dis.id={$neighbourhoods[$idNeighbourhood]['district_id']} AND
+                                                                    d.id = dv.dataclass_id
+                        ORDER BY dis.id");
+				$direction = !($result[0]['direction'] == "negative");
                 $rawValues[$idNeighbourhood]=$result[0]['_value'];
             }
-            $normalisedWeightedValues=$this->normaliseValues($rawValues, $normalisedWeights[$dataclass_id]);
+            $normalisedWeightedValues=$this->normaliseValues($rawValues, $normalisedWeights[$dataclass_id], $direction);
             /*
             foreach ($normalisedWeightedValuesAux as $key=>$value) $normalisedWeightedValues[$key]+=$normalisedWeightedValuesAux[$key];
             print_r($normalisedWeightedValuesAux);print('<br>');
@@ -99,7 +121,7 @@ foreach($colours as $color)
 
 
 
-    private function normaliseValues($values, $weight=1.0){
+    private function normaliseValues($values, $weight=1.0, $direction=true){
         $aux = array_values($values);
         if (sort($aux, SORT_NUMERIC)){
             //print('<br>');print_r($aux);print('<br>');
@@ -114,16 +136,20 @@ foreach($colours as $color)
 						$norm = $value - $min;
 						$norm = (float)($norm) / (float)($difference);
 						$normalisedValues[$key] = $norm * $weight;
+						if(!$direction)
+						{
+							$normalisedValues[$key] = 1 - $normalisedValues[$key];
+						}
 						// $normalisedValues[$key]= ((float)((float)($value-$min)/(float)$difference));
 						// print('<br>'.$key.' '.$value.'  '. $norm);
 					}
                 else $normalisedValues[$key]=(float) 1/count($values);
             }
-            //print('<br>Normalised:<br>');
-            //print_r($normalisedValues);
+            print('<br>Normalised:<br>');
+            print_r($normalisedValues);
 			$sum = 0;
             foreach($normalisedValues as $value) $sum=max($sum,$value);
-            //print('Sum '.$sum);
+            print('Sum '.$sum);
             return $normalisedValues;
         }
         else return null;

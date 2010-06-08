@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:idec="http://www.geoportal-idec.cat/idec" xmlns:gml="http://www.opengis.net/gml" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.geoportal-idec.cat/idec" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1.2">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="feature.xsd"/>
+	<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Municipis_Type">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="the_geom" minOccurs="0" nillable="true" type="gml:MultiPolygonPropertyType"/>
+					<xs:element name="MUNICIPI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="COMARCA" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="PROVINCIA" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="NOM_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="NOMN_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="NOMG_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="CAP_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="CAPN_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="CAPG_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+					<xs:element name="SUP_MUNI" minOccurs="0" nillable="true" type="xs:double"/>
+					<xs:element name="ORSUP_MUNI" minOccurs="0" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Municipis" type="idec:Municipis_Type" substitutionGroup="gml:_Feature"/>
+</xs:schema>

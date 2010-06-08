@@ -1,0 +1,18 @@
+<h1>Listing polygons</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @polygons.each do |polygon| %>
+  <tr>
+    <td><%= link_to 'Show', polygon %></td>
+    <td><%= link_to 'Edit', edit_polygon_path(polygon) %></td>
+    <td><%= link_to 'Destroy', polygon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New polygon', new_polygon_path %>
