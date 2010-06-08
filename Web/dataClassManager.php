@@ -9,18 +9,23 @@ class dataClassManager {
         $this->db = new dbManager();
     }
 
-private function extractGroups($group){
-        $dataclasses=$this->db->launchQuery("SELECT dc.* FROM dataclass dc, children c WHERE c.parent_id={$group['id']} AND c.child_id=dc.id");
-        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['name']]=$dataclass['id'];
-        $subgroups= $this->db->launchQuery("SELECT * FROM groups WHERE id IN (SELECT from_group_id FROM belongs_to WHERE to_group_id={$group['id']})");
-        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['name']]=$this->extractGroups($subgroup);
+    private function extractGroups($group, $language){
+        $dataclasses=$this->db->launchQuery("SELECT dc.id, t._value FROM dataclass dc, children c, _translation t, _language l
+                                             WHERE c.parent_id={$group['id']} AND c.child_id=dc.id AND t.dataclass_id=dc.id AND t.language_id=l.id AND l.name='{$language}'");
+        if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['_value']]=$dataclass['id'];
+        $subgroups= $this->db->launchQuery("SELECT g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
+                                            WHERE g.id=b.from_group_id AND b.to_group_id={$group['id']} AND gt.group_id=g.id AND gt.language_id=l.id AND l.name='{$language}'");
+        if ($subgroups) foreach ($subgroups as $subgroup) $result[$subgroup['_value']]=$this->extractGroups($subgroup, $language);
         return $result;
     }
-    public function getDataclasses(){
-        $groups=$this->db->launchQuery('SELECT * FROM groups WHERE id NOT IN (SELECT from_group_id FROM belongs_to)');
-        foreach ($groups as $group) $result[$group['name']]=$this->extractGroups($group);
+    public function getDataclasses($language){
+        $groups=$this->db->launchQuery("SELECT distinct g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
+                                        WHERE g.id NOT IN (SELECT from_group_id FROM belongs_to) AND gt.group_id=g.id AND gt.language_id=l.id AND l.name='{$language}'");
+
+        foreach ($groups as $group) $result[$group['_value']]=$this->extractGroups($group, $language);
         return $result;
     }
+
     public function getParameters(){
         // Esto para cuando estén los idiomas
         $sql = "SELECT dc.*, t._value FROM dataclass dc, _translation t, _language l
@@ -50,14 +55,16 @@ private function extractGroups($group){
         $neighbourhoods = $aux;
 
         foreach ($dataClassWeights as $dataclass_id=>$dataclass_weight) {
-            $rawValues=null; 
+            $rawValues=null;
             $neighbourhoodValues = $this->getNeighbourhoodValues($dataclass_id);
-           
-print_r($neighbourhoodValues);
+
+//print_r($neighbourhoodValues);
             foreach ($neighbourhoodValues as $value) $rawValues[$value['id']]=$value['_value'];
             $keys=array_keys($rawValues);
             foreach($neighbourhoods as $key=>$value) if (!in_array($key, $keys)) $noValues[]=$key;
-            $maxAge = $this->db->launchQuery("SELECT MAX(dv.age) as age FROM district_value dv WHERE dv.dataclass_id={$dataclass_id}");
+            $maxAge = $this->db->launchQuery("SELECT MAX(dv.age) as age, d.direction FROM district_value dv, dataclass d WHERE dv.dataclass_id={$dataclass_id} AND d.id = dv.dataclass_id");
+			$direction = !($maxAge[0]['direction'] == "negative");
+			// echo "<br/>" . $direction . ":" . $maxAge[0]['direction'] . "<br/>";
             $maxAge = $maxAge[0]['age'];
             foreach ($noValues as $idNeighbourhood){
                 /*
@@ -82,7 +89,6 @@ print_r($neighbourhoodValues);
                                                                     dis.id={$neighbourhoods[$idNeighbourhood]['district_id']} AND
                                                                     d.id = dv.dataclass_id
                         ORDER BY dis.id");
-				$direction = !($result[0]['direction'] == "negative");
                 $rawValues[$idNeighbourhood]=$result[0]['_value'];
             }
             $normalisedWeightedValues=$this->normaliseValues($rawValues, $normalisedWeights[$dataclass_id], $direction);
@@ -97,6 +103,9 @@ print_r($neighbourhoodValues);
 				//print_r($normalisedWeightedValues);
                 if (!isset($normalisedWeightedValues[$neighbourhood['id']])) $normalisedWeightedValues[$neighbourhood['id']]=0;
 				$value = $normalisedWeightedValues[$neighbourhood['id']];
+				$values[$neighbourhood['id']] += $value;
+				//print_r($values);
+				/*
 				if($value >= 0.5)
 				{
 	                $colours[$neighbourhood['id']]['green'] += $value;
@@ -105,18 +114,19 @@ print_r($neighbourhoodValues);
 				{
 	                $colours[$neighbourhood['id']]['red'] += $value;
 				}
+				*/
                 // $colours[$neighbourhood['id']]['blue'] = '00';
             }
         }
-
+/*
 foreach($colours as $color)
 {
 	$color['green'] = $color['green'] / count($dataClassWeights);
 	$color['red'] = $color['red'] / count($dataClassWeights);
 }
-
+*/
         //print_r($colours);
-        return $colours;
+        return $values;
     }
 
 
@@ -129,7 +139,7 @@ foreach($colours as $color)
             $difference = $max - $min;
             // print($min.' '.$max.' '.$difference);
             foreach($values as $key=>$value){
-                
+
                 if ($difference>0)
 					{
 						$norm = 0;
@@ -145,11 +155,11 @@ foreach($colours as $color)
 					}
                 else $normalisedValues[$key]=(float) 1/count($values);
             }
-            print('<br>Normalised:<br>');
-            print_r($normalisedValues);
-			$sum = 0;
-            foreach($normalisedValues as $value) $sum=max($sum,$value);
-            print('Sum '.$sum);
+            //print('<br>Normalised:<br>');
+            //print_r($normalisedValues);
+			//$sum = 0;
+            //foreach($normalisedValues as $value) $sum=max($sum,$value);
+            //print('Sum '.$sum);
             return $normalisedValues;
         }
         else return null;

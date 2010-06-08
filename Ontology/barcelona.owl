@@ -1,0 +1,464 @@
+<rdf:RDF
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:j.0="http://www.w3.org/XML/1998/namespace"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:bif="bif:"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:j.1="http://www.mapcelona.org/city.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Nou_Barris">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Nou Barris</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Provencals_del_Poblenou_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Provencals del Poblenou</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Verneda_i_la_Pau_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Verneda i la Pau</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Camp_d&apos;en_Grassot_i_Gracia_Nova_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Camp d'en Grassot i Gracia Nova</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Gracia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Prosperitat_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Prosperitat</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Marina_del_Prat_Vermell_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Marina del Prat Vermell</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#les_Tres_Torres_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>les Tres Torres</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#La_Sagrera_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>La Sagrera</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Porta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Porta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Genis_dels_Agudells_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Genis dels Agudells</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sarria_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sarria</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Montjuic_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Montjuic</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Coll_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Coll</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Gracia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#l&apos;Antiga_Esquerra_de_l&apos;Eixample_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>l'Antiga Esquerra de l'Eixample</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Marti">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Sant Marti</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Maternitat_i_Sant_Ramon_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Maternitat i Sant Ramon</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Les_Corts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Clota_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Clota</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Montbau_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Montbau</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Ciutat_Meridiana_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Ciutat Meridiana</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Vallcarca_i_els_Penitents_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Vallcarca i els Penitents</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Gracia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Zona_Franca_-_Port_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Zona Franca - Port</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Barcelona">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#City"/>
+    <j.1:hasName>Barcelona</j.1:hasName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Poble-sec_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Poble-sec</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Vall_d&apos;Hebron_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Vall d'Hebron</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Gracia">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Gracia</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Teixonera_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Teixonera</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Eixample">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Eixample</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Raval_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Raval</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Ciutat_Vella"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Besos_i_el_Maresme_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Besos i el Maresme</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Turo_de_la_Peira_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Turo de la Peira</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Parc_i_Llacuna_del_Poblenou_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Parc i Llacuna del Poblenou</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Sants-Montjuic</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Verdum_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Verdum</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Carmel_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Carmel</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#les_Corts_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>les Corts</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Les_Corts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#El_Poblenou_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>El Poblenou</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Andreu_de_Palomar_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Andreu de Palomar</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Baro_de_Viver_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Baro de Viver</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#El_Putget_i_Farro_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>El Putget i Farro</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Horta-Guinardo</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Gervasi_-_Galvany_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Gervasi - Galvany</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Marti_de_Provencals_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Marti de Provencals</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Vila_Olimpica_del_Poblenou_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Vila Olimpica del Poblenou</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Hostafrancs_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Hostafrancs</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Fort_Pienc_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Fort Pienc</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Salut_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Salut</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Gracia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Bon_Pastor_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Bon Pastor</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Horta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Horta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Trinitat_Nova_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Trinitat Nova</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Can_Peguera_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Can Peguera</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Clot_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Clot</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Guineueta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Guineueta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Canyelles_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Canyelles</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Torre_Baro_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Torre Baro</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Vilapicina_i_Torre_Llobeta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Vilapicina i Torre Llobeta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Andreu">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Sant Andreu</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Sarria-Sant Gervasi</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Navas_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Navas</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Gotic_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Gotic</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Ciutat_Vella"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Diagonal_Mar_i_el_Front_Maritim_del_Poblenou_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Diagonal Mar i el Front Maritim del Poblenou</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Les_Corts">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Les Corts</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Pere,_Santa_Caterina_i_la_Ribera_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Pere, Santa Caterina i la Ribera</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Ciutat_Vella"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sants-Badal_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sants-Badal</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Congres_i_els_Indians_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Congres i els Indians</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Font_de_la_Guatlla_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Font de la Guatlla</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Ciutat_Vella">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#District"/>
+    <j.1:hasName>Ciutat Vella</j.1:hasName>
+    <j.1:isDistrictOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Barcelona"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Camp_de_l&apos;Arpa_del_Clot_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Camp de l'Arpa del Clot</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Marti"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Font_d&apos;en_Fargues_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Font d'en Fargues</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Can_Baro_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Can Baro</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Antoni_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Antoni</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Barceloneta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Barceloneta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Ciutat_Vella"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Vallvidrera,_el_Tibidabo_i_les_Planes_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Vallvidrera, el Tibidabo i les Planes</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Nova_Esquerra_de_l&apos;Eixample_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Nova Esquerra de l'Eixample</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Guinardo_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Guinardo</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Roquetes_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Roquetes</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Vallbona_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Vallbona</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Nou_Barris"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sants_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sants</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sant_Gervasi_-_la_Bonanova_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sant Gervasi - la Bonanova</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sarria-Sant_Gervasi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Pedralbes_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Pedralbes</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Les_Corts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Vila_de_Gracia_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Vila de Gracia</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Gracia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Dreta_de_l&apos;Eixample_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Dreta de l'Eixample</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Trinitat_Vella_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Trinitat Vella</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sant_Andreu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Marina_de_Port_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Marina de Port</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#la_Bordeta_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>la Bordeta</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Sants-Montjuic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#Sagrada_Familia_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>Sagrada Familia</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Eixample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mapcelona.org/barcelona.owl#el_Baix_Guinardo_n">
+    <rdf:type rdf:resource="http://www.mapcelona.org/city.owl#Neighbourhood"/>
+    <j.1:hasName>el Baix Guinardo</j.1:hasName>
+    <j.1:isNeighbourhoodOf rdf:resource="http://www.mapcelona.org/barcelona.owl#Horta-Guinardo"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  #map.resources :maps
+
+  map.resources :points
+
+  map.resources :polygons
+
+  map.resources :entities
+  
+  map.map 'entities/:id/map', :controller => 'maps', :action => 'show'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

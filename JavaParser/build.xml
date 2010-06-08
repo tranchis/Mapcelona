@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="JavaParser">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../Applications/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="JavaParser.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/arq-2.8.1.jar"/>
+        <pathelement location="lib/commons-logging-1.1.jar"/>
+        <pathelement location="lib/fontbox-1.1.0.jar"/>
+        <pathelement location="lib/icu4j-3.4.4.jar"/>
+        <pathelement location="lib/iri-0.7.jar"/>
+        <pathelement location="lib/JavaAPIforKml-sources.jar"/>
+        <pathelement location="lib/JavaAPIforKml.jar"/>
+        <pathelement location="lib/jempbox-1.1.0.jar"/>
+        <pathelement location="lib/jena-2.6.2-tests.jar"/>
+        <pathelement location="lib/jena-2.6.2.jar"/>
+        <pathelement location="lib/junit-4.5.jar"/>
+        <pathelement location="lib/log4j-1.2.13.jar"/>
+        <pathelement location="lib/lucene-core-2.3.1.jar"/>
+        <pathelement location="lib/pdfbox-1.1.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.5.6.jar"/>
+        <pathelement location="lib/slf4j-log4j12-1.5.6.jar"/>
+        <pathelement location="lib/stax-api-1.0.1.jar"/>
+        <pathelement location="lib/virtjdbc3.jar"/>
+        <pathelement location="lib/wstx-asl-3.2.9.jar"/>
+        <pathelement location="lib/xercesImpl-2.7.1.jar"/>
+        <pathelement location="lib/jericho-html-3.1.jar"/>
+        <pathelement location="lib/mysql-connector-java-3.0.17-ga-bin.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="JavaParser.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AyuntamientoParser">
+        <java classname="org.mapcelona.javaparser.pdfparser.AyuntamientoParser" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+    <target name="InitDB">
+        <java classname="org.mapcelona.javaparser.entrypoint.InitDB" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+    <target name="Ruido">
+        <java classname="org.mapcelona.javaparser.staticdata.Ruido" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+    <target name="UrbanaParser">
+        <java classname="org.mapcelona.javaparser.pdfparser.UrbanaParser" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+    <target name="Wikipedia2Neighbourhoods">
+        <java classname="org.mapcelona.javaparser.barrios.Wikipedia2Neighbourhoods" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+    <target name="Rdf2SqlConnector">
+        <java classname="org.mapcelona.javaparser.rdf2SqlConnector.Rdf2SqlConnector" failonerror="true" fork="yes">
+            <classpath refid="JavaParser.classpath"/>
+        </java>
+    </target>
+</project>

@@ -1,76 +1,239 @@
-// Floater
-var offset_top = $('#floater').outerHeight() / 2 - $('#floater').height() / 2;
-var offset_left = $('#floater').outerWidth() / 2 - $('#floater').width() / 2;
-$('#floater').offset({top:offset_top,left:offset_left});
+// globals
+var factors = []; 	// factors is an array of ids corresponding to selected DataClasses
+var kmls = []; 		// kmls is an array of objects {id:number,kml:GGeoXml}
 
+// globals for the automatic resizing of the layout
+var map_height;
+var panel_padding = 10;
+var panel_height;
+
+/*
+function kmlObject(id,kml) {
+	return kmlObject[id] = {id:id,kml:kml};
+} 
+*/
+
+// Floater
+/*
 $('.floater_close').bind('click', function() {
   $('#overlay').addClass('invisible');
   $('#floater').addClass('invisible');
 });
+*/
 
+// adjusting layout according to window size
+function resizeApp() {
+	map_height = $(window).height() - $('#header').height();
+	panel_height = map_height - panel_padding;
+	$('#panel').height(panel_height);
+	$('#panel').width($(window).width()*0.20 - panel_padding);
+	$('#factors_target').height(panel_height - $('#panel_header').height() - $('#panel_footer').height() - 2 * panel_padding - 16);
+	$('#panel_expanded').height(map_height);
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 3 * panel_padding - 2);
+	$('#map').height(map_height);
+}
+
+resizeApp();
 
 // loading the map
-var map =new GMap2(document.getElementById("map"));
+var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
-map.setCenter(new GLatLng(41.387917,2.169919), 12);
-var kml;
-var overlaid = false;
+map.setCenter(new GLatLng(41.40,2.17), 12);
+var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0,'fraction','fraction'), new GScreenPoint(68,0), new GScreenSize(135,40));
+map.addOverlay(logo);
 
 // maps functions
-function showPolygons(url) {
-    if(overlaid) hidePolygons();
-    kml = new GGeoXml(url);
-    map.addOverlay(kml);
-    overlaid = true;
-}
-function hidePolygons() {
-    map.removeOverlay(kml);
-}
+function updateMap() { // !!!! we should check whether the array of factors has changed since last update or not in order to avoid unnecessary computation and data transfer
 
-// handling the panel
-function expandPanel() {
-    document.getElementById("panel").setAttribute("class", "panel_expanded");
-    document.getElementById("panel_collapsed").setAttribute("class", "invisible");
-    document.getElementById("panel_expanded").setAttribute("class", "visible");
-}
-function collapsePanel() {
-    document.getElementById("panel").setAttribute("class", "panel_collapsed");
-    document.getElementById("panel_collapsed").setAttribute("class", "visible");
-    document.getElementById("panel_expanded").setAttribute("class", "invisible");
-    updateMap();
-}
+/*
+    // collect all active factors and their weights
+    var arrayOfIds = new Array();
+    var arrayOfWeights = new Array();
+    $('.active').each(function(){
+        arrayOfIds.push($(this).attr('id'));
+    });
+    $('.factor_weight').each(function(){
+        arrayOfWeights.push($(this).html());
+    });
+    if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
+        // encode all the values in the string to be sent in json should be -> [{id:204,weight:0},...]
+        var datastring = '';
+        for(var i in arrayOfIds) {
+            datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
+        }
+        datastring = datastring.substring(1);
+        datastring = 'params=' + datastring;
+        // make the ajax call
+        $.ajax({
+            url:'http://www.mapcelona.org/devel/ajax.php',
+            data:datastring,
+            success: function(url){loadKml(url);}
+        });
+    }
+*/
 
-// factors in the panel
-function checkParameter(chk) {
-    if (chk.checked) {
-        // add the slider
-        chk.parentNode.innerHTML += '<div class="slider"><div class="slider-handle"></div></div><span>0</span>';
-        
-        
-        $('.slider-handle').draggable({
-    		containment:'parent',
-    		axis:'x',
-    		drag:function(e,ui){
-    			/* The drag function is called on every drag movement, no matter how minute */
-    			if(!this.par)
-    			{
-    				/* Initializing the variables only on the first drag move for performance */
-    				this.par = $(this).parent();
-    				this.parWidth = this.par.width();
-    				this.width = $(this).width();
-    			}
-                
-    			var maxValue = this.parWidth-this.width;
-    			var ratio = ui.position.left/maxValue;
-    			ratio = Math.round(ratio*100);
-    			this.par.siblings().last().html(ratio + ' %');
-    		}
-    	});
-    } else {
-        chk.parentNode.innerHTML 
+	// new version
+	if($('#panel_expanded').is(":visible")) collapsePanel();
+    if (factors.length > 0) {
+        // encode all the values in the string to be sent in json should be -> [{id:204,weight:0},...]
+        var datastring = '';
+        for(var i in factors) {
+        	var id = factors[i];
+	        datastring = 'params=' + id + ',1';
+	        // make the ajax call
+	        $.ajax({
+	            url:'http://www.mapcelona.org/devel/ajax.php',
+	            data:datastring,
+	            dataType:'json',
+	            success:function(data){loadKml(data);}
+	        });
+	        // add the activity indicator
+	        $('#selected_factors li[id='+factors[i]+']').prepend('<img src="./css/images/indicator_white.gif" />');
+	        datastring = '';
+        }
     }
 }
 
+function loadKml(json) {
+/*
+	var geoXml = new GGeoXml(url,function() {
+    	if (geoXml.load()) {
+        	kml.gotoDefaultViewport(map);
+        	// remove the activity indicator
+        	$('#selected_factors li[id='+id+']').first().remove();
+        	// add the visibility checkbox
+        	$('#selected_factors li[id='+factors[i]+']').prepend('<input type="checkbox" class="factor_checkbox" checked="checked" />');
+        }
+    });
+*/
+	console.log(json);
+    var geoXml = new GGeoXml(json.Url);
+    var id = json.DataClassId;
+    console.log('id = ' + id);
+    GEvent.addListener(geoXml, 'load', function() {
+    	console.log('geoXml triggered event "load" for dataclass with id = ' + id);
+    	//geoXml.gotoDefaultViewport(map);
+    	// remove the activity indicator
+    	$('#selected_factors li[id='+id+']').children().first().remove();
+    	// add the visibility checkbox
+    	$('#selected_factors li[id='+id+']').prepend('<input type="checkbox" class="factor_checkbox" checked="true" />');
+    });
+    kmls.push({id:id,kml:geoXml});
+    map.addOverlay(kmls[kmls.length-1].kml);
+}
+
+function showPolygonsForLayerWithId(id) {
+	console.log('called showPolygons for layer with id = ' + id);
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(kmls[i].id == id) kmls[i].kml.show(); // map.show(kmls[i].kml);
+	};
+}
+
+function hidePolygons() {
+	console.log('called hideLayers()');
+	for(layer in kmls) layer.kml.hide(); // map.hide(layer.kml);
+}
+
+function hidePolygonsForLayerWithId(id) {
+	console.log('called hidePolygons for layer with id = ' + id);
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(kmls[i].id == id) kmls[i].kml.hide(); // map.hide(kmls[i].kml); // 
+	};
+}
+
+function removeLayers() {
+	console.log('called removeLayers()');
+	for(layer in kmls) map.removeOverlay(layer.kml);
+	kmls = [];
+	factors = [];
+}
+
+function removeLayerWithId(id) {
+	console.log('called removeLayer for layer with id = ' + id);
+	for (var i = kmls.length - 1; i >= 0; i--){
+	    if(factors[i] == id) {
+	    	map.removeOverlay(kmls[i].kml);
+	    	kmls.splice(i,1);
+	    	factors.splice(i,1);
+	    }
+	};
+}
+
+// panel functions
+function expandPanel() {
+	$('#panel_expanded').toggle('slide',{},'slow');
+	$('#factors_expanded').height(map_height - $('#panel_expanded_header').height() - $('#panel_expanded_footer').height() - 3 * panel_padding - 2);
+}
+
+function collapsePanel() {
+	$('#panel_expanded').toggle('slide',{},'slow');
+}
+
+// factors functions		
+$('.expandable .expandable_trigger').click(function() {
+	$(this).parent().next().toggle('slow');
+	return false;
+}).parent().next().hide();
+
+$(".factor").dblclick( function () { if( !$(this).hasClass('factor_disabled') ) addFactor($(this)); });
+
+$('.factor').draggable({
+	helper: function(event) {
+				return $('<li class="factor" style="width:'+$('#panel').width()+';padding:5px;">'+$(this).html()+'</li>');
+			},
+	opacity: 0.75,
+	revert: 'invalid',
+	zIndex: 1000
+	});
+
+$('#factors_target').droppable({
+	accept: '.factor',
+	activate: function(event, ui) { $('#factors_target').effect('highlight'); },
+	drop: function(event, ui) { 
+		// code to be executed when a factor is dropped
+		addFactor(ui.draggable);
+	},
+	over:function(event, ui) { $('#factors_target').effect('highlight'); }
+	});
+	
+function addFactor(factor) {
+	// add the id of the factor in the array
+	var id = factor.attr('id');
+	factors.push(id);
+	$('#selected_factors').append(
+		'<li class="factor" id="'+id+'">'+factor.html()+'<a href="#" class="factor_clear" onclick="removeFactor('+id+');></a></li>'
+	);
+	if( $('#drag_help').hasClass('visible') ) $('#drag_help').toggleClass('visible invisible');
+	// and disable the factor preventing it being added twice
+	factor.draggable("option", "disabled", true); // functionally
+	factor.addClass('factor_disabled'); // and visually
+}
+
+function removeFactor(id) {
+	$('#selected_factors li[id='+id+']').remove();
+	setTimeout("if($('#selected_factors li').length == 0 && $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",500);
+	removeLayerWithId(id);
+	$('.factor_disabled[id='+id+']').removeClass('factor_disabled');
+}
+
+function removeFactors()
+{
+	$('#selected_factors li').remove();
+	setTimeout("if( $('#drag_help').hasClass('invisible') ) $('#drag_help').toggleClass('visible invisible');",500);
+	removeLayers();
+	$('.factor_disabled').removeClass('factor_disabled');
+}
+
+$('.factor_checkbox').change(function() {
+	console.log('checkbox changed!');
+	if ($(this).is(':checked')) {
+		showPolygonsForLayerWithId($(this).parent().attr('id'));
+	} else {
+		hidePolygonsForLayerWithId($(this).parent().attr('id'));
+	}
+});
+
+/*
 $('.factor_checkbox').change(function() {
     if ($(this).is(':checked')) {
         $(this).parent().addClass('active');
@@ -81,10 +244,10 @@ $('.factor_checkbox').change(function() {
     		containment:'parent',
     		axis:'x',
     		drag:function(e,ui){
-    			/* The drag function is called on every drag movement, no matter how minute */
+    			// The drag function is called on every drag movement, no matter how minute
     			if(!this.par)
     			{
-    				/* Initializing the variables only on the first drag move for performance */
+    				// Initializing the variables only on the first drag move for performance
     				this.par = $(this).parent();
     				this.parWidth = this.par.width();
     				this.width = $(this).width();
@@ -99,33 +262,27 @@ $('.factor_checkbox').change(function() {
         $(this).parent().removeClass('active');
         $(this).siblings().last().remove();
         $(this).siblings().last().remove();
+        // we should test whether we are removing the '%' symbol or not
+        //$(this).siblings().last().remove();
     }
 });
 
-function updateMap() {
-    // collect all active factors and their weights
-    var arrayOfIds = new Array();
-    var arrayOfWeights = new Array();
-    $('.active').each(function(){
-        arrayOfIds.push($(this).attr('id'));
-    });
-    $('.factor_weight').each(function(){
-        arrayOfWeights.push($(this).html());
-    });
-    if (arrayOfIds.length == arrayOfWeights.length && arrayOfIds.length > 0) {
-        // put all the values in the string to be sent
-        var datastring = '';
-        for(var i in arrayOfIds) {
-            datastring += '-' + arrayOfIds[i] + ',' + arrayOfWeights[i];
-        }
-        datastring = datastring.substring(1);
-        datastring = 'params=' + datastring;
-        //$('#header').append(datastring);
-        // make the ajax call
-        $.ajax({
-            url:'http://www.mapcelona.org/ajax.php',
-            data:datastring,
-            success: function(url){showPolygons(url);}
-        });
-    }
-}
+$('.slider-handle').draggable({
+	containment:'parent',
+	axis:'x',
+	drag:function(e,ui){
+		// The drag function is called on every drag movement, no matter how minute 
+		if(!this.par)
+		{
+			// Initializing the variables only on the first drag move for performance 
+			this.par = $(this).parent();
+			this.parWidth = this.par.width();
+			this.width = $(this).width();
+		}
+        
+		var ratio = ui.position.left/(this.parWidth-this.width);
+		ratio = Math.round(ratio*100);
+		this.par.siblings().last().html(ratio);
+	}
+});
+*/
