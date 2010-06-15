@@ -39,7 +39,7 @@ resizeApp();
 var map = new GMap2(document.getElementById("map"));
 map.addControl(new GLargeMapControl3D());
 map.setCenter(new GLatLng(41.40,2.17), 12);
-var logo = new GScreenOverlay('http://www.mapcelona.org/devel/css/images/logo_trans.png', new GScreenPoint(0.5,0,'fraction','fraction'), new GScreenPoint(68,0), new GScreenSize(135,40));
+var logo = new GScreenOverlay('http://www.mapcelona.org/css/images/logo_trans_sized.png', new GScreenPoint(0.5,0,'fraction','fraction'), new GScreenPoint(68,0), new GScreenSize(135,40));
 map.addOverlay(logo);
 
 // maps functions
