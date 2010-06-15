@@ -50,67 +50,67 @@ if (!is_numeric($data_class_ID) || !is_numeric($var[1])) $return['error'] = true
 else{
     // We have checked that both inputs are numeric and no SQL injection is introduced
     $exploded_pairs[$data_class_ID] = $var[1];
-    $dcm = new dataClassManager();
-    // Buscar si existe un fichero llamado doc+toString($exploded_pairs).kml
-    @$values=$dcm->getIndicator($exploded_pairs);
-    //print_r($colors);
-    $filename="./doc.kml";
-    $output="";
-    $file = fopen($filename, "r");
-    while(!feof($file)) $output = $output . fgets($file, 4096);
-    fclose ($file);
-    // print_r($colors);
-    $startcolor = hexdec("0000FF");
-    $endcolor = hexdec("00FF00");
-    foreach($values as $dataclass => $value)
-    {
-	//echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
-	/*
-	$total = $color["green"] - $color["red"];
-	if($total < 0)
-	{
-		$alpha = strtoupper(dechex(min(255, 128 - $total*128)));
-		$red = "FF";
-		$green = "00";
-	}
-	else
-	{
-		$red = "00";
-		$green = "FF";
-		$alpha = strtoupper(dechex(min(255, 128 + $total*128)));
-	}
-	*/
-	/*
-	if(strlen($red . "") == 1)
-	{
-		$red = "0" . $red;
-	}
-	if(strlen($green . "") == 1)
-	{
-		$green = "0" . $green;
-	}
-	$blue = "00";
-	*/
-	//echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
-	$alpha = strtoupper(dechex(min(255, 128)));//100 + $value * 100)));
-	if(strlen($alpha) == 1) $alpha = "0" . $alpha;
-	$bgr = dechex($startcolor + $value * ($endcolor - $startcolor));
-	while(strlen($bgr) < 6)	$bgr = "0" . $bgr;
-	$output = str_replace("FAFAF" . $dataclass, $alpha . $bgr, $output);
-    }
-
-    $randname = rand_str(5);
-    // Guardar el fichero como doc+toString($explodedPairs).kml
-    // Actualizar indicadores de uso: el string explodedPairs, para saber el nº de veces usada esa combinación y luego cada parámetro por separado
-    $filename="./doc" . $randname . ".kml";
-    $file = fopen($filename, "w");
-    fputs($file, $output);
-    fclose ($file);
-
     $return['DataClassId'] = $data_class_ID;
-    $return['Url']= "http://www.mapcelona.org/devel/doc{$randname}.kml";
-    /* echo "http://www.mapcelona.org/devel/doc". $randname .".kml"; */
-    //echo '{"DataClassId":'. $data_class_ID .',"Url":"http://www.mapcelona.org/devel/doc'. $randname .'.kml"}';
+    // We check if the requested dataclass has already been computed in a previous request (and the resulting .kml file has been stored)
+    if (file_exists("./doc{$data_class_ID}.kml")) $return['Url']= "http://www.mapcelona.org/doc{$data_class_ID}.kml";
+    else {
+        $dcm = new dataClassManager();
+        @$values=$dcm->getIndicator($exploded_pairs);
+        $filename="./doc.kml";
+        $output="";
+        $file = fopen($filename, "r");
+        while(!feof($file)) $output = $output . fgets($file, 4096);
+        fclose ($file);
+        $startcolor = hexdec("0000FF");
+        $endcolor = hexdec("00FF00");
+        foreach($values as $dataclass => $value) {
+            //echo $color["green"] . ":" . $color["red"] . ":" . ($color["green"] - $color["red"]) . "<br/>";
+            /*
+            $total = $color["green"] - $color["red"];
+            if($total < 0)
+            {
+                    $alpha = strtoupper(dechex(min(255, 128 - $total*128)));
+                    $red = "FF";
+                    $green = "00";
+            }
+            else
+            {
+                    $red = "00";
+                    $green = "FF";
+                    $alpha = strtoupper(dechex(min(255, 128 + $total*128)));
+            }
+            */
+            /*
+            if(strlen($red . "") == 1)
+            {
+                    $red = "0" . $red;
+            }
+            if(strlen($green . "") == 1)
+            {
+                    $green = "0" . $green;
+            }
+            $blue = "00";
+            */
+            //echo $dataclass . ":" . $alpha . $blue . $green . $red . "<br/>";
+            $alpha = strtoupper(dechex(min(255, 128)));//100 + $value * 100)));
+            if(strlen($alpha) == 1) $alpha = "0" . $alpha;
+            $bgr = dechex($startcolor + $value * ($endcolor - $startcolor));
+            while(strlen($bgr) < 6)	$bgr = "0" . $bgr;
+            $output = str_replace("FAFAF" . $dataclass, $alpha . $bgr, $output);
+        }
+        //$randname = rand_str(5);
+        // Guardar el fichero como doc+toString($explodedPairs).kml
+        // Actualizar indicadores de uso: el string explodedPairs, para saber el nº de veces usada esa combinación y luego cada parámetro por separado
+        $filename="./doc" . $data_class_ID . ".kml";
+        $file = fopen($filename, "w");
+        fputs($file, $output);
+        fclose ($file);
+        $return['DataClassId'] = $data_class_ID;
+        $return['Url']= "http://www.mapcelona.org/doc{$data_class_ID}.kml";
+        
+        //echo "http://www.mapcelona.org/devel/doc". $data_class_ID .".kml";
+        //echo '{"DataClassId":'. $data_class_ID .',"Url":"http://www.mapcelona.org/devel/doc'. $randname .'.kml"}';
+    }
 }
 echo json_encode($return);
 ?>

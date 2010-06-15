@@ -82,7 +82,7 @@ function updateMap() { // !!!! we should check whether the array of factors has 
 	        datastring = 'params=' + id + ',1';
 	        // make the ajax call
 	        $.ajax({
-	            url:'http://www.mapcelona.org/devel/ajax.php',
+	            url:'http://www.mapcelona.org/ajax.php',
 	            data:datastring,
 	            dataType:'json',
 	            success:function(data){loadKml(data);}
