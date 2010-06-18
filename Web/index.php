@@ -18,14 +18,11 @@ $dcm = new dataClassManager();
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta name="keywords" content="map barcelona socioeconomic indicators">
-        <meta name="description" content="Mapcelona is a mashup between Google Maps and several socioeconomic indicators obtained from official documents of the Local council and other public administrations.">
-	    <link rel="shortcut icon" href="<?=IMAGES_PATH?>favicon.ico" type="image/x-icon">
         <title>mapcelona</title>
-        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ" type="text/javascript"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta name="keywords" content="map barcelona socioeconomic indicators" />
+        <meta name="description" content="Mapcelona is a mashup between Google Maps and several socioeconomic indicators obtained from official documents of the Local council and other public administrations." />
+	<link rel="shortcut icon" href="<?=IMAGES_PATH?>favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css" />
     </head>
     <body onunload="GUnload()" onresize="resizeApp()">
@@ -62,9 +59,6 @@ $dcm = new dataClassManager();
                             }
                         }
                         print_group($dcm->getDataclasses($_SESSION['lang']));
-	                
-                            //print("<li onclick=\"addParam('{$parameter['id']}', '{$parameter['_value']}');\" id='{$parameter['id']}' class='factor'>{$parameter['_value']}</li>");
-                        
 	            ?>
 	            </ul>
             </div><!--factors_expanded-->
@@ -74,6 +68,9 @@ $dcm = new dataClassManager();
         </div><!--panel_expanded-->
         <div id="map">&nbsp;</div>
         <!-- <div id="spacer"></div> -->
+        <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAQaqpGkTfKPJnihNVtZAkqxRdbGFxy3qZiDLh0IXFGr-jkCTdRRQqAhIpOR57-sKaogrRI5pPn5WgZQ"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?=JS_PATH?>mapcelona.js"></script>
         <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
