@@ -106,12 +106,12 @@ function loadKml(json) {
         }
     });
 */
-	console.log(json);
+	//console.log(json);
     var geoXml = new GGeoXml(json.Url);
     var id = json.DataClassId;
-    console.log('id = ' + id);
+    //console.log('id = ' + id);
     GEvent.addListener(geoXml, 'load', function() {
-    	console.log('geoXml triggered event "load" for dataclass with id = ' + id);
+    	//console.log('geoXml triggered event "load" for dataclass with id = ' + id);
     	//geoXml.gotoDefaultViewport(map);
     	// remove the activity indicator
     	$('#selected_factors li[id='+id+']').children().first().remove();
@@ -123,33 +123,33 @@ function loadKml(json) {
 }
 
 function showPolygonsForLayerWithId(id) {
-	console.log('called showPolygons for layer with id = ' + id);
+	//console.log('called showPolygons for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
 	    if(kmls[i].id == id) kmls[i].kml.show(); // map.show(kmls[i].kml);
 	};
 }
 
 function hidePolygons() {
-	console.log('called hideLayers()');
+	//console.log('called hideLayers()');
 	for(layer in kmls) layer.kml.hide(); // map.hide(layer.kml);
 }
 
 function hidePolygonsForLayerWithId(id) {
-	console.log('called hidePolygons for layer with id = ' + id);
+	//console.log('called hidePolygons for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
 	    if(kmls[i].id == id) kmls[i].kml.hide(); // map.hide(kmls[i].kml); // 
 	};
 }
 
 function removeLayers() {
-	console.log('called removeLayers()');
+	//console.log('called removeLayers()');
 	for(layer in kmls) map.removeOverlay(layer.kml);
 	kmls = [];
 	factors = [];
 }
 
 function removeLayerWithId(id) {
-	console.log('called removeLayer for layer with id = ' + id);
+	//console.log('called removeLayer for layer with id = ' + id);
 	for (var i = kmls.length - 1; i >= 0; i--){
 	    if(factors[i] == id) {
 	    	map.removeOverlay(kmls[i].kml);
@@ -225,7 +225,7 @@ function removeFactors()
 }
 
 $('.factor_checkbox').change(function() {
-	console.log('checkbox changed!');
+	//console.log('checkbox changed!');
 	if ($(this).is(':checked')) {
 		showPolygonsForLayerWithId($(this).parent().attr('id'));
 	} else {
