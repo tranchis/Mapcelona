@@ -10,7 +10,7 @@ class dataClassManager {
     }
 
     private function extractGroups($group, $language){
-        $dataclasses=$this->db->launchQuery("SELECT dc.id, t._value FROM dataclass dc, children c, _translation t, _language l
+        $dataclasses=$this->db->launchQuery("SELECT dc.id, t._value FROM v_dataclass dc, children c, _translation t, _language l
                                              WHERE c.parent_id={$group['id']} AND c.child_id=dc.id AND t.dataclass_id=dc.id AND t.language_id=l.id AND l.name='{$language}'");
         if ($dataclasses) foreach ($dataclasses as $dataclass) $result[$dataclass['_value']]=$dataclass['id'];
         $subgroups= $this->db->launchQuery("SELECT g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
@@ -19,7 +19,7 @@ class dataClassManager {
         return $result;
     }
     public function getDataclasses($language){
-        $groups=$this->db->launchQuery("SELECT distinct g.id, gt._value FROM groups g, belongs_to b, groups_translation gt, _language l
+        $groups=$this->db->launchQuery("SELECT distinct g.id, gt._value FROM v_groups g, belongs_to b, groups_translation gt, _language l
                                         WHERE g.id NOT IN (SELECT from_group_id FROM belongs_to) AND gt.group_id=g.id AND gt.language_id=l.id AND l.name='{$language}'");
 
         foreach ($groups as $group) $result[$group['_value']]=$this->extractGroups($group, $language);
